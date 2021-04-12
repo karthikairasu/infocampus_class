@@ -1,0 +1,2 @@
+# infocampus_class
+training
