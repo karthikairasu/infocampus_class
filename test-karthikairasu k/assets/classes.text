@@ -1,0 +1,214 @@
+Classes in Bootstrap :
+
+1)container : it leaves left and right margin.
+
+2)container-fluid : it is a full width container.
+
+Note : You should not have container within in container-fluid and vice-versa. 
+		You can have more than one container  or container-fluid with a page but it should not be one inside the  other.
+		
+3)well : it gives grey background
+--------------------------------------------------------------------------------
+4) classes for ul tag :
+	
+	<ul class="list-group"> For creating list
+	<li class="list-group-item">write some text</li>
+	</ul>
+	
+	Creating normal horizontal nav bar :
+		1)<ul class="nav nav-tabs">(or)
+		2)<ul class="nav nav-pills">
+		
+	Creating normal vertical nav bar we use nav-stacked class along with above two classes.
+	
+------------------------------------------------------------------------------	
+5)panel
+	
+ class for div:
+              class= panel panel-success
+			         panel panel-primary
+					 panel panel-danger
+					 panel panel-warning
+					 panel panel-info
+					 
+			         
+	          class= panel-heading
+			         panel-body
+					 panel-footer
+					 	
+	
+-----------------------------------------------------------------------
+6)Classes for img tag :
+
+	img-thumbnail
+	img-circle
+	img-rounded
+	img-responsive
+----------------------------------------------------------------------------	
+7) Classes giving different backgrounds :
+
+	bg-primary
+	bg-success
+	bg-warning
+	bg-danger
+	bg-info
+--------------------------------------------------------------------
+	
+8)Classes for button :
+
+	btn btn-success
+	btn btn-warning
+	btn btn-danger
+	btn btn-info
+	btn btn-primary
+	btn btn-link
+----------------------------------------------------------------------
+	
+9)Glyphicons are smaller icons : You can get it from w3shcool
+         span = glyphicon glyphicon-lock
+		 
+-----------------------------------------------------------------------		 
+10)Classes for tables:
+
+	table
+	table table-bordered
+	table table-striped
+	table table-condensed
+	table table-hover
+	table-responsible ->(note : it is not used inside the table tag but used inside the div tag.)
+					  ->Your table should be lengthy enough to make the table-responsible work.
+-----------------------------------------------------------------------------
+					  
+11)forms
+    class for div:
+	        
+		    class= row form-group
+		    input tag class= form-control
+
+    note---> (form inline is used to from tag.class for form tag.)
+        
+		     class= form-inline
+		            form-horizontal
+	                
+    note----> (form-inline  is used ,div inside don't col-sm-12 used for name and input, div tag class only form-group but row don't used.)	   
+
+
+input-group for used :
+             class for div tag= input-group
+             class for span=	input-group-addon		 
+          
+		glyphicon is used for i tag inside, i tag is used span inside.   
+		
+--------------------------------------------------------------------		
+   
+12)alert
+        
+		      class for div:  alert alert-success alert-dismissable
+		
+		                      data-dismiss= alert
+						
+					data-dismiss is a in side the a href tag used.			   
+---------------------------------------------------------------------
+								   
+13)pager
+               class for ul:
+			          ul= pager
+					  li= previous
+					      next
+---------------------------------------------------------------------
+						
+14)pagination
+               class for ul:
+			          ul= pagination
+					  li= inside a href= numbers
+					  
+-------------------------------------------------------					  
+
+
+progress
+
+progress-bar
+attribute :role=progressbar
+aria-valuenow
+aria-valuemin
+aria-valuemax
+style="width:50%"
+   .progress-bar-success
+   .progress-bar-info
+   .progress-bar-warning
+   .progress-bar-danger
+	 
+	 
+Add class .progress-bar-striped to add stripes to the progress bars:
+
+progress-bar-striped active"	
+
+ 15) collapse:
+
+ for collapse we need jquery.min.js
+ and bootstrap.js file ,it should be called in sequence 1)jquery.min.js 2)bootstrap.js
+ 
+ we can use a button or anchor tag ie.(<a></a>)with the two attributes given below
+ 1)data-toggle = collapse (for collapse effect)
+ 2)data-target = "#id given to div which has to be targetted after click the button or link"
+ note:you  have to use class="collapse" for the div which is to be targetted ,
+ along with the id referred data-target attribute given for button or link
+
+        data-toggle= collapse
+		data-target= #name of collapse button (id- is a same name of target and another name don't run collapse)
+	 
+-------------------------------------------------------------------------
+modal:
+	 for collapse we need jquery.min.js
+ and bootstrap.js file ,it should be called in sequence 1)jquery.min.js 2)bootstrap.js
+ 
+ we can use a button or anchor tag ie.(<a></a>)with the two attributes given below
+ 1)data-toggle = modal (for modal effect)
+ 2)data-target = "#id given to div which has to be targetted after click the button or link"
+ note:you  have to use class="modal fade" for the div which is to be targetted ,
+ along with the id referred data-target attribute given for button or link
+ 
+ we have followingclasses for making 
+ the model which are used along with the <div> tag
+ 
+ class=modal fade for outer most div , it should also have attribute called as role ,with
+    value called as dialog.
+	it should also contain id referred  in data-target attribute of button or link
+	2)div class="modal-dialog" 
+	3)div class="modal-content"
+	      3.1)div class="modal-header"
+		     3.1.1)div class="modal-title"
+		  3.2)div class="model-body"
+		  3.3)div class="modal-footer"
+	3)div closes
+	2nd div closes
+	1st div closes
+
+        data-toggle= collapse
+		data-target= #name of collapse button (id- is a same name of target and another name don't run collapse)
+		
+		
+		
+		
+media objects
+
+
+1) div class="media" outer most div 
+
+1.1) media-left inside which the image code goes 
+1.2)media-body
+various classes used with media object are
+media-right
+media-left/right along with media-top/bottom/middle		
+===================================================================================
+
+Navbar
+
+<nav class="navbar navbar-inverse">
+container-fluid
+navbar-header
+navbar-brand
+<ul class="nav navbar-nav">
+  navbar navbar-inverse navbar-fixed-top
+  navbar navbar-inverse navebar-fixed-bottom
+

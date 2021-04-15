@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Html Javascript Calculator</title>
+<style>
+td,th
+{
+	border:1px solid green;
+}
+</style>
+</head>
+
+<body>
+<form name="cal" id="cal">
+<table width="200" style="border:40px solid maroon;" align="center">
+  <tr>
+    <td><textarea name="result" id="result" cols="22" rows="2"></textarea></td>
+  </tr>
+  <tr>
+    <td align="center"><input type="text" name="v1" id="v1" size="7"/>
+    <input type="text" name="operator" id="operator" size="2"/>
+    <input type="text" name="v2" id="v2" size="7"/></td>
+  </tr>
+  <tr>
+    <td>
+    	<table width="200">
+  <tr>
+    
+    <td align="center"><input type="button" name="1" id="1" value="1" onclick="inputValue(this.value);"/></td>
+    <td align="center"><input type="button" name="2" id="2" value="2" onclick="inputValue(this.value);"/></td>
+    <td align="center"><input type="button" name="3" id="3" value="3" onclick="inputValue(this.value);"/></td>
+  </tr>
+  <tr>
+    <td align="center"><input type="button" name="4" id="4" value="4" onclick="inputValue(this.value);"/></td>
+    <td align="center"><input type="button" name="5" id="5" value="5" onclick="inputValue(this.value);"/></td>
+    <td align="center"><input type="button" name="6" id="6" value="6" onclick="inputValue(this.value);"/></td>
+  </tr>
+  <tr>
+    <td align="center"><input type="button" name="7" id="7" value="7" onclick="inputValue(this.value);"/></td>
+    <td align="center"><input type="button" name="8" id="8" value="8" onclick="inputValue(this.value);"/></td>
+    <td align="center"><input type="button" name="9" id="9" value="9" onclick="inputValue(this.value);"/></td>
+  </tr>
+  
+   <tr>
+    <td align="center"><input type="button" name="0" id="0" value="0" onclick="inputValue(this.value);"/></td>
+    <td align="center"><input type="button" name="add" id="add" value="+"  onclick="operates(this.value)"/></td>
+    <td align="center"><input type="button" name="mul" id="mul" value="*" onclick="operates(this.value)"/></td>
+    </tr>
+   <tr>
+    <td align="center"><input type="button" name="sub" id="sub" value="-" onclick="operates(this.value)"/></td>
+    <td align="center"><input type="button" name="div" id="div" value="/" onclick="operates(this.value)"/></td>
+    <td align="center"><input type="button" name="mod" id="mod" value="%" onclick="operates(this.value)"/></td>
+    </tr>
+    <tr>
+     <td align="center"><input type="button" name="getResult" id="getResult" value="=" onclick="showResult();"/></td>
+    <td colspan="2" align="center"><input type="reset" name="reset" id="reset" value="Clear" /></td>
+  </tr>
+</table>
+
+    
+    </td>
+  </tr>
+</table>
+</form>
+<script>
+function operates(operator)
+{
+   document.getElementById("operator").value=operator;
+}
+
+function inputValue(inputdata)
+{
+   var operator = document.getElementById("operator").value;
+   if(operator=="")
+   {
+	   document.getElementById("v1").value=inputdata;
+	}else{
+		document.getElementById("v2").value=inputdata;
+		}
+}
+
+function showResult()
+{
+		var value1 = document.getElementById("v1").value;
+		var value2 = document.getElementById("v2").value;
+		var operator = document.getElementById("operator").value;
+		value1 = parseInt(value1);
+		value2 = parseInt(value2);
+		if(operator=="+")
+		{
+			var result = value1 + value2;
+		}
+		if(operator=="-")
+		{
+			var result = value1 - value2;
+		}
+		if(operator=="/")
+		{
+			var result = value1 / value2;
+		}
+		if(operator=="%")
+		{
+			var result = value1 % value2;
+		}
+		if(operator=="*")
+		{
+			var result = value1 * value2;
+		}
+	document.getElementById("result").value=result;
+}
+</script>
+
+</body>
+</html>

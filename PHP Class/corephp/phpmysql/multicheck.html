@@ -1,0 +1,30 @@
+<html>
+   <body>
+     <form method="POST" action="savecheck.php">
+	 <table align="center" cellpadding="7">
+	 <caption><h4>multicheck</h4></caption>
+	 <tr>
+	   <th>fullname </th>
+	   <td><input type="text" placeholder="enter name" name="fname"></td>
+	  </tr>
+	  
+	  <tr>
+	   <th>Select item </th>
+	   <td>
+	   <input type="checkbox" name="item[]" value="apple">apple
+	   <input type="checkbox" name="item[]" value="orange">orange
+	   <input type="checkbox" name="item[]" value="mango">mango
+	   <input type="checkbox" name="item[]" value="banana">banana
+	   </td>
+	  </tr>
+	  
+	  <tr>
+	  <th colspan="2">
+	  <button type="submit">Save</button>
+	  <button type="reset">clear</button>
+	  </th>
+	  </tr>
+	 </table>
+   </body>
+
+</html>

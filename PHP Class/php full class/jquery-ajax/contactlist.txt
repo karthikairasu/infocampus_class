@@ -1,0 +1,9 @@
+[
+	{"name":"Sonia","mobile":"9999999999","city":"mumbai","age":"25"},
+	{"name":"Girish","mobile":"9752662779","city":"pune","age":"25"},
+	{"name":"Rohan","mobile":"9992429999","city":"bangalore","age":"25"},
+	{"name":"Anish","mobile":"999434399","city":"hyderabad","age":"25"},
+	{"name":"Kiran","mobile":"920209999","city":"kolkata","age":"25"},
+	{"name":"Shannon","mobile":"9935399999","city":"chennai","age":"25"},
+	{"name":"Aditi","mobile":"95023336399","city":"delhi","age":"25"}
+]

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <title>Book My Trip</title>
+	 <link href="assets/css/bootstrap.css" rel="stylesheet">
+	 <link href="assets/css/font-awesome.css" rel="stylesheet">
+	 <link href="style.css" rel="stylesheet">
+	 <script src="assets/js/jquery.min.js"></script>
+	 <script src="assets/js/bootstrap.js"></script>
+   </head>
+   <body>
+	    <div class="container-fluid">
+		<header>
+		  <div class="col-sm-5 wel">
+	        <img src="images/logo.jpg" height="100px" width="140px">
+		  </div>
+		  <div class="col-sm-1"></div>
+		  <div class="col-sm-3 wel3" style="padding:14px 0px 0px 0px;">
+			<span class="fa-stack fa-1x" style="padding:12px 0px 0px 0px;">
+			  <i class="fa fa-circle fa-stack-2x icon-background"></i>
+			  <i class="fa fa-phone fa-stack-1x icon-image"></i>
+			</span>
+			<b>Call 24/7 Support <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1800 6574 765</b>
+		  </div>
+		  <div class="col-sm-2 wel4" style="padding:24px 0px 0px 0px;">
+		    <input type="search" id="search" class="form-control" placeholder="Search entire website here" style="border-radius:20px;"><i class="fa fa-search icon-search"></i>
+		  </div>
+		  </header>
+		</div>
+<nav class="navbar navbar-default" style="background-color:#4c85cc;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+    </div>
+	<div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+	    <li><a href="index.html">Home</a></li>
+	   <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Hotels
+        </a>
+        <ul class="dropdown-menu" style="background-color:blue;">
+          <li class="list-group-item"><a href="#">Hotels in india</a></li>
+          <li class="list-group-item"><a href="#">International Hotels</a></li>
+          <li class="list-group-item"><a href="#">International Hostels</a></li>
+          <li class="list-group-item"><a href="#">Popular Hostels in Asia</a></li>
+          <li class="list-group-item"><a href="#">Popular Hostels in Eroupe</a></li>
+          <li class="list-group-item"><a href="#">Activities</a></li>
+          <li class="list-group-item"><a href="#">Hotel Deals of Week</a></li>
+          
+        </ul></li>
+      <li><a href="flight.html">Flights</a></li>
+      <li><a href="vacation.html">Vacations</a></li>
+      <li><a href="hotdeals.html">Hot Deals</a></li>
+      <li><a href="travel.html">Travel Guides</a></li>
+      <li><a href="blog.html">Blogs</a></li>
+    </ul>
+	<ul class="nav navbar-nav navbar-right">
+      <button data-toggle="modal" data-target="#myModal" class="btn btn-danger navbar-btn btn1"><b>SIGN UP</b></button>
+    <button data-toggle="modal" data-target="#myModal2" class="btn btn-danger navbar-btn btn2" style="margin:0px 80px 0px 0px;"><b>MY ACCOUNT</b></button>
+	</ul>
+  </div>
+  </div>
+</nav>
+     <div class="container-fluid" style="margin-top: -22px;">
+	  <div class="row">
+	    <div class="col-sm-12" style="padding: 0px;">
+		  
+		      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner">
+					<div class="item active">
+					  <img src="images/v5.jpg" alt="Chania">
+					  <div class="carousel-caption">
+						<h3>Los Angeles</h3>
+						<p>LA is always so much fun!</p>
+					  </div>
+					</div>
+
+					<div class="item">
+					  <img src="images/v2.jpg" alt="Chicago">
+					  <div class="carousel-caption">
+						<h3>Chicago</h3>
+						<p>Thank you, Chicago!</p>
+					  </div>
+					</div>
+
+					<div class="item">
+					  <img src="images/v4.jpg" alt="New York">
+					  <div class="carousel-caption">
+						<h3>New York</h3>
+						<p>We love the Big Apple!</p>
+					  </div>
+					</div>
+				  </div>
+
+				  <!-- Left and right controls -->
+				  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+					<span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+					<span class="sr-only">Next</span>
+				  </a>
+				</div>
+
+		  
+		</div>
+		  
+	  </div><!----information---->
+		
+	  
+	  <div class="row" style="background-color:#eadfdf;">
+	    <div class="row" style="margin-right: 0px;">
+	    <div class="col-sm-1"></div>
+		<div class="col-sm-10">
+		   <div class="row" >
+		   <br>
+		   <div class="col-sm-3" style="margin-right:;"><p style="font-size: 16px;margin-top: 10px;"><b>Popular Hotels</b></p></div>
+		   <div class="col-sm-8"><hr></div>
+		   <div class="col-sm-1 " style="padding: 0px;">
+		   <i class="fa fa-arrow-circle-left" style="font-size:22px;"></i>&nbsp;&nbsp;&nbsp;
+		   <i class="fa fa-arrow-circle-right" style="font-size:22px;"></i></div>
+		    </div>
+			<div class="col-sm-4">
+			  <div class="panel" style="width:100%; height:100%;">
+			    <div class="panel-body" style="padding: 0px;">
+				  <img src="images/popular-taj.jpg" height="200px" width="100%">
+				</div>
+			    <div class="panel-footer" style="padding-right:0px;">
+			   <label style="margin:5px 80px 3px 0px;"><a>Hotel Tajmahal palace</a><p>Mumbai, India</p></label>
+			   <button class="btn btn-primary" style="">$ 2000</button>
+				</div>
+			  </div>
+			</div>
+			<div class="col-sm-4">
+			 <div class="panel" style="width:100%; height:100%;">
+			    <div class="panel-body" style="padding: 0px;">
+				  <img src="images/popular-mont.jpg" height="200px" width="100%">
+				</div>
+			    <div class="panel-footer" style="padding-right:0px;">
+			   <label style="margin:5px 80px 3px 0px;"><a>Mont Blanc</a><p>Zurich, Switzerland</p></label>
+			   <button class="btn btn-primary" style="">$ 3200</button>
+				</div>
+			  </div>
+			</div>
+			<div class="col-sm-4">
+			 <div class="panel" style="width:100%; height:100%;">
+			    <div class="panel-body" style="padding: 0px;">
+				  <img src="images/popular-mariott.jpg" height="200px" width="100%">
+				</div>
+			    <div class="panel-footer" style="padding-right:0px;">
+			   <label style="margin:5px 80px 3px 0px;"><a>Hotel Mariott</a><p>Melbourne, Australia</p></label>
+			   <button class="btn btn-primary" style="">$ 1200</button>
+				</div>
+			  </div>
+			 </div>
+		</div>
+	    <div class="col-sm-1"></div>
+	    </div>
+		
+		<div class="row" style="margin-right: 0px;">
+		  <div class="col-sm-1"></div>
+		<div class="col-sm-10">
+		   <div class="row" style="margin-right:;">
+		   <br>
+		   <div class="col-sm-3" style="margin-right:;"><p style="font-size: 16px;margin-top: 10px;"><b>Hot Deals</b></p></div>
+		   <div class="col-sm-9"><hr></div>
+		    </div>
+			<div class="col-sm-6">
+			   <img src="images/deal1.jpg" height="250px" width="100%">&nbsp;&nbsp;
+			</div>
+			<div class="col-sm-6">
+			   <img src="images/deal2.jpg" height="250px" width="100%">
+			</div>
+		</div>
+	    <div class="col-sm-1"></div>
+		</div>
+		
+		<div class="row" style="margin-right: 0px;">
+		  <div class="col-sm-1"></div>
+		  <div class="col-sm-10" style="border:1px solid white;background-color:white;">
+		  <h4><b>Latest Blogs &nbsp;&nbsp; <i class="fa fa-angle-right" style="font-size:24px"></i>&nbsp;</b>best place visit in india</h4>
+		  </div>
+		  <div class="col-sm-1"></div><br><br><br><br>
+		</div>
+	   
+	  </div>
+	    <footer style="background-color:white;">
+		  <div class="row">
+		    <div class="col-sm-1"></div>
+		    <div class="col-sm-10"><br><br>
+			  <div class="col-sm-3">
+			    <h4><b>Company</b></h4>
+				<p>About the Company</p>
+				<p>Terms and Conditions</p>
+				<p>Privacy Policy</p>
+				<p>Career</p>
+			  </div>
+			  <div class="col-sm-3">
+			    <h4><b>Customer Support</b></h4>
+				<p>Contact</p>
+				<p>FAQ</p>
+			  </div>
+			  <div class="col-sm-3">
+			    <h4><b>Follow Us</b></h4>
+				<span class="fa-stack fa-1x">
+				 <i class="fa fa-circle fa-stack-2x"></i>
+				 <i class="fa fa-facebook fa-stack-1x" style="color:white"></i>
+				</span>
+				<span class="fa-stack fa-1x">
+				 <i class="fa fa-circle fa-stack-2x"></i>
+				 <i class="fa fa-tumblr fa-stack-1x" style="color:white"></i>
+				</span>
+				<span class="fa-stack fa-1x">
+				 <i class="fa fa-circle fa-stack-2x"></i>
+				 <i class="fa fa-linkedin fa-stack-1x" style="color:white"></i>
+				</span>
+				<span class="fa-stack fa-1x">
+				 <i class="fa fa-circle fa-stack-2x"></i>
+				 <i class="fa fa-youtube fa-stack-1x" style="color:white"></i>
+				</span>
+				<span class="fa-stack fa-1x">
+				 <i class="fa fa-circle fa-stack-2x"></i>
+				 <i class="fa fa-google-plus fa-stack-1x" style="color:white"></i>
+				</span>
+			  </div>
+			  <div class="col-sm-3">
+			    <form action="#" method="POST">
+			    <h4><b>Don't miss our deals and offers</b></h4>
+				<p><input type="text" class="form-control" placeholder="Enter your Email Id" required/><button type="submit" class="btn btn-primary" style="margin:3px;">Subscribe</button></p>
+				</form>
+			  </div>
+			</div>
+		    <div class="col-sm-1"></div>
+		    
+		  </div>
+		  <br><br><br>
+		  <p style="margin-left:120px;color:#b3b3ad">Copyright(c)2013,All rights reserved</p>
+		</footer>
+		
+		<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Signup page</h4>
+        </div>
+        <div class="modal-body">
+          
+		   <form action="#" method="POST">
+		    <div class="form-group">
+		  <label>Email</label>
+		  <input type="email" class="form-control" required>
+		</div>
+		
+		<div class="form-group">
+		  <label>Phone</label>
+		  <input type="text" class="form-control" required>
+		</div>
+		
+		<div class="form-group">
+		  <label>Password</label>
+		  <input type="password" class="form-control" required>
+		</div>
+		<div class="form-group">
+		  <label>Confirm Password</label>
+		  <input type="password" class="form-control" required>
+		</div>
+		  
+		  <button type="submit" class="btn btn-success">Submit</button>
+		   </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      </div>
+      </div>
+	  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Login page</h4>
+        </div>
+        <div class="modal-body">
+          <form action="#" method="POST">
+		    <div class="form-group">
+		  <label>Email</label>
+		  <input type="email" class="form-control" required>
+		</div>
+	
+		<div class="form-group">
+		  <label>Password</label>
+		  <input type="password" class="form-control" required>
+		</div>
+	
+		  <button type="submit" class="btn btn-success">Submit</button>
+		   </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      </div>
+      </div>
+		
+	 </div>
+   </body>
+</html>

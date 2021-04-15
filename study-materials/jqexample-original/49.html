@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery.min.js"></script>
+</script>
+<script>
+function afterText()
+{
+var txt1="<b>I </b>";                    // Create element with HTML
+var txt2=$("<i></i>").text("love ");     // Create with jQuery
+var txt3=document.createElement("big");  // Create with DOM
+txt3.innerHTML="jQuery!";
+$("img").after(txt1,txt2,txt3);          // Insert new elements after img
+}
+</script>
+</head>
+<body>
+
+<img src="http://w3schools.com/images/w3jquery.gif" alt="jQuery" width="100" height="140">
+<br><br>
+<button onclick="afterText()">Insert after</button>
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+codeigniter:
+    it is a MVC framework, where M stands for Models,
+	v stands for views
+	c stands for controller
+	
+	Structure of codeigniter:
+	
+	application->
+	 1)config folder ( for configuration settings)
+	     a)config.php
+		   1.base-url
+		   make changes on line 26:
+		   set the base url which is as below
+		   eg:$config['base_url'] = 'http://localhost/codeigniterproject/';
+		   
+		   2.set the encryption key: 
+		   this is set when we deal with sessions
+		   if u dont set u will get the error......
+		   
+		   3.removing index.php file
+-----------------------------------------------------------------------------------------		   
+		 b)constants.php
+		     define the constant named BASEURL and set its value to
+			 eg:define('BASEURL','http://localhost/codeigniterproject/');
+-----------------------------------------------------------------------------------------			 
+			 
+		 c)database.php
+		      give the username password if any,database name on line no 79,80,81
+		 
+------------------------------------------------------------------------------------------		 
+		 d)routes.php
+		     a)if we make our controller we can change the default controller which is at
+			 line no 52 "welcome " to "name of controller we made"
+			 
+			 b)we can also maintain the routes in this file.
+---------------------------------------------------------------------------------------------			 
+	 2)Models:deals with database queries
+	 3)views: deals with design
+	 4)controllers:acts as an intermediator between models and views
+-------------------------------------------------------------------------	 
+	Models:
+	
+----------------------------------------------------------------------------
+	
+	views: deals with all design pages ie.all
+	your design pages pages will be saved in views folder
+	
+---------------------------------------------------------------------------	
+    controller :
+	   ->it acts as a intermediater between views and model
+	   ->every controller must have first function as index()
+	   ->every controller must extent the parent class CI_controller
+	   note:
+	     a)No page is called directly in codeigniter
+		 b)it is to be called through the controller's function
+		 c)index()function is the first function called by the controller,
+		 usually we call the page which we want to display first on our 
+		 website inside the index()
+		 
+	while calling the page we must type
+    syntax:localhost/name of folder/index.php/name of controller/function
+	       which calling that page
+	ex:http://localhost/codeigniterproject/index.php/welcome/homepage	   
+---------------------------------------------------------------------------------------
+  routes.php
+  
+       1. $routes-> to change your controller name first
+		
+	   2. $routes['filename.php']='controllername/functionname';
+		
+	Ex:	$routes['addblog.php']='blog/addblog';
+	
+	   3.<?php echo BASEURL;?>index.php/blog/updateblog to change->updateblog.php(url rewriting)
+	   
+	      header("Location:viewblog.php");->to controller change.
+--------------------------------------------------------------------------------------
+		flow:
+		
+		    1.views
+			2.routes->here it will find the controller and function name
+			3.controller
+			4.models
+			5.controller
+			6.views.

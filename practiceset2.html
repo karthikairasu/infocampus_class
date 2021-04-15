@@ -1,0 +1,224 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="assets/css/bootstrap.css">
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.js"></script>
+		<script>
+			function passcheck()
+			{
+				var a=document.getElementById("pass1").value;
+				var b=document.getElementById("pass2").value;
+				if(a!=b)
+				{
+					document.getElementById("passerr").innerHTML="wrong password";
+					document.getElementById("passerr").style.color="red";
+				}
+				else{
+					document.getElementById("passerr").innerHTML="password matched";
+					document.getElementById("passerr").style.color="green";
+				}
+			}
+			function passchecklogin()
+			{
+				var a=document.getElementById("pass1").value;
+				var b=document.getElementById("logpass").value;
+				var c=document.getElementById("mailreg").value;
+				var d=document.getElementById("maillog").value;
+				if(c!=d)
+				{
+					document.getElementById("maillog").value="";
+					document.getElementById("wrong1").innerHTML="wrong email id";
+					document.getElementById("wrong1").style.color="red";
+				}
+				if(a!=b){
+					document.getElementById("logpass").value="";
+					document.getElementById("wrong2").innerHTML="wrong password";
+					document.getElementById("wrong2").style.color="red";	
+				}
+				if(c==d && a==b)
+				{
+					alert("sucessfull");	
+				}
+			}
+			function registration()
+			{
+				var a=document.getElementById("fname").value;
+				var b=document.getElementById("lname").value;
+				var c=document.getElementById("pass1").value;
+				var d=document.getElementById("pass2").value;
+				var e=document.getElementById("mailreg").value;
+				if(a.length==0)
+				{
+					document.getElementById("empty").innerHTML="this field shoud not be empty";
+					document.getElementById("empty").style.color="red";
+				}
+				else if(b.length==0)
+				{
+					document.getElementById("empty1").innerHTML="this field shoud not be empty";
+					document.getElementById("empty1").style.color="red";
+				}
+				else if(c.length==0)
+				{
+					document.getElementById("empty2").innerHTML="this field shoud not be empty";
+					document.getElementById("empty2").style.color="red";
+				}
+				else if(d.length==0)
+				{
+					document.getElementById("empty3").innerHTML="this field shoud not be empty";
+					document.getElementById("empty3").style.color="red";
+				}
+				else if(e.length==0)
+				{
+					document.getElementById("empty4").innerHTML="this field shoud not be empty";
+					document.getElementById("empty4").style.color="red";
+				}
+				else{
+					var p=confirm("you did not fill up all fields.continue?");
+					if(p==true)
+					{
+						alert("registration successfull");
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		
+			<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target="#col">
+						<span class="glyphicon glyphicon-bar"></span>
+						<span class="glyphicon glyphicon-bar"></span>
+						<span class="glyphicon glyphicon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand"><h4>HANKOK</h4></a>
+				</div>
+				<div id="col" class="collapse navbar-collapse">
+					<div class="navbar-body">
+						<ul class="nav navbar-nav" style="margin-left:200px">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Career</a></li>
+							<li><a href="#">Portfolio</a></li>
+							<li><a href="#">AboutUs</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#" data-toggle="modal" data-target="#reg">Register</a>
+								<div id="reg" class="modal fade" role="dialog">
+									<div class="modal-dialog">
+										
+										<div class="modal-content">
+											<div class="modal-header">
+												<label>Enter your details:</label>
+												<a data-dismiss="modal" class="close">&times;</a>
+											</div>
+											<div class="modal-body">
+												<div class="row">
+													<div class="col-sm-6">
+														<div class="row form-group">
+															<div class="col-sm-3"><label>First Name:</label></div>
+															<div class="col-sm-9">
+																<input id="fname" type="text" class="form-control">
+																<p id="empty"></p>
+															</div>
+														</div>
+														<div class="row form-group">
+															<div class="col-sm-3"><label>Password:</label></div>
+															<div class="col-sm-9">
+																<input id="pass1" name="pasword" type="password" class="form-control">
+																<p id="empty2"></p>
+															</div>
+														</div>
+														<div class="row form-group">
+															<div class="col-sm-3"><label>email:</label></div>
+															<div class="col-sm-9">
+																<input id="mailreg" name="email" type="text" class="form-control">
+																<p id="empty4"></p>
+															</div>
+														</div>
+														<div class="row form-group">
+															<div class="col-sm-3"><label>Full Address:</label></div>
+															<div class="col-sm-9">
+																<textarea class="form-control"></textarea>
+															</div>
+														</div>
+													</div>
+													<div class="col-sm-6">
+														<div class="row form-group">
+															<div class="col-sm-3"><label>Last Name:</label></div>
+															<div class="col-sm-9">
+																<input id="lname" type="text" class="form-control">
+																<p id="empty1"></p>
+															</div>
+														</div>
+														<div class="row form-group">
+															<div class="col-sm-3"><label>Confirm Password:</label></div>
+															<div class="col-sm-9">
+																<input id="pass2" name="cpasword" onblur="passcheck()" type="password" class="form-control">
+																<p id="empty3"></p>
+																<p id="passerr"></p>
+															</div>
+														</div>
+														<div class="row form-group">
+															<div class="col-sm-3"><label>City:</label></div>
+															<div class="col-sm-9">
+																<select class="form-control">
+																	<option>choose city:</option>
+																	<option>kolkata</option>
+																	<option>bangalore</option>
+																	<option>pune</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button  onclick="registration()" class="btn btn-success">Register</button>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="#" data-toggle="modal" data-target="#log">Login</a>
+								<div id="log" class="modal fade" role="dialog">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<label>Enter your details:</label>
+												<a data-dismiss="modal" class="close">&times;</a>
+											</div>
+											<div class="modal-body">
+												<div class="row">
+													<div class="form-group">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+															<input type="text" id="maillog" class="form-control" placeholder="email">
+														</div>
+														<p id="wrong1"></p>
+													</div>											
+													<div class="form-group">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+															<input id="logpass" type="password" class="form-control" placeholder="password">
+														</div>
+														<p id="wrong2"></p>
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button class="btn btn-success" onclick="passchecklogin()">login</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		
+	</body>
+</html>

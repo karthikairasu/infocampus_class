@@ -1,0 +1,146 @@
+Classes in bootstrap
+
+
+				.col-xs 	.col-sm 	.col-md 	.col-lg
+Screen width 	<576px 		>=768px 	>=992px 	>=1200px
+
+1)container:it leaves left and right margin
+2)container-fluid:It is a full width container
+Note:you should not have container with in container-fluid 
+and vice-versa.You can have more than one container or container-fluid 
+with a page but it should not be one inside the other.
+
+3)well:gives a gray background
+4)classes for ul tag
+	<ul class="list-group"> for creating list
+	<li class="list-group-item">write some text</li>
+	
+	creating normal  horizontal nav bar
+	1)<ul class="nav nav-tabs">(or)
+	2)<ul class="nav nav-pills">
+	creating normal vertial nav bar
+	we use nav-stacked class along with above two classes.
+	
+	
+5)classes for img tag
+
+	img-thumbnail
+	img-circle
+	img-rounded
+	img-responsive
+6)classes for giving different backgrounds
+	bg-primary
+	bg-success
+	bg-warning
+	bg-danger
+	bg-info
+7)classes for button
+	btn btn-success
+	btn btn-warning
+	btn btn-danger
+	btn btn-info
+	btn btn-primary
+	btn btn-link
+8)glyphicons are the smaller icons
+9)classes for table
+	table
+	table table-bordered
+	table table-striped
+	table table-hover
+	table table-condensed
+	
+	table-responsive::-> note :it is not used inside the table tag but used inside div
+			ur table should be lengthy enough to make the table-responsive work
+
+10)forms
+
+11)alert
+
+12)pager
+
+13)pagination
+
+14)
+progress
+progress-bar 
+attribute :role=progressbar
+aria-valuenow
+aria-valuemin
+aria-valuemax
+style="width:50%"
+    .progress-bar-success
+    .progress-bar-info
+    .progress-bar-warning
+    .progress-bar-danger
+
+Add class .progress-bar-striped to add stripes to the progress bars:
+
+progress-bar-striped active"
+
+
+collapse:
+for collapse we need jquery.min.js
+and bootstrap.js file ,It should be called in sequence 1)jquery.min.js 2) bootstrap.js 
+
+we can use a button or anchor tag ie.(<a></a>) with the two attributesgiven below
+1)data-toggle=collapse (for collapse effect)
+2)data-target="#id given to div which has to be targetted after click the button or link"
+note :you haveto use class="collapse" for the div which is tobe targetted,
+along with the id referred data-target attribute given for button or link
+
+Modal:
+for modal we need jquery.min.js
+and bootstrap.js file ,It should be called in sequence 1)jquery.min.js 2) bootstrap.js 
+
+we can use a button or anchor tag ie.(<a></a>) with the two attributesgiven below
+1)data-toggle=modal (for modal effect)
+2)data-target="#id given to div which has to be targetted after click the button or link"
+note :you haveto use class="modal fade" for the div which is tobe targetted,
+along with the id referred in the data-target attribute given for button or link
+
+we have following classes for making
+ the modal which are used along with the <div> tag
+	
+1)class=modal fade for outer most div ,it should also have attribute called as role,with the 
+	value called as dialog. 
+	it should also contain id referred in data-target attribute of button or link
+	2)div class="modal-dialog"
+	3)div class="modal-content"
+		3.1)div class="modal-header">
+			3.1.1)div class="modal-title"
+		3.2)div class="modal-body"
+		3.3)div class="modal-footer">
+	3)div closes
+	2nd div closes
+	1st div closes
+	
+	
+Media objects
+
+1)div class="media" outer most div
+1.1)media-left inside which the image code goes
+1.2)media-body
+various classes used with media object are
+media-right
+media-left/right along with media-top/bottom/middle
+
+Navbar
+
+<nav class="navbar navbar-inverse">
+container-fluid
+navbar-header
+navbar-brand
+<ul class="nav navbar-nav">
+navbar navbar-inverse navbar-fixed-top
+navbar navbar-inverse navbar-fixed-bottom"
+
+ <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+
+

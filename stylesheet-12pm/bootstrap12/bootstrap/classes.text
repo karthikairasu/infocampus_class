@@ -1,0 +1,63 @@
+Classes in Bootstrap :
+
+1)container : it leaves left and right margin.
+
+2)container-fluid : it is a full width container.
+
+Note : You should not have container within in container-fluid and vice-versa. 
+		You can have more than one container  or container-fluid with a page but it shoudl not be one inside the  other.
+		
+3)well : it gives grey background
+--------------------------------------------------------------------------------
+4) classes for ul tag :
+	
+	<ul class="list-group"> For creating list
+	<li class="list-group-item">write some text</li>
+	</ul>
+	
+	Creating normal horizontal nav bar :
+		1)<ul class="nav nav-tabs">(or)
+		2)<ul class="nav nav-pills">
+		
+	Creating normal vertical nav bar we use nav-stacked class along with above two classes.
+-----------------------------------------------------------------------
+5)Classes for img tag :
+
+	img-thumbnail
+	img-circle
+	img-rounded
+	img-responsive
+----------------------------------------------------------------------------	
+6) Classes giving different backgrounds :
+
+	bg-primary
+	bg-success
+	bg-warning
+	bg-danger
+	bg-info
+	
+7)Classes for button :
+
+	btn btn-success
+	btn btn-warning
+	btn btn-danger
+	btn btn-info
+	btn btn-primary
+	btn btn-link
+	
+8) Glyphicons are smaller icons : You can get it from w3shcool
+
+9)Classes for tables:
+
+	table
+	table table-borderd
+	table table-striped
+	table table-condensed
+	table table-hover
+	table-responsive -> (note : it is not used inside the table tag but used inside the div tag.)
+					  ->Your table should be lengthy enough to make the table-responsible work.
+
+	
+	
+	
+	

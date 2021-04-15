@@ -1,0 +1,249 @@
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=
+
+                    -= Footprinting And The Basics Of Hacking =-
+
+                             -= By Manic Velocity =-
+                        -= manicvelocity@geeksyndicate.net =-
+                           
+                           -= http://www.2600slc.org =-
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+
+¥ What Is Footprinting?
+
+Footprinting is the first and most convenient way that hackers use to gather information 
+about computer systems and the companies they belong to.  The purpose of footprinting to 
+learn as much as you can about a system, it's remote access capabilities, its ports and 
+services, and the aspects of its security.
+
+In order to perform a successful hack on a system, it is best to know as much as you can, 
+if not everything, about that system.  While there is nary a company in the world that 
+isn't aware of hackers, most companies are now hiring hackers to protect their systems.  
+And since footprinting can be used to attack a system, it can also be used to protect it.  
+If you can find anything out about a system, the company that owns that system, with the 
+right personell, can find out anything they want about you.
+
+In this talk, I will explain what the many functions of footprinting are and what they do. 
+I'll also footprint everyone's favorite website, just to see how much info we can get on 
+Grifter.
+
+¥ Open Source Footprinting
+
+Open Source Footprinting is the easiest and safest way to go about finding information 
+about a company.  Information that is available to the public, such as phone numbers, 
+addresses, etc.  Performing whois requests, searching through DNS tables, and scanning 
+certain IP addresses for open ports, are other forms of open source footprinting.  Most 
+of this information is fairly easy to get, and getting it is legal, legal is always good.
+
+Most companies post a shit load of information about themselves on their website.  A lot 
+of this information can be very useful to hackers and the companies don't even realize it.  
+It may also be helpful to skim through the webpage's HTML source  to look for comments.  
+Comments in HTML code are the equivalent to the small captions under the pictures in high 
+school science books.  Some comments found in the HTML can hold small tid-bits of info 
+about the company, otherwise not found anywhere else.
+
+¥ Network Enumeration
+
+Network Enumeration is the process of identifying domain names and associated networks.  
+The process is performing various queries on the many whois databases found on the 
+internet.  The result is the hacker now having the information needed to attack the system 
+they are learning about.  Companie's domain names are listed with registrars, and the 
+hacker would simply query the registrar to obtain the information they are looking for.  
+The hacker simply needs to know which registrar the company is listed with.  There are 
+five types of queries which are as follows:
+
+	Registrar Query:  This query gives information on potential domains matching the 
+	target.
+
+	Organizational Query:  This is searching a specific registrar to obtain all 
+	instances of the target's name.  The results show many different domains associated
+	with the company.
+
+	Domain Query:  A domain query is based off of results found in an organizational 
+	query.  Using a domain query, you could find the company's address, domain name, 
+	administrator and his/her phone number, and the system's domain servers.  The 
+	administrative contact could be very useful to a hacker as it provides a purpose
+	for a wardialer.  This is also where social engineering comes into play.  But 
+	that's a talk for another time.  Many administrators now post false phone numbers 
+	to protect themselves from this. 
+
+	Network Query:  The fourth method one could use the American Registry for Internet 
+	Numbers is to discover certain blocks owned by a company.  It's good to use a 
+	broad search here, as well as in the registrar query.
+
+	POC Query:  This query finds the many IP adresses a machine may have.
+
+¥ DNS Interrogation
+
+After gathering the information needed using the above techniques, a hacker would begin to 
+query the DNS.  A common problem with system adminstrators is allowing untrusted, or worse, 
+unknown users, to perform a DNS Zone Transfer.  Many freeware tools can be found on the 
+internet and can be used to perform DNS interrogation.  Tools such as nslookup, for PC, and 
+AGnet Tools, for Mac, are some common programs used for this.
+
+¥ Other Helpful Techniques Used In Footprinting
+
+	Ping Sweep:  Ping a range of IP addresses to find out which machines are awake.
+
+	TCP Scans:  Scan ports on machines to see which services are offered.  TCP scans 
+	can be performed by scanning a single port on a range of IPs, or by scanning a 
+	range of ports on a single IP.  Both techniques yeild helpful information.
+
+	UDP Scans:  Send garbage UDP packets to a desired port.  I normally don't perform 
+	UDP scans a whole lot because most machines respond with an ICMP 'port unreachable' 
+	message.  Meaning that no service is available.
+
+	OS Indentification:  This involves sending illegal ICMP or TCP packets to a machine.  
+
+The machine responds with unique invalid inputs and allows the hacker to find out what the 
+target machine is running. 
+
+¥ Let's Try It!
+
+Ok, I've explained as best I can what the functions of footprinting are.  Now we're going 
+to actually use them.  Let's footprint 2600slc.org to find out as much as we can about 
+Grifter.  Keep in mind that I am using a mac and I don't know the necessary tools to use 
+on a PC when footprinting.  For all the procedures listed below, I will be using a utility 
+known as AGnet Tools version 2.5.1.  This application allows you to use all of the basic 
+funtions of footprinting in one easy to use program.  I know there are other security 
+auditing tools for the mac out there which offer more functions, but AGnet is the most 
+user friendly program I can find.
+
+Now, just by looking at the website, we know where the 2600 meetings are held and at what 
+time.  This information really isn't useful right now because you obviously managed to find 
+your way here.  Good for you.  We find that Grifter also runs staticdischarge.org, and by 
+going further into the website, we find that Grifter has three main email contacts which 
+are:
+
+	grifter@staticdischarge.com
+	grifter@linuxninjas.org
+	and grifter@hackinthebox.org
+
+Ok, we have Grifter's three emails which we will use later.  But for now, let's get some 
+information on 2600slc.org.  We type in 2600slc.org into the prompt of the Name Lookup 
+window in AGnet tools, and our result is this IP address:
+
+	207.173.28.130
+
+But wait, just out of curiosity, what is the IP of staticdischarge.org?  We type the domain 
+into the Name Lookup prompt and we are given the same IP.  We can safely say that 
+2600slc.org and staticdischarge.org are hosted on the same box.  But if I were to do a 
+reverse name lookup on the IP, which domain will come up?  2600slc.org or 
+taticdischarge.org?  Neither, the result is linuxninjas.org.  Ah ha!  So linuxninjas.org 
+is the name of the box hosting 2600slc.org and staticdischarge.org.  Neat!
+
+So now that we have the IP, let's check to see if linuxninjas is awake.  We type the IP 
+into the prompt in the Ping window.  We'll set the interval between packets to 1 
+millisecond.  We'll set the number of seconds to wait until a ping times out to 5.  We'll 
+set the ping size to 500 bytes and we'll send ten pings.
+
+Ten packets sent and ten packets received.  Linuxninjas.org returned a message to my 
+computer within an average of 0.35 seconds for every packet sent.  Linuxninjas is alive 
+and kicking.
+
+Moving on.  Remember Grifter's three email addresses?  What can we do with those?  This is 
+where Finger comes in.  A lot of businesses nowadays don't run finger, because it reveals 
+too much information about any one user on a system.  But of course, it never hurts to try.  
+Let's enter Grifter's emails into the prompt in the Finger window.
+
+	grifter@staticdischarge.com = Finger failed.
+	grifter@linuxninjas.org = Finger failed.
+	grifter@hackinthebox.org = Finger failed.
+
+Like I said, a lot of systems no longer use finger.  
+
+Ok, since Finger gave us bupkuss, let's move on to Whois.  We open the Whois window and 
+type linuxninjas.org into the Query prompt, and whois.networksolutions.com into the Server 
+prompt.  This means we'll be asking Network Solutions to tell us everything they know about 
+linuxninjas.org.
+
+The result is this laundry list of info:
+
+	Registrant:
+	Static Discharge (LINUXNINJAS-DOM)
+	p.o.box 511493
+	SLC, UT 84151
+	US
+
+	Domain Name: LINUXNINJAS.ORG
+
+	Administrative Contact, Billing Contact:
+	Wyler, Neil  (NWB43)  grifter212@uswest.net
+	Static Discharge
+	p.o.box 511493
+	SLC, UT 84151
+	801-773-6103
+
+	Technical Contact:
+	sutton, kenny  (KS16306)  root@HEKTIK.COM
+	hektik
+	p.o.box 511493
+	SLC, UT 84151
+	877-828-3849
+
+	Record last updated on 17-Aug-2001.
+	Record expires on 11-Aug-2002.
+	Record created on 11-Aug-2000.
+	Database last updated on 12-Dec-2001 04:06:00 EST.
+
+	Domain servers in listed order:
+
+	NS1.HEKTIK.ORG	207.173.28.130
+	NS2.HEKTIK.ORG	64.81.168.80
+
+Wow.  Check this out.  But remember that a lot of sysadmins post false info into their 
+registrars database.  So these phone numbers could be payphones, and these addresses could 
+be whore houses.  But as far as we know, we now have Grifter's real name, his address and 
+his phone number.  We also have the same for Kenny.  We can see when Grifter registered 
+linuxninjas.org, when it expires, and when it was last updated.  And look!  We have 
+another one of Grifter's email addresses.  Lets run it through Finger just for kicks.
+
+	grifter212@uswest.net = Finger failed.  Oh well.
+
+Well, now that we have a bit of personal info on Grifter, let's check back with 
+linuxninjas.org.
+
+A corner stone of footprinting is Port Scanning.  Let's port scan linuxninjas.org and see 
+what kind of services are running on that box.  We type in the linuxninjas IP into the Host 
+prompt of the Port Scan window.  We'll start searching from port number 1, and we'll stop 
+at the default Sub7 port, 27374.  Our results are:
+
+	21	TCP	ftp
+	22	TCP	ssh	SSH-1.99-OpenSSH_2.30
+	25	TCP	smtp
+	53	TCP	domain
+	80	TCP	www
+	110	TCP	pop3
+	111	TCP	sunrpc
+	113	TCP	ident
+
+Just by this we know that Grifter is running a website and email, (duh), using POP3, 
+(Post Office Protocal version 3), SUNRPC (SUN Remote Procedure Call), and ident.  This 
+could lead to some fun trying to access his FTP, or telnetting to his SMTP and sending 
+your mom midget porn through his email address.
+
+¥ Conclusion
+
+All of these functions are very basic.  They are simpe and easy to use.  And above all, 
+they are legal.  As I said in the introduction, legal is always good.  Whenever 
+footprinting a system, keep in mind that you could find something that you aren't supposed 
+to see.  If this happens, contact the sysadmin and let them know of it.  You could get into 
+serious trouble if you misuse the information you find.  Also let them know of any bugs or 
+exploits you may find.  Who knows?  If you help them out enough, you could land a job with 
+them protecting their system.  Nothing could be greater than getting paid to do what you do 
+best.  But try not to let money be your motivation.  Hacking is all about learning.
+
+There is definetely more to learn about Grifter and his little websites.  Like why I found 
+him sneaking around my backyard last night.  But I guess we'll have to delve into that 
+later.
+
+Especially be careful when trying to access any open ports you may find.  Brute forcing an 
+ftp or a web server can also land you in a pile.  If anything you try to access requires a 
+password, you probably shouldn't be there.  But like I said, if you access something 
+important and it didn't ask you for a password, let the sysadmin know of it.  
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-
+© 2600SLC.ORG 2002
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-

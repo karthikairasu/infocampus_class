@@ -1,0 +1,8 @@
+xml stands for (xtensible markup language)
+   it has nothing as predefined
+   all is depend on user defined tags.
+   but all user defined tags are case sencitive
+   every xml should have a parent tag. but only one 
+   child tag has no limitation
+   xml use to store the data same like mysql.
+   but it is not secure and not suitable for bulk storage like mysql.

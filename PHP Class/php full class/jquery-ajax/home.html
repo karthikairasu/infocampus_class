@@ -1,0 +1,112 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="assets/css/bootstrap.css">
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.js"></script>
+		<script>
+			$(function()
+			{
+				$("#home").click(function(){
+					
+					$.ajax({
+						url:"myhome.html",
+						type:"get",
+						success:function(response)
+						{
+							$("#msg").html(response);
+						}
+					});
+				});		// home event ends here
+				
+				$("#aboutus").click(function()
+				{
+				$.ajax({
+						url:"aboutus.html",
+						type:"get",
+						success:function(response)
+						{
+							$("#msg").html(response);
+						}
+					});
+				});		// about event ends here
+				
+				$("#contact").click(function()
+				{
+				$.ajax({
+						url:"contact.html",
+						type:"get",
+						success:function(response)
+						{
+							$("#msg").html(response);
+						}
+					});
+				});		// contact event ends here
+				
+				
+				$("#login").click(function()
+				{
+				$.ajax({
+						url:"login.html",
+						type:"get",
+						success:function(response)
+						{
+							$("#msg").html(response);
+						}
+					});
+				});			//login ends here
+				
+				$("#contactlist").click(function()
+				{
+				$.ajax({
+						url:"contactlist.txt",
+						type:"get",
+						success:function(response)
+						{
+							var alluser = JSON.parse(response);		//converting json to array
+							//alert(alluser.length);
+							// above line finds length of array
+							
+							var mydata="<table  class='table  table-bordered table-hover'>";
+							
+							mydata = mydata + "<thead><tr class='danger'> <th>Name</th> <th>Mobile</th> <th>City</th> <th>Age</th><thead>";
+							for(var i=0;i<alluser.length;i++)
+							{
+								mydata = mydata +"<tbody>"+ "<tr>";
+								mydata = mydata + "<td>" +alluser[i].name + "</td>";
+								mydata = mydata + "<td>" +alluser[i].mobile + "</td>";
+								mydata = mydata + "<td>" +alluser[i].city + "</td>";
+								mydata = mydata + "<td>" +alluser[i].age + "</td>";
+								mydata = mydata + "</tr>"+"</tbody>";
+							}
+							mydata = mydata + "</table>";
+							$("#msg").html(mydata);
+						}
+					});
+				});				//contactlist ends here
+			});	// jquery ends here
+		</script>
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+					<ul class="nav navbar-nav ">
+						<li><a href="#" id="home">Home</a></li>
+						<li><a href="#" id="aboutus">About</a></li>
+						<li><a href="#" id="contact">Contact Us</a></li>
+						<li><a href="#" id="login">Login</a></li>
+						<li><a href="#" id="contactlist">Contactlist</a></li>
+					</ul>
+			</div>
+		</nav>
+		
+		
+		<div align="center" id="msg">
+			<div class="col-sm-12" id="msg">
+				No Data
+			</div>
+		</div>
+	</body>
+</html>

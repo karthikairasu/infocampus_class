@@ -1,0 +1,19 @@
+Drupal is content management software -(cms) tool
+ use to create Website using ready made modules.
+    drupal is devided into 3 modules
+	
+	   1. core module - (all the contents get downloaded with drupal)
+	   
+	   2. contributed module - (for specific functionality we required download separate 
+	   module from drupal.org)which is given by different drupal developer to drupal.org
+	   
+	   3. Custom Module - if according to our requirement we are unable to find a contrubuted 
+	   module from drupal.org. then we have to develop out own module according to requirement.
+-------------------------------------------------------------------------------------------------
+	 Types of Users in drupal
+      1. Admin - who can add and delete content from website.
+    
+      2. Authenticated user - those user who have created account in website
+    
+      3. Anonymous User - Just visitors on your website
+-------------------------------------------------------------------------------------------------	  

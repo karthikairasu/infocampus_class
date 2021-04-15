@@ -1,0 +1,86 @@
+  css: cascading style sheet
+  types of css
+  1.inline
+  2.internal
+  3.external
+  4.import
+  --------------------------
+ list of properties in css.
+    
+   background (2)
+   height(3)
+            height:100px (increment/decrement both are locked)
+			min-height:100px (increment(open) decrement(locked)
+			height:auto; (both is open) if no contents no visibility.
+   width(4)
+           width:800px (fixed)
+		   width:80% (not fixed will work according to device width)
+           min-width;
+           max-width;		   
+   float:it will change the scope of a block level tag to inline
+        a.left :it arrange the contents from left to right (LTR)
+        b.Right:it arrange the contents from right to left (RTL)
+---------------------------------------------------------------------
+margin: it apply gap for a container form following sides.
+      margin:20px->it apply 20px gap form all side.
+      margin:auto->it will arrange the container into center of present area.	  
+	  margin-top:20px
+	  margin-left:20px
+	  margin-right:20px
+	  margin-bottom:20px
+----------------------------------------------------------------------
+
+padding: it apply gap inside of container.
+        padding:20px--->all side gap of 20px
+         padding-top:20px;
+	     padding-left:20px;
+	     padding-right:20px;
+	     padding-bottom:20px;		
+------------------------------------------------------------------------		
+ border:
+         border:2px solid red;  (2px is thickness)
+                                 (solid is style of border)
+                                 (red is color of border)
+  border-top:
+  border-left:
+  border-right:
+  border-bottom:
+  ---------------------------------------------------------------------------
+  border-radius: 20px all 4 corner will be minus by 20px;
+  border-radius: 20px 10px 40px 50px
+  it work like clock.
+  
+  ---------------------------------------------------------------------------
+  Dis adv inline:
+        1. it is one to one (write once and use once).
+		2. because of 1 to 1 code redundancy will happen.
+		3. because of redundancy file weight will increase.
+		4. if file weight will increase then more disk space is required. 
+		   page loading will take long time....
+		   because of slow page loading customer will close the website.
+		5. google search will never ever display those website that have
+           inline css.
+
+Adv: it have higher priority than external/import/internal	   
+
+====================================================================================
+     internal css is 1 to many (write once and use many times)
+	        a.css by tag name.
+			     ==>if in one page 1 type of tag used only one time.
+			b.css by id
+			     ==>if in one page 1 type of tag used many times
+				 but UI/structure is different.
+			c.css by class.
+			      => if in one page 
+			d.css by tag group.
+			e.css by parent and respective child
+
+_____________________________________________________________________________________________________			
+			
+			
+
+  
+  
+  
+		
+	  

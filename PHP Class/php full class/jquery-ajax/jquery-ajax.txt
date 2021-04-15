@@ -1,0 +1,4 @@
+17/04/2018 evening
+jquery-ajax folder stored in htdocs in xampp.
+to run write
+->localhost/jquery-ajax/home.html in browser

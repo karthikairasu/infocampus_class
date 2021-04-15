@@ -1,0 +1,12 @@
+nivsbhbvhabdus jandj dsajnjcsn csajnanc
+ahsbuhjs
+aouih
+ajcbhbcsahscan jsab u jasiuisuasijiaujk asjniu  g s vags  dhv u bu y  u uyb uy bu hbu b ub ub ubbuhbhj
+hbubcbiua
+nibhbucia nainio nina oinoina msuHOA OIONC
+CNGCSYUCSAHBcjs vu
+ncihbhbska bhsagDHBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBbbbbbbbbbbb<p>my file update from (File Updated On : 2018-04-20 08:35:38)</p><p>kbscahkbjjh (File Updated On : 2018-04-23 06:53:07)</p>
+
+<img src="assets/images/profile/<?php echo $_SESSION['photo']>" height="100px" width="100px">
+$_SESSION['aid']=$row->id;
+$_SESSION['photo']=$row->image;

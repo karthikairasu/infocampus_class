@@ -1,0 +1,181 @@
+.wel{
+	     background-color:white;
+		 padding:8px 0px 8px 110px;
+	   }
+	   .icon-background{
+	    color:black;
+	   }
+	   .icon-image{
+	   color:white;
+	   }
+	   @media only screen and (min-width: 300px){
+       #search{
+	    position:relative;
+	   }
+	   .icon-search{
+	    position:absolute;
+		left:200px;
+		top:35px;
+	   } 
+       }
+	   @media only screen and (min-width: 768px){
+       #search{
+	    position:relative;
+	   }
+	   .icon-search{
+	    position:absolute;
+		left:100px;
+		top:35px;
+	   } 
+       }
+	   @media only screen and (min-width: 1024px){
+       #search{
+	    position:relative;
+	   }
+	   .icon-search{
+	    position:absolute;
+		left:150px;
+		top:35px;
+	   } 
+       }
+	   @media only screen and (min-width: 1200px){
+       #search{
+	    position:relative;
+	   }
+	   .icon-search{
+	    position:absolute;
+		left:190px;
+		top:35px;
+	   } 
+       } 
+	   .navbar-default .navbar-nav > li > a {
+	   color:white;
+	   font-size:19px;
+	   }
+	   .dropdown-menu > li > a:hover {
+	    color:blue;
+	   }
+	   .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: white;
+    background-color: #4c85cc;
+      }
+	  .btn-danger{
+	   background-color:#f2d210;
+	   border-color:#f2d210;
+	  }
+	  
+	  .btn-danger:hover{
+	   background-color:#f2d210;
+	   border-color:#f2d210;
+	  }
+	  .btn-danger:focus,
+		.btn-danger.focus {
+		  color: #fff;
+		  background-color:#e7a300;
+		  border-color: #e7a300;
+		}
+	.btn-danger:active:hover,
+	.btn-danger.active:hover,
+	.open > .dropdown-toggle.btn-danger:hover,
+	.btn-danger:active:focus,
+	.btn-danger.active:focus,
+	.open > .dropdown-toggle.btn-danger:focus,
+	.btn-danger:active.focus,
+	.btn-danger.active.focus,
+	.open > .dropdown-toggle.btn-danger.focus {
+	  color: #fff;
+	  background-color: #f2d210;
+	  border-color: #f2d210;
+	}
+	.info{
+	  color:white;
+	  float:right;
+	  margin: 300px 50px 50px 600px;
+	}
+	.nav-tabs > li > a {
+	margin-left: 25px;
+    border-radius: 17px 17px 0px 0px;
+    background-color: black;
+    color: white;
+	font-size: 20px;
+    width: 210px;
+	}
+	.clear{
+	  clear:both;
+	}
+	.nav-tabs > 
+	li.active > 
+	a, .nav-tabs > 
+	li.active > a:hover, 
+	.nav-tabs > li.active > 
+	a:focus {
+	background-color:black;
+	color:white;
+	}
+	.table-responsive {
+    background-color: white;
+    }
+	.form-control{
+	 background-color:#f5f5f5;
+	}
+	.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: black;
+}
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+}
+
+/* Add a card effect for articles */
+.card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+}
