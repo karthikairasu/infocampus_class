@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+     <meta charset="UTF-8">
+	 <title>flexbox</title>
+	 <style>
+	   #div1{
+	     display:flex;
+		 background-color:skyblue;
+		 /*flex-direction:row-reverse;<!----row,column,row-reverse,column-reverse---->*/
+		 /*flex-wrap:nowrap;*/
+		 flex-flow:row nowrap;
+		 /*justify-content:center;*/
+		 /*justify-content:flex-end;*/  /*-----flex-start---*/
+		 justify-content:space-between; /*-----space-around---*/
+	   }
+	   .div2{
+	     height:100px;
+		 width:100px;
+		 background-color:blue;
+		 border:2px solid yellow;
+		 margin:10px;
+		 font-size:20px;
+		 font-weight:bold;
+		 text-align:center;
+		 line-height:75px;
+	   
+	   }
+	 </style>
+  </head>
+  <body>
+   <div id="div1">
+         <div class="div2">1</div>
+         <div class="div2">2</div>
+         <div class="div2">3</div>
+         <div class="div2">4</div>
+        
+   </div>
+  
+  </body>
+</html>

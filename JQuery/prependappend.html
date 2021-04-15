@@ -1,0 +1,53 @@
+<html>
+<head>
+<title></title>
+<link href="dist/css/bootstrap.css" rel="stylesheet">
+<script src="dist/js/jquery.min.js"></script>
+<script>
+$(function(){
+$(".btn-primary").click(function(){
+$("#list1").prepend("<li class='list-group-item'>Prepended item chinese</li>");
+})
+$(".btn-primary").click(function(){
+$("#list2").append("<li class='list-group-item'>Prepended item chinese</li>");
+})
+
+
+
+});
+
+
+</script>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-sm-6 well">
+<ul class="list-group" id="list1">
+<li class="list-group-item">Fruits</li>
+<li class="list-group-item">veg</li>
+<li class="list-group-item">nonveg</li>
+<li class="list-group-item">continental</li>
+</ul>
+<button class="btn btn-primary btn-block">prepend</button>
+</div>
+<div class="col-sm-6 well">
+<ul class="list-group" id="list2">
+<li class="list-group-item">Fruits</li>
+<li class="list-group-item">veg</li>
+<li class="list-group-item">nonveg</li>
+<li class="list-group-item">continental</li>
+</ul>
+<button class="btn btn-danger btn-block">Append</button>
+</div>
+
+
+
+
+</div>
+
+
+
+</div>
+</body>
+</html>

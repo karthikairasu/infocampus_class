@@ -1,0 +1,41 @@
+<html>
+<head>
+<title></title>
+<link href="dist/css/bootstrap.css" rel="stylesheet">
+<script src="dist/js/jquery.min.js"></script>
+<script>
+$(function(){
+
+$(".btn-primary").click(function(){
+$(".btn-primary").after("<img src='dist/images/abc1.jpg' class='img-thumbnail' height='100px' width='100px'>");
+});
+
+$(".btn-danger").click(function(){
+$(".btn-danger").before("<img src='dist/images/abc1.jpg' class='img-thumbnail' height='100px' width='100px'>");
+});
+
+});
+
+
+</script>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-sm-6">
+<img src="dist/images/abc1.jpg" class="img-thumbnail" height="100px" width="100px"/>
+<button class="btn btn-primary btn">After</button>
+</div>
+<div class="col-sm-6">
+<button class="btn btn-danger btn">Before</button>
+<img src="dist/images/abc1.jpg" class="img-thumbnail" height="100px" width="100px"/>
+</div>
+
+
+</div>
+
+
+
+</div>
+</body>
+</html>

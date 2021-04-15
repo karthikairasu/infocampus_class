@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+   <userlist>
+     <user>
+	    <name>MR.AAAAAAA</name>
+		<mobile>768797999</mobile>
+		<city>bangalore</city>
+	 </user>
+	 
+	 <user>
+	    <name>MR.BBBBBBBBB</name>
+		<mobile>768797999</mobile>
+		<city>karnataka</city>
+	 </user>
+	 
+	 
+	 <user>
+	    <name>MR.CCCCCCCC</name>
+		<mobile>768797999</mobile>
+		<city>coimbatore</city>
+	 </user>
+	 
+	 <user>
+	    <name>MR.DDDDDDDD</name>
+		<mobile>768797999</mobile>
+		<city>tirchy</city>
+	 </user>
+	 
+	 <user>
+	    <name>MR.YYYYYYYY</name>
+		<mobile>768797999</mobile>
+		<city>madurai</city>
+	 </user>
+	 
+	 <user>
+	    <name>MR.MMMMMMMMMM</name>
+		<mobile>768797999</mobile>
+		<city>chennai</city>
+	 </user>
+   
+   </userlist>

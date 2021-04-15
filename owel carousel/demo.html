@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+<script src="jquery.min.js"></script>
+<script src="owlcarousel/owl.carousel.min.js"></script>
+<script>
+
+</script>
+<style>
+
+</style>
+ </head>
+ <body>
+ <!-- Set up your HTML -->
+<section class="title">
+      <div class="row">
+        <div class="large-12 columns">
+          <h1>Autoplay</h1>
+        </div>
+      </div>
+    </section>
+
+    <!--  Demos -->
+    <section id="demos">
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <h4><img src="1.jpg " width="200px" width="200px"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="2.jpg " width="200px" width="200px"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="3.jpg " width="200px" width="200px"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="4.jpg " width="200px" width="200px"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="5.jpg " width="200px" width="200px"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="6.jpg " width="200px" width="200px"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="7.jpg " width="200px" width="200px"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="8.jpg " width="200px" width="200px"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="2.jpg " width="200px" width="200px"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="5.jpg " width="200px" width="200px"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="7.jpg " width="200px" width="200px"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="8.jpg " width="200px" width="200px"></h4>
+            </div>
+          </div>
+          <a class="button secondary play">Play</a> 
+          <a class="button secondary stop">Stop</a> 
+          
+          <script>
+            $(document).ready(function() {
+              var owl = $('.owl-carousel');
+              owl.owlCarousel({
+                items: 4,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 1000,
+                autoplayHoverPause: true
+              });
+              $('.play').on('click', function() {
+                owl.trigger('play.owl.autoplay', [1000])
+              })
+              $('.stop').on('click', function() {
+                owl.trigger('stop.owl.autoplay')
+              })
+            })
+          </script>
+        </div>
+      </div>
+    </section>
+
+
+ </body>
+ 
+</html>
+

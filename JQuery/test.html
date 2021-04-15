@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>Fetching</title>
+	<script src="assets/js/jquery.min.js"></script>
+	<script>
+	   $(function(){
+	     
+		 $("#btn").click(function(){
+		  
+		  var english=$("#english").val();
+		  var maths=$("#maths").val();
+		  var science=$("#science").val();
+		  var sscience=$("#sscience").val();
+		  var result=parseInt(english)+parseInt(maths)+parseInt(science)+parseInt(science);
+		  var avg=parseInt(english)+parseInt(maths)+parseInt(science)+parseInt(science)/4;
+		
+		  $("#total").val(result);
+		  $("#avg").val(avg);
+		 })
+	     
+	   });
+	</script>
+	
+  </head>
+  
+  <body>
+    <table bgcolor="orange" align="center" border="1">
+	  <tr>
+	     <th>english</th>
+	     <td><input type="text" id="english"placeholder="Enter english mark"/></td>
+	  </tr>
+	  
+	  <tr>
+	     <th>maths</th>
+	     <td><input type="text" id="maths" placeholder="Enter maths mark"/></td>
+	  </tr>
+	  
+	  <tr>
+	     <th>science</th>
+	     <td><input type="text" id="science" placeholder="Enter science mark"/></td>
+	  </tr>
+	  
+	  <tr>
+	     <th>social science</th>
+	     <td><input type="text" id="sscience" placeholder="Enter sscience mark"/></td>
+	  </tr>
+	 
+	  
+	  <tr>
+	     <th>Total</th>
+	     <td><input type="text" id="total" readonly/></td>
+	  </tr>
+	  
+	  <tr>
+	     <th>Average</th>
+	     <td><input type="text" id="avg" readonly/></td>
+	  </tr>
+	  
+	  <tr>
+	     
+	     <td colspan="2" align="center"><input type="button"  id="btn" value="total bill"></td>
+	  </tr>
+	  
+	</table>
+  </body>
+</html>

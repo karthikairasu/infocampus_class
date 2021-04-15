@@ -1,0 +1,47 @@
+<html>
+  <head>
+  <title> Home page</title>
+  <link href="<?php echo BASEURL;?>assets/css/bootstrap.css" rel="stylesheet">
+  <script src="<?php echo BASEURL;?>assets/js/jquery.min.js"></script>  
+  <script src="<?php echo BASEURL;?>assets/js/bootstrap.js"></script>  
+ </head>
+ 
+ <body>
+   <div class="container">
+     <div class="row">
+	  <div class="col-sm-3"></div>
+	  <div class="col-sm-6">
+	  <h4 class="text-center"><?php echo $this->session->flashdata("msg");?></h4>
+	   <form action="logincheck.php" method="POST">
+	   
+	     <div class="row form-group">
+		 <div class="input-group">
+		  <span class="input-group-addon">
+		    <i class="glyphicon glyphicon-envelope"></i>
+		  </span>
+		  <input type="text" name="email" class="form-control" placeholder="Enter email">
+		 </div>
+	    </div><!-----1nd row------>
+	   
+	    <div class="row form-group">
+		 <div class="input-group">
+		  <span class="input-group-addon">
+		    <i class="glyphicon glyphicon-lock"></i>
+		  </span>
+		  <input type="password" name="pass" class="form-control" placeholder="Enter password">
+		 </div>
+	    </div><!-----2nd row------>
+		
+		 <div class="row form-group">
+		 <div class="col-sm-12 text-center">
+		  <button type="submit" class="btn btn-primary" >Login</button>
+		  <button type="reset" class="btn btn-danger" >Clear</button>
+		 </div>
+	    </div><!-----3nd row------>
+		</form>
+	  </div>
+	  <div class="col-sm-3"></div>
+	 </div>
+   </div>
+ </body>
+</html>

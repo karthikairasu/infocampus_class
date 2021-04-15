@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+	<script src="assets/js/angular.js"></script>
+	<script src="assets/js/route.js"></script>
+	<script src="assets/js/mytest2.js"></script>
+  </head>
+  
+  <body ng-app="mytest">
+    <div class="container">
+	<div class="row">
+	 <div class="col-sm-4">
+	   <ul class="list-group">
+	   <li class="list-group-item"><a href="#menclothing">Menclothing</a></li>
+	   <li class="list-group-item"><a href="#womenclothing">Womenclothing</a></li>
+	   <li class="list-group-item"><a href="#kidclothing">Kidsclothing</a></li>
+	   </ul>
+	  
+	 </div>
+	<div class="col-sm-8 " ng-view></div>
+	</div>
+	 
+	
+	</div>
+  </body>
+</html>

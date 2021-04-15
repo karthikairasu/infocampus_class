@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+	  <title>border image</title>
+	  <style>
+	   #div1{
+	      height:200px;
+		  width:100%;
+		 background-image:url('../images/flower1.jpg'),url('../images/transparent.jpg');
+		 background-position:right bottom,left top;
+		 background-repeat:no-repeat,repeat;
+		 background-size:100px 80px,cover;
+	   }
+	    #div2{
+		  height:300px;
+		  width:100%;
+		  background-image:url('../images/transparent.jpg');
+		  padding:50px;
+		  background-repeat:no-repeat;
+		  border:12px dotted green;
+		  background-origin:content-box;
+		}
+		#div3{
+		  height:300px;
+		  width:100%;
+		  background-color:yellow;
+		  padding:20px;
+		  border:12px dotted green;
+		  background-clip:content-box;
+		}
+	  </style>
+   </head>
+   <body>
+     <section>
+          <div id="div1"></div><br><br>
+		  <div id="div2">background-origin is the property to be used with background-image
+		   It Has three values:border-box ,padding-box,content-box;
+		  </div>
+		  <div id="div3">background-clip is the property to be used with background-image
+		   It Has three values:border-box ,padding-box,content-box;
+		  </div>
+	</section>
+	
+   </body>
+</html>

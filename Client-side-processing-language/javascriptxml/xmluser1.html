@@ -1,0 +1,68 @@
+<html>
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<head>
+		<script>
+			function getxmluser()
+			{
+				if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+				xmlhttp = new XMLHttpRequest();
+				} else {
+					// code for IE6, IE5
+					xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xmlhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+				   
+				var xmldata = this.responseText;
+				//xml parsing start 
+			var parser = new DOMParser();
+			var xmlDoc = parser.parseFromString(xmldata,"text/xml");
+			
+			var user = xmlDoc.getElementsByTagName("user").length;
+			
+			var pdata = "<table class='table table-bordered'>";
+			for(var i=0; i<user; i++)
+			{
+var n = xmlDoc.getElementsByTagName("name")[i].childNodes[0].nodeValue;
+var m = xmlDoc.getElementsByTagName("mobile")[i].childNodes[0].nodeValue;
+var c = xmlDoc.getElementsByTagName("city")[i].childNodes[0].nodeValue;
+
+		pdata = pdata + "<tr>";
+		
+		pdata = pdata + "<td>" +n+ "</td>";
+		pdata = pdata + "<td>" +m+ "</td>";
+		pdata = pdata + "<td>" +c+ "</td>";
+
+        pdata = pdata + "</tr>";
+		
+			} // for loop end
+			pdata = pdata + "</table>";
+			
+			document.getElementById("msg").innerHTML=pdata;
+				  //xml parsing end 
+					}
+				};
+				xmlhttp.open("GET","user.xml",true);
+				xmlhttp.send();
+			}
+		</script>
+	</head>
+	<body>
+		<br>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-2">
+		<button class="btn btn-primary" onclick="getxmluser()"> Load xml User </button>
+				</div>
+				
+				<div class="col-sm-1"></div>
+				
+				<div class="col-sm-9" id="msg">
+					No Data
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

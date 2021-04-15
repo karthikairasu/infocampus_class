@@ -1,0 +1,135 @@
+<html>
+  <head>
+     <link href="assets/css/bootstrap.css" rel="stylesheet">
+	 <script src="assets/js/angular.js"></script>
+	 <script>
+	   var app=angular.module("myApp",[]);
+	   app.controller("myctrl",function($scope)
+	   {
+	   
+	   });
+	 
+	 </script>
+	 <style>
+	    input.ng-touched{
+	     border:2px solid red;
+	   }
+	   input.ng-valid{
+	   border:2px solid green;
+	   }
+	   select.ng-touched{
+	   border: 2px solid red;
+	   }
+	   select.ng-valid{
+	   border: 2px solid green;
+	   }
+	   textarea.ng-touched{
+	   border: 2px solid red;
+	   }
+	   textarea.ng-valid{
+	   border: 2px solid green;
+	   }
+	   form.ng-pristine{
+	   background-color:skyblue;
+	   }
+	   form.ng-dirty{
+	   background-color:lightgreen;
+	   }
+	 </style>
+  </head>
+  <body ng-app="myApp">
+     <div class="container" ng-controller="myctrl">
+	  <div class="row">
+	 
+	   <div class="col-sm-3"></div>
+	   <div class="col-sm-6">
+	    <form name="form1" action="#" method="POST" novalidate>
+		   <div class="row form-group">
+		    <div class="col-sm-4"><label>Name</label></div>
+             <div class="col-sm-8">
+			  <input type="name" class="form-control" ng-model="fname"  name="fname" placeholder="Enter Name" required>
+			  <span ng-show="form1.fname.$touched  && form1.fname.$invalid">please Enter name</span>
+			 </div>
+		   </div>
+		   
+		    <div class="row form-group">
+		    <div class="col-sm-4"><label>Email</label></div>
+             <div class="col-sm-8">
+			  <input type="email" class="form-control" ng-model="email"  name="email" placeholder="Enter email" required>
+			  <span ng-show="form1.email.$touched  && form1.email.$invalid">
+			    <span ng-show="form1.email.$error.required">please Enter email</span>
+			      <span ng-show="form1.email.$error.email">Invalid email: "Enter valid email Id"
+			  </span>
+			  
+			  </span>
+			 </div>
+		   </div>
+		   
+		    <div class="row form-group">
+		    <div class="col-sm-4"><label>Mobile</label></div>
+             <div class="col-sm-8">
+			  <input type="text" class="form-control" ng-model="mobile"  ng-pattern="/[0-9]{10}/" name="mobile" placeholder="Enter mobile no" required>
+			  <span ng-show="form1.mobile.$touched  && form1.mobile.$invalid">
+			     <span ng-show="form1.mobile.$error.required">
+				 please Enter mobile no
+			      </span>
+			    <span ng-show="form1.mobile.$error.pattern">
+				Invalid mobile: "please enter 10 digit mobile no"
+			    </span>
+			  </span>
+			  
+			 </div>
+		   </div>
+		   
+		    <div class="row form-group">
+		    <div class="col-sm-4"><label>City</label></div>
+             <div class="col-sm-8">
+			  <select ng-model="city" name="city" class="form-control" required>
+			    <option value="">Choose city</option>
+				<option value="bangalore">bangalore</option>
+				<option value="pune">pune</option>
+				<option value="chennai">chennai</option>
+			  </select>
+			  
+			  <span ng-show="form1.city.$touched  && form1.city.$invalid">
+			     <span ng-show="form1.city.$error.required">
+			     Invalid city: "Enter valid city name"
+			     </span>
+			  </span>
+			  
+			 </div>
+		   </div>
+		   
+		    <div class="row form-group">
+		    <div class="col-sm-4"><label>Message</label></div>
+             <div class="col-sm-8">
+			  <textarea ng-model="message" name="message" class="form-control" placeholder="Enter Message" required></textarea>
+			  <span ng-show="form1.message.$touched  && form1.message.$invalid">
+			     <span ng-show="form1.message.$error.required">
+			     Invalid message: "Enter valid message"
+			    </span>
+			  </span>
+			 </div>
+		   </div>
+		   
+		   <div class="row form-group text-center">
+		   <input type="checkbox" ng-model="enablechk">&nbsp;I Agree T&C
+		   
+		   </div>
+		   
+		
+		  <div class="row text-center">
+		    <button type="submit" class="btn btn-success" ng-disabled="form1.$pristine">Submit</button>
+		    </div>
+		  
+		   </form>
+		 </div>
+	   
+	   
+	   <div class="col-sm-3"></div>
+	  
+	  </div>
+	 
+	 </div>
+  </body>
+</html>

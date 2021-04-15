@@ -1,0 +1,48 @@
+<html>
+ <head>
+    <script src="assets/js/angular.js"></script>
+	
+ </head>
+   <body>
+    
+	
+	<div ng-app="mytest">
+	
+	  <div ng-controller="test1">
+	    <h3>{{msg}}</h3>
+	  </div>
+	  
+	  <div ng-controller="test2">
+	    <h3>{{msg}}</h3>
+	  </div>
+	  
+	  <div ng-controller="test3">
+	    <h3>{{msg}}</h3>
+	  </div>
+
+	</div>
+	
+	<script>
+	   var obj= angular.module("mytest",[]);//object creation of module
+	   obj.controller("test1",function($scope){
+             $scope.msg="Hello Controller one ";                               
+		
+		
+		});	
+		
+		 obj.controller("test2",function($scope){
+             $scope.msg="Hello Controller two ";                               
+		
+		
+		});	
+		
+		 obj.controller("test3",function($scope){
+             $scope.msg="Hello Controller three ";                               
+		
+		
+		});	
+		
+		</script>
+	
+   </body>
+</html>

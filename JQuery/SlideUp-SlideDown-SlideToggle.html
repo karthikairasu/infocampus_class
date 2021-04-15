@@ -1,0 +1,121 @@
+<html>
+	<head>
+		<title>SlideUp SlideDown SlideToggle</title>
+		<style>
+			.div1{
+				width:100%;
+				height:50px;
+				background-color:red;
+				color:black;
+				text-align:center;
+				font-size:18px;
+				font-weight:bold;
+				text-transform:uppercase;
+				border:2px solid blue;
+			}
+			
+			.div2{
+				width:100p%;
+				height:200px;
+				background-color:Yellow;
+				color:black;
+				text-align:center;
+				font-size:18px;
+				font-weight:bold;
+				text-transform:uppercase;
+				border:2px solid blue;
+			}
+			
+			.div3{
+				width:100%;
+				height:50px;
+				background-color:green;
+				color:black;
+				text-align:center;
+				font-size:18px;
+				font-weight:bold;
+				text-transform:uppercase;
+				border:2px solid blue;
+			}
+			
+			.div4{
+				width:100p%;
+				height:200px;
+				background-color:Pink;
+				color:black;
+				text-align:center;
+				font-size:18px;
+				font-weight:bold;
+				text-transform:uppercase;
+				border:2px solid blue;
+				display:none;
+			}
+			
+			.div5{
+				width:100%;
+				height:50px;
+				background-color:orange;
+				color:black;
+				text-align:center;
+				font-size:18px;
+				font-weight:bold;
+				text-transform:uppercase;
+				border:2px solid blue;
+			}
+			
+			.div6{
+				width:100p%;
+				height:200px;
+				background-color:purple;
+				color:black;
+				text-align:center;
+				font-size:18px;
+				font-weight:bold;
+				text-transform:uppercase;
+				border:2px solid blue;
+			}
+		
+		</style>
+		<script src="dist/js/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			//=================================
+				$(".div1").click(function(){
+					$(".div2").slideUp();
+				})
+				
+				$(".div3").click(function(){
+					$(".div4").slideDown();
+				})
+				
+				$(".div5").click(function(){
+					$(".div6").slideToggle();
+				})
+			
+			
+			//=================================
+			});
+		</script>
+	</head>
+	<body>
+		<div class="div1"> <!--you can also use id="div1" there is no problem-->
+			Click me to Slide Up
+		</div>
+		<div class="div2">
+			I am Sliding Up
+		</div>
+		<div class="div3">
+			Click me to slide Down
+		</div>
+		<div class="div4">
+			i am sliding Down
+		</div>
+		<div class="div5">
+			Click me to slide Toggle
+		</div>
+		<div class="div6">
+			i am slide Toggling
+		</div>
+		
+	</body>
+</html>

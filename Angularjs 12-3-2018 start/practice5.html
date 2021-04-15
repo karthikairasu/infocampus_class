@@ -1,0 +1,61 @@
+<html>
+   <head>
+      <script src="assets/js/angular.js"></script>
+	  
+   </head>
+   <body>
+      <div ng-app="myClass" ng-init=" student=[{'name':'ravi', 'class':'7', 'section':'A'},
+	                                            {'name':'aravind', 'class':'9', 'section':'B'},
+												{'name':'ragu', 'class':'10', 'section':'C'},
+												{'name':'mari', 'class':'7', 'section':'D'},
+												{'name':'dinesh', 'class':'8', 'section':'D'},
+												{'name':'bala', 'class':'11', 'section':'C'},
+												{'name':'suresh', 'class':'9', 'section':'B'},
+												{'name':'vinoth', 'class':'8', 'section':'A'},
+												{'name':'siva', 'class':'12', 'section':'C'}
+												
+	  
+	  ];">
+	  
+	  <div ng-controller="myStudent">
+	  
+	  <center>
+	    Search: <input type="text" ng-model="searchkey">
+	  </center>
+	  
+	  <table align="center" cellpadding="7">
+	   
+	    <tr>
+		 <th ng-click="changeOrder('name')">Name</th>
+		 <th ng-click="changeOrder('class')">Class</th>
+		 <th ng-click="changeOrder('section')">Section</th>
+		</tr>
+	    <tr ng-repeat="row in student | filter:searchkey | orderBy:myorder">
+		<td>{{row.name}}</td>
+		<td>{{row.class}}</td>
+		<td>{{row.section}}</td>
+		
+		</tr>
+	  
+	  
+	  </table>
+	  
+	  </div>
+	  
+	  </div>
+    
+	   <script>
+	       var obj = angular.module("myClass",[]);
+		   obj.controller("myStudent",function($scope){
+		     
+			
+			   $scope.changeOrder = function(key){
+			    $scope.myorder = key;
+				}
+			 
+		   });
+	   
+	   </script>
+	
+   </body>
+</html>

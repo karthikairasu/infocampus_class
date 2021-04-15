@@ -1,0 +1,140 @@
+<html>
+	<head>
+		<link href="dist/css/bootstrap.css" rel="stylesheet">
+		<script src="dist/js/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$(".btn-primary").click(function(){
+					//----featch values from form-controls and store it in respective variables--//
+					var name=$("#fname").val();
+					var email=$("#email").val();
+					var mobile=$("#mobile").val();
+					var city=$("#city").val();
+					var message=$("#msg").val();
+					var status=true;
+					//--for name--//
+					if(name=="")
+					{
+						$("#fname").css("border","2px solid red");
+						$("#nameerror").text("Invalid Name");
+						status=false;
+					}
+					else
+					{
+						$("#fname").css("border","2px solid green");
+					}
+					
+					if(email=="")
+					{
+						$("#email").css("border","2px solid red");
+						$("#emailerror").text("Invalid email");
+						status=false;
+					}
+					else
+					{
+						$("#email").css("border","2px solid green");
+					}
+					if(mobile=="")
+					{
+						$("#mobile").css("border","2px solid red");
+						$("#mobileerror").text("Invalid mobile");
+						status=false;
+					}
+					else
+					{
+						$("#mobile").css("border","2px solid green");
+					}
+					if(city=="")
+					{
+						$("#city").css("border","2px solid red");
+						$("#cityerror").text("Invalid city");
+						status=false;
+					}
+					else
+					{
+						$("#city").css("border","2px solid green");
+					}
+					if(message=="")
+					{
+						$("#msg").css("border","2px solid red");
+						$("#msgerror").text("Invalid message");
+						status=false;
+					}
+					else
+					{
+						$("#email").css("border","2px solid green");
+					}
+				})
+			});
+		</script>
+	
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<h3 class="text-center">Contact Us</h3>
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<div class="row form-group">
+						<div class="col-sm-3">
+							<label>Name</label>
+						</div>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="fname" placeholder="Enter Your Name">
+							<i id="nameerror" style="color:red"></i> 
+						</div>
+					</div>
+					<div class="row form-group">
+						<div class="col-sm-3">
+							<label>Email</label>
+						</div>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="email" placeholder="Enter Your Email">
+							<i id="emailerror" style="color:red"></i> 
+						</div>
+					</div>
+					<div class="row form-group">
+						<div class="col-sm-3">
+							<label>Mobile</label>
+						</div>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="mobile" placeholder="Enter Your Mobile">
+							<i id="mobileerror" style="color:red"></i> 
+						</div>
+					</div>
+					<div class="row form-group">
+						<div class="col-sm-3">
+							<label>City</label>
+						</div>
+						<div class="col-sm-9">
+							<select class="form-control" id="city">
+								<option value="">Choose City</option>
+								<option value="pune">Pune</option>
+								<option value="chennai">Chennai</option>
+								<option value="bangalore">Bangalore</option>
+							</select>
+							<i id="cityerror" style="color:red"></i>
+						</div>
+					</div>
+					<div class="row form-group">
+						<div class="col-sm-3">
+							<label>Message</label>
+						</div>
+						<div class="col-sm-9">
+							<textarea class="form-control" id="msg" placeholder="Enter Your Message"></textarea>
+							<i id="msgerror" style="color:red"></i> 
+						</div>
+					</div>
+					<div class="row-form-group">
+						<div class="col-sm-12 text-center">
+							<button type="button" class="btn btn-primary">Send</button>
+							<button type="button" class="btn btn-danger">Clear</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3"></div>
+			</div>
+		</div>
+	</body>
+	
+</html>

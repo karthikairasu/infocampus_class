@@ -1,0 +1,44 @@
+<html>
+  <head>
+     <script src="assets/js/angular.js"></script>
+  </head>
+  <body>
+     <H1>input variables with and without data</H1>
+	 
+	 <div ng-app="" ng-init="a=100; b=200; item=['apple','orange','mango','grapes']">
+	   
+	   <h3>{{a+b}}</h3>
+	 
+	   <h3 ng-bind="a+b"></h3>
+	   
+	   <input type="text" ng-model="a+b"><br><br>
+	   
+	   <input type="number" ng-model="a">
+	   
+	    <input type="number" ng-model="b">
+		
+		<br>
+		
+		<h3>{{item[2]}}</h3>
+		<ul>
+		 <li>Item list</li>
+		 <li ng-repeat="x in item">{{x}}</li>
+		
+	   </ul>
+	   <select>
+	   <option >item list</option>
+	   <option ng-repeat="x in item">{{x}}</option>
+	   </select>
+	   <br>
+	   <p>
+	   <label  ng-repeat="x in item">
+	   <input type="checkbox">{{x}}
+	   </label>
+	   </p>
+	   <br>
+	   <p ng-repeat="x in item">
+	    <input type="text"  ng-model="x">
+	   </p>
+	 </div>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title> FadeIn FadeOut FadeToggle</title>
+		<style>
+			#div1{
+				height:100px;
+				width:100px;
+				background-color:red;
+				border:2px solid black;
+				margin:25px;
+			}
+			#div2{
+				height:100px;
+				width:100px;
+				background-color:green;
+				border:2px solid black;
+				margin:25px;
+			}
+			#div3{
+				height:100px;
+				width:100px;
+				background-color:yellow;
+				border:2px solid black;
+				margin:25px;
+			}
+		</style>
+		<script src="dist/js/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			//================================
+				$("#btn1").click(function(){
+					$("#div1").fadeIn(2000);
+					$("#div2").fadeIn(4000);
+					$("#div3").fadeIn(6000);
+				})
+				$("#btn2").click(function(){
+					$("#div1").fadeOut(3000);
+					$("#div2").fadeOut(6000);
+					$("#div3").fadeOut(9000);
+				
+				})
+				$("#btn3").click(function(){
+					$("#div1").fadeToggle(4000);
+					$("#div2").fadeToggle(6000);
+					$("#div3").fadeToggle(8000);
+				
+				})
+			//================================
+			});
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+		<div id="div2">
+		
+		</div>
+		<div id="div3">
+		
+		</div>
+		<button id="btn1">FadeIn</button>
+		<button id="btn2">FadeOut</button>
+		<button id="btn3">FadeToggle</button>
+	</body>
+</html>

@@ -1,0 +1,328 @@
+=> WHAT IS DATABASE ?
+	->Database is collections of inter-related table.
+	
+=>what is tables ?
+	->table is collection of attributes
+	->table contains the details decription about an entity.
+-------------------------------------------------------------------
+	1.database creation
+	2.table creation
+	3.columns add
+	4.row deleted
+	5.data insert
+	6.rename table columns
+	7.rename table
+	8.drop table
+	9.drop database
+	---------------------------------------------------------------
+	GUI
+	---------------------------------------------------------------
+	CLI
+	
+	1.DDL(database defination language)
+		->it deals with all structure of database and structure of table.
+		
+	2.DML(database manipulation language)
+	->it will deal with data not with structure
+	(store,retrieve,modify,delete)
+	
+	medium of learning
+		1.GUI(graphical user interface) tool
+		2.CLI(command line interface)sql query
+		
+		
+	3.JOINS,INDEXING,TRIGGER
+	---------------------------------------------------------------------------------
+	CLI(Command line interface)
+	
+	how to create database ?
+	syntax
+	create database<dbname>;
+	
+	example:
+	create database mytestproject;
+	
+	create database mytestproject2;
+----------------------------------------------------------------------------------------------
+	how to create table in mysql database ?
+	syntax:
+		create table  <tablename>
+		(
+			colname1        datatype(length) primary key auto_increment,
+			colname2        datatype(length),
+			colname3        datatype(length)
+			
+		);
+		
+		Example:
+			create table user
+			(
+				userid        	int(10) primary key auto_increment,
+				name       		varchar(255),
+				mobile			bigint(13),
+				age				varchar(20)
+				
+			);
+			
+			Example2:
+			create table contactus
+			(
+				id        			int(10) primary key auto_increment,
+				fullname       		varchar(100),
+				mobileno			bigint(13),
+				city				varchar(100),
+				pincode				int(6)
+				
+			);
+			
+			Example3:
+			create table product
+			(
+				proid       			int(10) primary key auto_increment,
+				name       				varchar(100),
+				price					float 
+				mrp						float
+				description				text(1000),
+				image					varchar(255)
+			);
+			
+			
+-------------------------------------------------------------------------------------------------------------------
+		How to add new column in existing mysql table?
+			1.in begning
+			2.at last
+			3.anywhere
+				1.syntax:
+					alter table <tablename>
+					add <new_col_name> datatype(length) first;
+					
+				Example:
+					alter table user
+					add email varchar(100) first;
+					
+				2.syntax:
+					alter table <tablename>
+					add <new_col_name> datatype(length);
+					
+				Example:
+					alter table user
+					add dob varchar(30);
+					
+				3.syntax:
+					alter table <tablename>
+					add <new_col_name> datatype(length) after <old_col_name>;
+					
+				Example:
+					alter table user
+					add password varchar(100) after email;
+--------------------------------------------------------------------------------------------------
+		How to add multiple column on different location in mysql table?
+		
+			Example:
+				alter table user
+				add test1 int(10),
+				add test2 int(10) after email,
+				add test3 int(10) first;
+--------------------------------------------------------------------------	
+		How to display/view the structre of any table on mysql?
+			1.explain
+			2.describe
+			Example:
+				explain user;
+			Example:
+				describe user;
+----------------------------------------------------------------------------------------------------
+		How to rename existing column of mysql table?
+			Syntax:
+				alter table <tablename>
+					change <old_col_name> <new_col_name> old/new datatype(length);
+			Example:
+				alter table user
+					change name fullname varchar(255);
+			Example:
+				alter table user
+					change mobile contactno bigint(13);
+-----------------------------------------------------------------------------------------------------------
+		How to drop a colunm fron sql table?
+			syntax:
+				alter table <tablename>
+					drop column <col_name>;
+			Example:
+				alter table user
+					drop column test1;
+		
+			Example2:
+				alter table user
+					drop column test2,
+					drop column test3,
+					drop column age;
+---------------------------------------------------------------------------------------------------------
+		How to rename table in mysql?
+			Syntax:
+				rename <table>
+					<old_table_name> to <new_table_name>;
+			Example:
+				rename table
+					user to myuser;
+------------------------------------------------------------------------------------------------------------------
+		How to drop table in mysql?
+			Syntax:
+				drop  table <table name>;
+		
+			Example:
+				drop table myuser;
+------------------------------------------------------------------------------
+		How to drop database in mysql?
+			Syntax:
+				drop  database <database-name>;
+		
+			Example:
+				drop database mytestproject;
+------------------------------------------------------------------------------------------------------------------------------------
+		
+		DML:
+			INSERT:
+				How to insert the data to mysql table?
+					2.
+						2.a
+							syntax:
+								insert into <tablename>
+								set
+								colname='value',
+								colname2='value',
+								colname3='value';
+							
+							Example:
+								insert into emp
+								set
+								empname ='Mr xyz',
+								empsalary='10000',
+								empage ='12 years',
+								empcity ='bangalore';
+-------------------------------------------------------------------------------------------
+						2.b
+							syntax:
+							
+								insert into <tablename>
+								(col1,col2,col3,col4....)
+								values('val1','val2','val3','val4',.......);
+							Example:
+							
+								insert into emp
+								(empname,empcity,empsalary,empage)
+								values('abc', 'pune', '12000', '20 years');
+------------------------------------------------------------------------------------------------------------
+		How to insert multiple rows at time in mysql.
+		
+		
+			Example:
+				insert into emp
+				(empname,empmobile,empage,empcity,empsalary)
+				values	('mahesh','7855565525','25 years','chennai','5000'),
+						('ganesh','985565525','20 years', 'mumbai', '9000'),
+						('gitesh','9977865525','10 years','pune',   '0'),
+						('manik','878786555','19 years',  'mumbai', '10000'),
+						('raghu','987565525','36 years',  'chennai','25000'),
+						('mohan','8888885525','32 years', 'pune',   '23000'),
+						('sashi','745565525','23 years',  'mumbai','45000'),
+						('mahi','9999565525','25 years',  'pune','35000'),
+						('alex','7855565525','37 years',  'chennai','455000'),
+						('san','7855565525','21 years',   'pune','55000');
+							
+================================================================================================================================
+how to fetch data from mysql table?
+     2 method
+	 
+	 1.syntax:
+	 
+	    select * from <tablename>;
+		
+	Example:
+         select * from emp;
+
+       note:it fetch all rows and all columns from table.
+             you should never follow this method else your project will be very
+             very slow.
+     2.syntax:
+	       select colname1,colname2,colname3.......from<tablename>
+	 Example:
+           select empname,empmobile,empsalary from emp;
+================================================================================================================================
+ORDER BY =>To Re-arrange the rows in order as ASC/DESC;
+   
+   Syntax:
+     SELECT * from<tablename> order by <colname>asc/desc;
+	 
+	 Example:
+	   select * from emp order by empsalary asc;
+	   
+	   select * from emp order by empname asc;
+	   
+===============================================================================================================
+GROUP BY => To filter unique record from mysql table?
+
+ Syntax: 
+      select * from<tablename>group by<colname>;
+    Example:
+      select * from emp group by empcity;
+
+      select * from emp group by empcity order by empsalary asc;
+====================================================================================================================
+DisTinct =>To find unique record but best suitable for 1 column at time.
+
+ Syntax:
+      select distinct <colname>from <tablenmae>;
+    Example:
+      select distinct empcity from emp;
+=======================================================================================================================
+BETWEEN => To fetch records from table for a given range min to max .
+   Syntax:
+      select * from <tablename> where colname between <min> and <max>;
+	  
+	Example:
+       select * from emp where empsalary between 9000 and 40000;
+
+    Example2:
+       select * from emp	
+	   where 
+	   empsalary between 9000 and 40000
+	   group by empcity
+	   order by empsalary desc;
+============================================================================================================================
+IN / NOT => To filter the records as random
+
+   IN: Syntax
+        select * from <tablename> where <colname> in (val1, val2, val3);
+
+    Example:
+        Select * from emp where empid in(1,6,9,100);
+		
+	Not IN :
+        Example:
+          select * from emp where empid not in(1,6,,9,100);
+==============================================================================================================================
+LIKE : To filter records best suitable for both alpha and numerics.
+   Syntax: 
+        select *from <tablename> where <colname> like 'pattern';
+
+    Example 1:
+       select * from emp where empname like 'a%';
+	   
+	 Example 2:
+       select * from emp where empname like '%a';
+	   
+      Example 3:
+       select * from emp where empname like '%d';
+	   
+	 Example 4:
+       select * from emp where empname like '_d%';   
+================================================================================================================================
+	   
+	   
+	  
+	   
+	 
+			 
+   					
+					
+		

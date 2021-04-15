@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>Remove Empty</title>
+		<style>
+			#div1{
+				width:500px;
+				height:200px;
+				background-color:yellow;
+				border:5px solid blue;
+				margin:25px;
+			}
+			
+			#div2{
+				width:500px;
+				height:200px;
+				background-color:yellow;
+				border:5px solid blue;
+				margin:25px;
+			}
+		</style>
+		<script src="dist/js/jquery.min.js"></script>
+		<script>
+			$(function(){  //(document).ready can be skipped because it means same without it also
+			//================================
+				$("#remove").click(function(){
+					$("#div1").remove();
+				})
+				$("#empty").click(function(){
+					$("#div2").empty();
+				})
+			//================================
+			});
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<p>This is a paragraph</p>
+			<p>This is a paragraph</p>
+			<p>This is a paragraph</p>
+			<p>This is a paragraph</p>
+		</div>
+		<button id="remove">Remove</button>
+		<div id="div2">
+			<p>This is a paragraph</p>
+			<p>This is a paragraph</p>
+			<p>This is a paragraph</p>
+			<p>This is a paragraph</p>
+		</div>
+		<button id="empty">Empty</button>
+	</body>
+</html>

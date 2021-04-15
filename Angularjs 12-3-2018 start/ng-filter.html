@@ -1,0 +1,63 @@
+<html>
+   
+  <head>
+     <script src="assets/js/angular.js"></script>
+  </head>
+  <body>
+    
+	 
+	 <div ng-app="myFilter" ng-init="
+	 user=[
+	                  
+					  {'name':'siva', 'mobile':'457689823', 'city':'bangalore', 'age':'21'},
+					  {'name':'kumar', 'mobile':'857689823', 'city':'chennai', 'age':'22'},
+					  {'name':'vinoth', 'mobile':'757689823', 'city':'bangalore', 'age':'23'},
+					  {'name':'ravi', 'mobile':'667689823', 'city':'chennai', 'age':'25'},
+					  {'name':'dinesh', 'mobile':'887689823', 'city':'bangalore', 'age':'26'},
+					  {'name':'shankar', 'mobile':'909689823', 'city':'chennai', 'age':'27'},
+					  {'name':'siva', 'mobile':'957689823', 'city':'bangalore', 'age':'28'},
+					   {'name':'siva', 'mobile':'957689823', 'city':'bangalore', 'age':'28'},
+					    {'name':'siva', 'mobile':'957689823', 'city':'bangalore', 'age':'28'},
+						 {'name':'siva', 'mobile':'957689823', 'city':'bangalore', 'age':'28'}
+	 
+	      ];">
+         
+		 <div ng-controller="myUser">
+		  <center>
+		    Search : <input type="text" ng-model="searchkey">
+		  </center>
+		  <table align="center"  cellpadding="7">
+		     <tr bgcolor="red">
+			    <th ng-click="changeOrder('name')"> Name </th>
+				<th ng-click="changeOrder('mobile')"> Mobile </th>
+				<th ng-click="changeOrder('city')"> City </th>
+				<th ng-click="changeOrder('age')"> Age </th>
+			 </tr>
+		     
+			 <tr ng-repeat="row in user | filter:searchkey | orderBy:myorder"> 
+			   <td>{{row.name}}</td>
+			   <td>{{row.mobile}}</td>
+			   <td>{{row.city}}</td>
+			   <td>{{row.age}}</td>
+			 </tr>
+		  
+		  </table>
+		 
+		 </div>
+	 
+	 </div>
+	    
+		<script>
+		var obj= angular.module("myFilter",[]);//object creation of module
+	  obj.controller("myUser",function($scope){
+	     
+		 $scope.changeOrder=function(key)
+		 {
+		     $scope.myorder = key;
+			 
+		 }
+	  });
+		</script>
+	 
+  </body>
+</html>

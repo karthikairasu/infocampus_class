@@ -1,0 +1,488 @@
+<html>
+  <head>
+     <link href="assets/css/bootstrap.css" rel="stylesheet">
+	 
+	 <script>
+	  function assignment()
+	  {
+	   var fname=document.getElementById("fname").value;
+	    var mname=document.getElementById("mname").value;
+		 var lname=document.getElementById("lname").value;
+		  var email=document.getElementById("email").value;
+		   var password=document.getElementById("password").value;
+		    var cpassword=document.getElementById("cpassword").value;
+			 var mobile=document.getElementById("mobile").value;
+			  var address=document.getElementById("address").value;
+			   var city=document.getElementById("city").value;
+			    var state=document.getElementById("state").value;
+				 var male=document.getElementById("male").checked;
+		         var female=document.getElementById("female").checked;
+				  var experience=document.getElementById("experience").value;
+				   var designation=document.getElementById("designation").value;
+				    var ptiming=document.getElementById("ptiming").value;
+					 var plocation=document.getElementById("plocation").value;
+					  var esalary=document.getElementById("esalary").value;
+					   var subject1=document.getElementById("subject1").checked;
+					    var subject2=document.getElementById("subject2").checked;
+						 var subject3=document.getElementById("subject3").checked;
+						  var subject4=document.getElementById("subject4").checked;
+	  status=true;
+      if(fname=="")
+       {
+	    document.getElementById("fname").style.borderColor="red";
+		document.getElementById("fnameerror").innerHTML="please select fname";
+		status=false;
+	   }	  
+	   else{
+	   document.getElementById("fname").style.borderColor="green";
+		document.getElementById("fnameerror").innerHTML="";
+	   }
+	   //====================================================//
+	   if(mname=="")
+       {
+	    document.getElementById("mname").style.borderColor="red";
+		document.getElementById("mnameerror").innerHTML="please select mname";
+		status=false;
+	   }	  
+	   else{
+	   document.getElementById("mname").style.borderColor="green";
+		document.getElementById("mnameerror").innerHTML="";
+	   }
+	   //====================================================//
+	   if(lname=="")
+       {
+	    document.getElementById("lname").style.borderColor="red";
+		document.getElementById("lnameerror").innerHTML="please select lname";
+		status=false;
+	   }	  
+	   else{
+	   document.getElementById("lname").style.borderColor="green";
+		document.getElementById("lnameerror").innerHTML="";
+	   }
+	   //====================================================//
+	   if(email=="")
+       {
+	    document.getElementById("email").style.borderColor="red";
+		document.getElementById("emailerror").innerHTML="please enter email";
+		status=false;
+	   }	  
+	   else{
+	   document.getElementById("email").style.borderColor="green";
+		document.getElementById("emailerror").innerHTML="";
+	   }
+	   //====================================================//
+	   if(password=="")
+       {
+	    document.getElementById("password").style.borderColor="red";
+		document.getElementById("passworderror").innerHTML="please enter password";
+		status=false;
+	   }	  
+	   else{
+	   document.getElementById("password").style.borderColor="green";
+		document.getElementById("passworderror").innerHTML="";
+	   }
+	   //====================================================//
+	   if(cpassword=="")
+       {
+	    document.getElementById("cpassword").style.borderColor="red";
+		document.getElementById("cpassworderror").innerHTML="enter password";
+		status=false;
+	   }	  
+	   else{
+	   document.getElementById("cpassword").style.borderColor="green";
+		document.getElementById("cpassworderror").innerHTML="";
+	   }
+	   //====================================================//
+	   
+	   if(mobile==""||mobile.lenth<10||isNaN(mobile))
+       {
+	    document.getElementById("mobile").style.borderColor="red";
+		document.getElementById("mobileerror").innerHTML="enter mobile no";
+		status=false;
+	   }	  
+	   else{
+	   document.getElementById("mobile").style.borderColor="green";
+		document.getElementById("mobileerror").innerHTML="";
+	   }
+	   //====================================================//
+	   if(address=="")
+       {
+	    document.getElementById("address").style.borderColor="red";
+		document.getElementById("addresserror").innerHTML="please enter address";
+		status=false;
+	   }	  
+	   else{
+	   document.getElementById("address").style.borderColor="green";
+		document.getElementById("addresserror").innerHTML="";
+	   }
+	   //====================================================//
+	   if(city=="")
+       {
+	    document.getElementById("city").style.borderColor="red";
+		document.getElementById("cityerror").innerHTML="please select city";
+		status=false;
+	   }	  
+	   else{
+	   document.getElementById("city").style.borderColor="green";
+		document.getElementById("cityerror").innerHTML="";
+	   }
+	   //====================================================//
+	   if(state=="")
+       {
+	    document.getElementById("state").style.borderColor="red";
+		document.getElementById("stateerror").innerHTML="please select state";
+		status=false;
+	   }	  
+	   else{
+	   document.getElementById("state").style.borderColor="green";
+		document.getElementById("stateerror").innerHTML="";
+	   }
+	   //====================================================//
+	   if(male==true||female==true)
+       {
+	    
+		document.getElementById("gendererror").innerHTML="";
+		
+	   }	  
+	   else{
+	   
+		document.getElementById("gendererror").innerHTML="please select gender";
+		status=false;
+	   }
+	   //====================================================//
+	     if(experience=="")
+       {
+	    document.getElementById("experience").style.borderColor="red";
+		document.getElementById("experienceerror").innerHTML="please select experience";
+		status=false;
+	   }	  
+	   else{
+	   document.getElementById("experience").style.borderColor="green";
+		document.getElementById("experienceeerror").innerHTML="";
+	   }
+	   //====================================================//
+	    if(designation=="")
+       {
+	    document.getElementById("designation").style.borderColor="red";
+		document.getElementById("designationerror").innerHTML="please select designation";
+		status=false;
+	   }	  
+	   else{
+	   document.getElementById("designation").style.borderColor="green";
+		document.getElementById("designationerror").innerHTML="";
+	   }
+	   //====================================================//
+	    if(ptiming=="")
+       {
+	    document.getElementById("ptiming").style.borderColor="red";
+		document.getElementById("experienceerror").innerHTML="please select ptiming";
+		status=false;
+	   }	  
+	   else{
+	   document.getElementById("ptiming").style.borderColor="green";
+		document.getElementById("ptimingerror").innerHTML="";
+	   }
+	   //====================================================//
+	    if(plocation=="")
+       {
+	    document.getElementById("plocation").style.borderColor="red";
+		document.getElementById("plocationerror").innerHTML="please select plocation";
+		status=false;
+	   }	  
+	   else{
+	   document.getElementById("plocation").style.borderColor="green";
+		document.getElementById("plocationerror").innerHTML="";
+	   }
+	   //====================================================//
+	    if(esalary=="")
+       {
+	    document.getElementById("esalary").style.borderColor="red";
+		document.getElementById("esalaryerror").innerHTML="please select esalary";
+		status=false;
+	   }	  
+	   else{
+	   document.getElementById("esalary").style.borderColor="green";
+		document.getElementById("esalaryerror").innerHTML="";
+	   }
+	   //====================================================//
+	    if(subject1==true||subject2==true||subject3==true||subject4==true)
+       {
+	  
+		document.getElementById("psubjecterror").innerHTML="";
+		
+	   }	  
+	   else{
+	   
+		document.getElementById("psubjecterror").innerHTML="select subject";
+		status=false;
+	   }
+	   //====================================================//
+	   
+	   return status;
+	  }
+	 </script>
+  </head>
+  <body>
+     <div class="container">
+	  <div class="row">
+	    <div class="col-sm-2"></div>
+	    <div class="col-sm-8 well">
+		
+		<h2 class="text-center">Tutor Registration</h2>
+		
+		<div class="row">
+		
+		<div class="col-sm-4">
+		
+		 <div class="row form-group">
+		 <div class="col-sm-4"><label>First Name</label></div>
+		  <div class="col-sm-8">
+		  <input type="text" class="form-control" placeholder="Enter first name" id="fname">
+		   <i id="fnameerror" style="color:red;"></i>
+		  </div>
+		 
+		 </div>
+		 
+		 <div class="row form-group">
+		 <div class="col-sm-4"><label>Email</label></div>
+		  <div class="col-sm-8">
+		  <input type="text" class="form-control" placeholder="Enter email" id="email">
+		   <i id="emailerror" style="color:red;"></i>
+		  </div>
+		 
+		 </div>
+		 
+		 <div class="row form-group">
+		 <div class="col-sm-4"><label>Mobile</label></div>
+		  <div class="col-sm-8">
+		  <input type="text" class="form-control" placeholder="Enter mobile no" id="mobile">
+		   <i id="mobileerror" style="color:red;"></i>
+		  </div>
+		 
+		 </div>
+		 
+		  <div class="row form-group">
+		 <div class="col-sm-4"><label>Address</label></div>
+		  <div class="col-sm-8">
+		 <textarea class="form-control" id="address" placeholder="Enter your address"></textarea>
+		  <i id="addresserror" style="color:red;"></i>
+		  </div>
+		 
+		 </div>
+		 
+		
+		
+		</div>
+		<div class="col-sm-4">
+		
+		<div class="row form-group">
+		 <div class="col-sm-4"><label>Middle Name</label></div>
+		  <div class="col-sm-8">
+		  <input type="text" class="form-control" placeholder="Enter middle name" id="mname">
+		   <i id="mnameerror" style="color:red;"></i>
+		  </div>
+		 
+		 </div>
+		 
+		 <div class="row form-group">
+		 <div class="col-sm-4"><label>Password</label></div>
+		  <div class="col-sm-8">
+		  <input type="text" class="form-control" placeholder="Enter your password" id="password">
+		   <i id="passworderror" style="color:red;"></i>
+		  </div>
+		 
+		 </div>
+		 
+		 <div class="row form-group">
+		 <div class="col-sm-4"><label>City</label></div>
+		  <div class="col-sm-8">
+		  <select id="city" class="form-control">
+		   <option value="">Choose City</option>
+		   <option value="bangalore">bangalore</option>
+		   <option value="chennai">chennai</option>
+		   <option value="mumbai">mumbai</option>
+		  </select>
+		   <i id="cityerror" style="color:red;"></i>
+		  </div>
+		 
+		 </div>
+		 
+		  <div class="row form-group">
+		 <div class="col-sm-4"><label>Gender</label></div>
+		  <div class="col-sm-8">
+		  <input type="radio" id="male" value="male">Male
+		  <input type="radio" id="female" value="female">FeMale
+		   <i id="gendererror" style="color:red;"></i>
+		  </div>
+		 
+		 </div>
+		 
+		
+		 
+          
+		  
+		
+		</div>
+		<div class="col-sm-4">
+		
+		 <div class="row form-group">
+		 <div class="col-sm-4"><label>Last Name</label></div>
+		  <div class="col-sm-8">
+		  <input type="text" class="form-control" placeholder="Enter your last name" id="lname">
+		   <i id="lnameerror" style="color:red;"></i>
+		  </div>
+		 
+		 </div>
+		 
+		  <div class="row form-group">
+		 <div class="col-sm-4"><label>Conform Password</label></div>
+		  <div class="col-sm-8">
+		  <input type="text" class="form-control" placeholder="Enter your password" id="cpassword">
+		   <i id="cpassworderror" style="color:red;"></i>
+		  </div>
+		 
+		 </div>
+		 
+		  <div class="row form-group">
+		 <div class="col-sm-4"><label>state</label></div>
+		  <div class="col-sm-8">
+		    <select id="state" class="form-control">
+		   <option value="">Choose state</option>
+		   <option value="tamilnadu">Tamilnadu</option>
+		   <option value="karnataka">karnataka</option>
+		   <option value="kerala">kerala</option>
+		  </select>
+		   <i id="stateerror" style="color:red;"></i>
+		  </div>
+		 
+		 </div>
+		 
+		   <div class="row form-group">
+		 <div class="col-sm-4"><label>Experience</label></div>
+		  <div class="col-sm-8">
+		    <select id="experience" class="form-control">
+		   <option value="">Choose experience</option>
+		   <option value="1 year">1 year</option>
+		   <option value="3 years">3 years</option>
+		   <option value="5 years">5 years</option>
+		  </select>
+		   <i id="experienceerror" style="color:red;"></i>
+		  </div>
+		 
+		 </div>
+		 
+		  
+		
+		</div>
+		
+		
+		
+		</div>
+		
+		<div class="row">
+		
+		  <div class="col-sm-12">
+		  <div class="row">
+		  <div class="col-sm-4">
+		
+		    <div class="row form-group">
+		 <div class="col-sm-4"><label>Designation</label></div>
+		  <div class="col-sm-8">
+		  <select id="designation" class="form-control">
+		   <option value="">Choose Designation</option>
+		   <option value="bangalore">bangalore</option>
+		   <option value="mysore">mysore</option>
+		   <option value="chennai">chennai</option>
+		  </select>
+		   <i id="designationerror" style="color:red;"></i>
+		  </div>
+		 
+		 </div>
+		  </div>
+		  <div class="col-sm-4">
+		  
+		   <div class="row form-group">
+		 <div class="col-sm-4"><label>Preferred Timing</label></div>
+		  <div class="col-sm-8">
+		    <select id="ptiming" class="form-control">
+		   <option value="">Choose preferred timing</option>
+		   <option value="morning 12">morning 12</option>
+		   <option value="afternoon 2-4">afternoon 2-4</option>
+		   <option value="evening 5-7">evening 5-7</option>
+		  </select>
+		  <i id="ptimingerror" style="color:red;"></i>
+		  </div>
+		 </div>
+		 </div>
+		  <div class="col-sm-4">
+		   <div class="row form-group">
+		 <div class="col-sm-4"><label>Preferred location</label></div>
+		  <div class="col-sm-8">
+		    <select id="plocation" class="form-control">
+		   <option value="">Choose preferred location</option>
+		   <option value="madiwala">madiwala</option>
+		   <option value="silkboard">silkboard</option>
+		   <option value="marathail">marathail</option>
+		   
+		  </select>
+		  <i id="plocationerror" style="color:red;"></i>
+		  </div>
+		 
+		 </div>
+		  
+		  
+		  </div>
+		  </div>
+		  
+		 
+		</div>
+		
+		</div>
+		
+		<div class="row">
+		<div class="col-sm-6">
+		 
+		  <div class="row form-group">
+		 <div class="col-sm-4"><label>preferred subject</label></div>
+		  <div class="col-sm-8">
+		  <input type="checkbox"  id="subject1" value="java">java
+		  <input type="checkbox"  id="subject2" value="java">.net
+		  <input type="checkbox"  id="subject3" value="java">PHP
+		  <input type="checkbox"  id="subject4" value="java">Python
+		   <i id="psubjecterror" style="color:red;"></i>
+		  </div>
+		 
+		 </div>
+		 
+		</div>
+		 <div class="col-sm-6">
+		 
+		 <div class="row form-group">
+		 <div class="col-sm-4"><label>Expected Salary</label></div>
+		  <div class="col-sm-8">
+		  <input type="text" class="form-control" placeholder="Enter your expected saiary" id="esalary">
+		  <i id="esalaryerror" style="color:red;"></i>
+		  </div>
+		 
+		 </div>
+		 
+		 </div>
+		</div>
+		
+		<div class="row text-center">
+		<button type="button" class="btn btn-primary" onclick="assignment()">Save</button>
+		 <button type="reset" class="btn btn-danger">clear</button>
+		</div>
+		
+		</div><!------col sm-8----->
+		
+	    <div class="col-sm-2"></div>
+	  
+	  
+	  </div>
+	  
+	  
+	 
+	 </div>
+  </body>
+</html>

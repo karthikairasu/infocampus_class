@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+   <head>
+      
+	  <title>button type as image</title>
+   </head>
+   <body>
+     <form action="savedata.html" method="POST">
+      <table >
+	     <tr>
+		   <th>Name</th>
+		   <td><input type="text" name="fname" placeholder="Enter Name"></td>
+		 </tr>
+		 
+		 <tr>
+		 <th>List</th>
+		 <td>
+		   <input list="citynames" name="city">
+		   <datalist id="citynames">
+		     <option value="bangalore"></option>
+		     <option value="chennai"></option>
+		     <option value="mysore"></option>
+		   
+		   </datalist>
+		 
+		 </td>
+		 </tr>
+		 
+		 <tr>
+		   <th>pattern</th>
+		   <td>
+		    <input type="text" name="codeno" pattern="[A-Z a-z]{3}"
+			placeholder="Enter City Code" 
+			oninvalid="this.setCustomValidity('Please enter 3 characters code only')"
+			oninput="this.setCustomValidity('')"required>
+		   </td>
+		 </tr>
+		 
+		<tr>
+		<td>
+		  <input type="image" height="50px" width="50px" src="th.png">
+		</td>
+		</tr>
+		 
+		
+	  </table>
+	  
+	  </form>
+   </body>
+</html>
+
+

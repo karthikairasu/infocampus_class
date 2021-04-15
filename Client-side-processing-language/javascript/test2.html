@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <script>
+	   function test1() 
+	   {
+	    var name = document.getElementById("value1").value;
+		document.getElementById("name").innerHTML="Name is : "+name;
+		
+	   }
+	   function test2() 
+	   {
+	    var name = document.getElementById("value2").value;
+		document.getElementById("mobile").innerHTML="Name is : "+name;
+		
+	   }
+	   function test3() 
+	   {
+	    var name = document.getElementById("value3").value;
+		document.getElementById("city").innerHTML="Name is : "+name;
+	
+	   }
+	</script>
+  </head>
+    <body>
+	   <table align="center" border="2">
+	     <tr>
+		   <td>
+		    <label>Name</label>
+			<input type="text" onkeyup="test1()" id="value1"> 
+			</td>
+			
+			<td id="name">Name is :</td>
+		 </tr>
+		 
+		  <tr>
+		   <td>
+		    <label>Mobile</label>
+			<input type="text" onkeyup="test2()" id="value2"> 
+			</td>
+			
+			<td id="mobile">Mobile is :</td>
+		 </tr>
+		 
+		  <tr>
+		   <td>
+		    <label>City</label>
+			<input type="text" onkeyup="test3()" id="value3"> 
+			</td>
+			
+			<td id="city">City is :</td>
+		 </tr>
+	   </table>
+	</body>
+ </html>

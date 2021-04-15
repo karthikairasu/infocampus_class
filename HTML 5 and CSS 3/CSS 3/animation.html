@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+     <meta charset="UTF-8">
+	 <title>Animation effect</title>
+	 <style>
+	     #div1{
+		    height:200px;
+			width:200px;
+			background-color:yellow;
+			-webkit-animation:mydiv 2s infinite;
+			/*-webkit-animation-duration:6s;*/
+			
+		 }
+		 @keyframes mydiv{
+		   from{background-color:yellow;}
+		   to{background-color:red;}
+		 }
+		  @-webkit-keyframes mydiv{
+		   from{background-color:yellow;}
+		   to{background-color:red;}
+		 }
+		 #div2{
+		    height:100px;
+			width:100px;
+			border:10px solid red;
+			background-color:pink;
+			position:relative;
+			margin:100px;
+			-webkit-animation:mydiv2 4s infinite;
+			<!-- -webkit-animation-duration:6s; -->
+		 }
+		 @keyframes mydiv2{
+		    0%{background-color:orange;left:0px;top:0px;}
+			10%{background-color:blue;left:100px;top:0px;}
+			20%{background-color:green;left:200px;top:0px;}
+			30%{background-color:red;left:400px;top:100px;}
+			40%{background-color:yellow;left:400px;top:200px;}
+			50%{background-color:magenta;left:400px;top:300px;}
+			60%{background-color:skyblue;left:450px;top:400px;}
+			70%{background-color:purple;left:200px;top:200px;}
+			80%{background-color:violet;left:200px;top:100px;}
+			90%{background-color:pink;left:100px;top:100px;}
+			100%{background-color:silver;left:0px;top:0px;}
+		 }
+		 @-webkit-keyframes mydiv2{
+		    0%{background-color:orange;left:0px;top:0px;}
+			10%{background-color:blue;left:100px;top:0px;}
+			20%{background-color:green;left:200px;top:0px;}
+			30%{background-color:red;left:400px;top:100px;}
+			40%{background-color:yellow;left:400px;top:200px;}
+			50%{background-color:magenta;left:400px;top:300px;}
+			60%{background-color:skyblue;left:450px;top:400px;}
+			70%{background-color:purple;left:200px;top:200px;}
+			80%{background-color:violet;left:200px;top:100px;}
+			90%{background-color:pink;left:100px;top:100px;}
+			100%{background-color:silver;left:0px;top:0px;}
+		 }
+	 </style>
+  </head>
+  <body>
+   <div id="div1">
+    <p>About Us</p>
+   </div>
+   <div id="div2">
+   
+   </div>
+  </body>
+</html>

@@ -1,0 +1,811 @@
+=> What is DATABASE ?
+    -> Database is collection of inter-related table.
+	
+=> what is table ?
+  -> Table is collections of attributes.
+  -> Table contains the detail description about an entity.
+  
+  ---------------------------------------------------------
+     1. Database creation
+	 2. tablecreation 
+	 3. columns add
+	 4. row deleted
+	 5. data insert
+	 6. rename table columns
+	 7. Rename table
+	 8. Drop table
+	 9. drop database
+----------------------------------------------------------
+  
+ ->GUI
+    How to create DATABASE
+	
+------------------------------------------
+    
+	CLI
+	   1. DDL (Database definition language)
+	     -> it deal with all structure
+	   2. DML (Database manipulation language)
+	   3. JOINS, INDEXING, TRIGGER
+	   
+----------------------------------------------
+CLI (command line interface)
+    ddl()
+  => how to create a database ?
+    syntax
+	create database <dbname>;
+	
+	example: 
+	create database mytestproject;
+	
+	create database mytestproject2;
+
+----------------------------------------
+  How to create table in my sql database
+  
+     syntax:
+	    create table <tablename>
+		(
+		  colname1           datatype(length) primary key auto_increment.
+		  colname2           datatype(length).
+		  colname3           datatype(length).
+		  
+		);
+		
+     Example :
+	     create table user
+		 (
+		   userid     int(10)primary key auto_increment,
+		   name     varchar(255),
+		   mobile     bigint(13),
+		   age     varchar(20)
+		 );
+		
+   Example 2:
+         create table contactus
+		 (
+		   id  int(10) primary key auto_increment,
+		   fullname  varchar(100),
+		   mobileno  bigint(13),
+		   city      varchar(100),
+		   pincode   int(6)
+		   );
+		   
+  example 3:
+  create table product
+    (
+	   proid  int(10)primary key auto_increment,
+	   name varchar(100),
+	   price float,
+	   mrp float,
+	   description text(1000),
+	   image    varchar(255)
+		 );
+-------------------------------------------------------------------
+
+ -> How to add new columns in existing mysql table?
+   
+   1.in begning
+	 2. at last
+	 3. anywhere
+	    
+		1. syntax: (in begning)
+		     alter table<tablename>
+		     add <new_col_name> datatype(length) first;
+		
+		Example :
+		   alter table user
+		   add   email varchar(100) first;
+		   
+		 2.(at last)
+		     syntax:
+		     alter table<tablename>
+		     add <new_col_name> datatype(length);
+		     
+        Example :
+                alter table user	
+				add dob varchar(30);
+				
+		3.
+		   syntax:
+		     alter table<tablename>
+			 add <new_col_name> datatype(length)after <old_col_name>;
+		  
+		   example :
+                   alter table user
+		   add  password varchar(100) after email;		   
+------------------------------------------------------------------
+  
+-> How to add multiple columns on different location in mysql table?
+	 
+	  example :
+	         alter table user
+			 add test1 int(10),
+			 add test2 int(10)after email,
+			 add test3 int(10) first;
+---------------------------------------------------------------------
+
+ -> How to display/view the structure of any table in mysql?
+  
+   1. explain
+	  2. describe
+	 
+	 example :
+	      explain user;
+
+     example :
+	      describe user;
+		  
+---------------------------------------------------------------------
+
+-> How to rename existing column of mysql ?
+
+    syntax :
+	    alter table <tablename>
+		   change <oldcolname> <newcolname> old/new datatype(length);
+		   
+	Example :
+	      alter table user
+		     change name fullname varchar(255);
+			 
+			 
+    Example:
+	     alter table user
+		     change mobile contactno bigint(13);
+			 
+--------------------------------------------------------------------
+
+ -> How to drop a column from mysql table ?
+	
+	   syntax :
+	        alter table <tablename>
+			 drop column<col_name>;
+			 
+	    example :
+		       alter table user
+			   drop column test1;
+			   
+	    example:
+		      alter table user
+			  drop column test2,
+			  drop column test3,
+			  drop column age;
+
+--------------------------------------------------------------------
+ -> How to rename in mysql ?
+      
+	   syntax:
+	       rename <tablename>
+		   <old_tablename> to <new_tablename>;
+		   
+		Example:
+		     rename table
+			 user to myuser;
+			 
+--------------------------------------------------------
+ -> How to drop table in mysql?
+ 
+     syntax:
+	     drop table <tablename>;
+		 
+	Example:
+	     drop table myuser;
+-----------------------------------------------------------
+ -> How to drop database in mysql ?
+
+    syntax:
+     drop database <database_name>;
+
+    Example:
+      drop database mytestproject;	
+	  
+---------------------------------------------------------
+
+  DML :
+      INSERT:
+	How to insert the data to mysql table?
+       2.
+		 2.a 
+				syntax:
+				    insert into <tablename>
+					set
+					colname  = 'value',
+					colname2 = 'value',
+					colname3 = 'value';
+					
+				example:
+				    insert into emp
+					set
+					empname = 'Mr xyz',
+					empsalary = '10000',
+					empage = '12 years',
+					empcity = 'Banglore';
+					
+----------------------------------------
+          2.b
+		      syntax:
+			       insert into <tablename>
+				   (col1, col2, col3, col4,..........)
+				   values('val1', 'val2', 'val3', 'val4',.........);
+
+                example:
+                     insert into emp
+					 (empname, empcity, empsalary, empage)
+				   values('abc', 'gulbarga', '20000', '25 years');
+					 
+--------------------------------------------------
+
+		How to insert multiple rows at a time in mysql ?
+		
+		  Example:
+		     insert into emp
+			      (empname, empmobile, empage, empcity, empsalary)
+		     values('Mahesh','99999999','25','mumbai','12000'),
+			       ('Ganesh','88888888','22','chnai','15000'),
+			       ('Naresh','9591683891','24','pune','20000'),
+			       ('Lokesh','77777777','22','mumbai','22000'),
+			       ('Panchu','25458754','21','gulbarga','25000'),
+			       ('pintu','2558644','22','pune','17000'),
+			       ('kiran','9145824','24','chnai','18000'),
+			       ('akswhya','9845786','22','Mumbai','16000'),
+			       ('swaroop','98924578','23','Manglore','16000'),
+			       ('rahul','989224587','26','mysore','19000');
+				   
+=============================================================================
+
+      How to fetch data from mysql table ?
+	     2 methods
+		 
+		 1. syntax:
+		        select * from <tablename>;
+				
+				Example:
+				   select * from emp;
+				   
+				Note : it fetch all rows and all columns from table.
+					   you should never follow this method else your 
+					   project will be very very slow.
+					   
+			  
+		 2. syntax:
+		       select colname1, colname2, colname3,.........from<tablename>
+			   
+			   Example: 
+			     select empname, empmobile, empsalary from emp;
+				 
+--------------------------------------------------------------------------------------
+
+    ORDER BY => TO re-arrange the rows in order as ASC/DESC;
+	
+	  syntax: 
+	    select * from <tablename> order by <colname> asc/desc;
+		
+		example:
+		   select * from emp order by empsalary asc;
+		   select * from emp order by empname asc;
+		   
+----------------------------------------------------------------------------------------
+
+         Group By => To filter unique records from mysql table ?
+		    syntax:
+			   select * from <tablename> group by <colname>;
+			   
+			Example:
+			   select * from emp group by empcity;
+			   
+		select * from emp group by empcity order by empsalary asc;	   
+------------------------------------------------------------------------
+
+     Distinct : to find unique record but best suitable for  column at a time.
+	 
+	    syntax:
+		   select distinct <colname> from <tablename>;
+		   
+		 Example:
+		      		   select distinct empcity from  emp;
+					   
+------------------------------------------------------------------------------------
+
+	BETWEEN  => To fetch records from table for a given range min to max.
+	
+	     Syntax :
+		    select * from <tablename> where colname between <min> and <max>
+			
+	     Example :
+		   		    select * from emp where empsalary between 9000 and 40000;
+					
+		Example2 :
+                select * from emp
+				where 
+				empsalary between 9000 and 40000
+				group by empcity 
+				order by empsalary desc;		
+------------------------------------------------------------------------------------
+
+     IN / NOT IN => To filter the records as a random 
+	 
+	    IN:  
+		   Syntax :
+		       select * from <tablename> Where <colname> in(val1,val2,val3);
+			   
+			   Example :
+		       select * from emp Where empid in(1,6,9,100);
+			   
+		NOT IN :
+		      Example :
+			  		       select * from emp Where empid not in(1,6,9,100);
+			
+------------------------------------------------------------------------------------------
+
+   LIKE => To filter records best suitable for both alpha and numeric.
+   
+       syntax :
+	        select * from <tablename> where <colname> like 'pattern';
+			
+	   Example1 :
+	   	        select * from emp where empname like 'a%';
+				
+	   Example2 :
+	   	        select * from emp where empname like '%a';
+				
+	   Example3 :
+	   	   	        select * from emp where empname like '%d';
+					
+	   Example4 :
+	   	   	   	        select * from emp where empname like '_a%';
+						
+-----------------------------------------------------------------------------------------
+    AVG  : to find the average records from a columns of table, best
+	suitable for numeric data type columns.
+	
+	Syntax : 
+	     select avg(colname) from <tablename>;
+		 
+	Example: 
+         select avg(empsalary) from emp;
+		 
+		 select avg(empsalary) as avgsalary from emp;
+
+---------------------------------------------------------------------------------------------		 
+   max() : to find the max value from a table column
+   
+   syntax:
+         
+		 select max (colname) from <tablename>;
+		 
+	Example:
+
+         select max(empsalary)	as maxsalary from emp;
+------------------------------------------------------------------------------------------------		
+     min() : to find the min value from a table column
+   
+   syntax:
+         
+		 select min (colname) from <tablename>;
+		 
+	Example:
+
+         select min(empsalary)	as minsalary from emp;
+-------------------------------------------------------------------------------------------------	
+   count() : to count the records from columns of a table	 
+   
+   Syntax:
+      select count(colname) from <tablename>;
+	  
+	Example:
+      select count(*) as totalemp from emp;
+ 
+note: to find total number of rows inside table.
+--------------------------------------------------------------------------------------------------- 
+    md5() : to encode the original data into 32 (alpha + numeric) hash
+	
+	Syntax:
+	  select md5(colname) from <tablename>;
+	  
+	 Example:
+	    select md5(empmobile) as mobileno from emp;
+		
+-----------------------------------------------------------------------------------------------------		
+     How to fetch 2nd highest records from mysql table?
+	 
+	 
+	 Syntax:
+	     select * from <tablename> order by <colname> desc
+		 limit <starindex>,<number of rows>;
+		 
+	Example:
+             select * from emp order by empsalary desc	
+		 limit 1,1;
+    -------------------------------------------------------------------------------------------------
+             How to fetch 2nd lowest records from mysql table?
+	 
+	 
+	 Syntax:
+	      select * from <tablename> order by <colname> asc
+		 limit <starindex>,<number of rows>;
+		 
+	Example:
+              select * from emp order by empsalary asc	
+		 limit 3,1;	
+		 
+		 note: we want 2nd highest number so we write startindex as 1 because indexing start from 0 position
+		  and we want only 2nd highest number so we write number of rows as1.
+		  startindex=3 and number of row=1.
+------------------------------------------------------------------------------------------------------	
+Update :
+    1. conditional
+    2. non conditional
+
+    2.non conditional
+	
+	Syntax:
+	     update <tablename>
+		 set
+		 colname1 = 'new value',
+		 colname2 = 'new value',
+		 colname3 = 'new value';
+		 
+	Example:
+           update emp
+           set
+           empname = 'ABC',
+           empmobile = '999999',
+           empcity = 'delhi';	
+--------------------------------------------------------------------------------------------------------
+    1. conditional
+	
+       Syntax:
+         update <tablename>
+		 set
+		 colname1 = 'new value',
+		 colname2 = 'new value',
+		 colname3 = 'new value' where <condition>;
+		 
+	  Example:
+         update emp
+           set
+           empname = 'Mahesh',
+           empmobile = '88888',
+           empcity = 'mumbai' where empid='6';	 
+		   
+	  Example2:
+          update emp
+          set 
+          empcity = 'bangalore',
+          empage = '45 Years' where empid between 2 and 5;	
+
+	  Example3:
+           update emp  
+		   set
+		   empsalary = '35000' where empid not in (1, 6, 3, 5);
+		   
+		   
+	  Example4:
+           update emp	
+           set
+		   empmobile = '9876542387' where empsalary >=8000;
+		   
+==================================================================
+    DELETE
+     1. conditional
+     2. non conditional
+
+    1.syntax:
+       delete from <tablename> where <condition>;
+
+	Example:
+	   delete from emp where empid=6;
+	   
+	 Example:
+	   delete from emp where empid between 4 and 7;
+	   
+	 Example:
+	   delete from emp where empid not in (1,4,6,8,9);
+--------------------------------------------------------------------------------------------------------
+    2.Syntax:
+        delete from <tablename>;
+
+	Example:
+	   delete from emp;
+ 		   
+----------------------------------------------------------------------------------------------------------
+	  insert into emp(empname) values ('AAAAAAAA');
+---------------------------------------------------------------------------------------------------------
+      TRUNCATE emp;
+---------------------------------------------------------------------------------------------------------	  
+	difference between delete and truncate 
+   
+   both are commends to delete the records from table.
+   
+	Delete:
+       1.it can 1,2,3, or all records with condition and
+       without condition.
+       
+       2.it belongs to DML
+	   3.Using delete the primary key index will remain same.
+	   
+	Truncate:
+       1.it has no condition so always delete entire records.
+	   2. it belongs to DML.
+	   3. it will delete the primary key index also.
+	   
+-----------------------------------------------------------------------------------------------------------
+   Trigger	
+   
+  the emp table name, mobile, salary  to change new value. they old value are backup to use trigger.
+
+ 
+
+create empbackup  table: add one column backupid at top first in empbackup table.
+
+ (to add trigger in empbackup table):  (
+									triggername : empupdate
+									table       : emp
+									time        : before
+									event       : update				
+								   )
+                  
+				   insert into empbackup
+
+				  SET
+				  empname = old.empname,
+				  empid = old.empid,
+				  empsalary = old.empsalary,
+				  empmobile = old.empmobile,
+				  empcity = old.empcity,
+				  empage = old.empage;
+
+
+emp table : to delete row  in table for backup.
+
+ (to add trigger same emp table )
+	
+                  insert into empbackup
+
+				  SET
+				  empname = old.empname,
+				  empid = old.empid,
+				  empsalary = old.empsalary,
+				  empmobile = old.empmobile,
+				  empcity = old.empcity,
+				  empage = old.empage;
+				  
+================================================================================================================
+  create table city
+    (
+	 cityid    int(10) primary key auto_increment,
+     cityname  varchar(100)	 
+	);
+
+--------------------------------------------------------------------------------------------------------------
+   create table user
+   (
+     userid    int(10) primary key auto_increment,
+	 fullname  varchar(100),
+	 mobileno    bigint(10),
+	 cityid    int(100)
+   );
+
+------------------------------------------------------------------------------------------------------------- 
+   create table education
+   (
+     eduid     int(10)primary key auto_increment,
+	 eduname   varchar(100),
+	 eduyear   int(10),
+	 userid    int(10)
+   );
+  
+-----------------------------------------------------------------------------------------------------
+      TYpes of keys :
+
+                  1. candidate key	  
+		  2. primary key
+		  3. alternate key
+		  4. foreign key
+		  5. composite key
+		  
+--------------------------------------------------------------------------------------------------------
+  1. candidate key :
+              
+            * inside a table all the columns are known as candidate key.
+			* in user table all the columns are candidate key.
+  2. primary key :
+            
+            * this is also a column of table (as part of candidate key)
+            * it makes relation between two or more tables.
+            Rules:
+			   entity Entigrity:
+			             1. primary key should be not contain null value.
+						 2. primary key should be not contain duplicate value.
+  3. alternate key :
+                     
+            * this is also column of table that identified as 
+			
+			alternate key = candidate key - primary key;		
+  4. foreign key :
+            * it is also column of the table (as part of canditate key)
+            * it makes relation between only two tables.	
+            Rules:
+                refrential Entigrity :
+                            1. foreign key should not contain null value.
+							2. foreign key should contain same as primary key value.
+	 
+  
+  
+  5.  composite key :
+                     when we marge multiple alternate key together to fetch unique       
+					 record from table.then this composition of multiple alternate key help
+					 to fetch data.
+					 
+			Example :
+                     select * from user user
+  
+					  where email ='abc@gmail.com'
+					  and mobile ='999999999'
+					  and city = 'pune'			
+------------------------------------------------------------------------------------------     
+	How to create foreign key constraints			
+	
+	alter table user
+	 add constraint cityid
+	 foreign key (cityid)
+	 references city(cityid);
+------------------------------------------------------------------------------------------
+	alter table education
+	 add constraint userid
+	 foreign key (userid)
+	 references user(userid);
+	 
+--------------------------------------------------------------------------------------	 
+   What is Join:
+        join will help to retrieve data from multiple inter related tables.
+		
+		using following types:
+		    
+   Types of join:
+       1. direct join
+       2. inner join
+       3. left join
+             a. left outer join
+       4. right join
+             b. right outer join	   
+			 
+	1.direct join :
+                --->it return full matching records from all table. 
+		Syntax:
+             select table1.*, table2.* from tabel1,table2
+                  where tabel1.primary key = table2.foreign key
+
+        Example
+          select city.*, user.* from city, user
+          where
+          city.cityid = user.cityid		
+       --------------------------------------------------------
+         Example
+          select city.cityname, user.fullname, user.mobileno
+		  from city,user
+          where
+          city.cityid = user.cityid			  
+--------------------------------------------------------------------------------------------------------------			2.Inner join :
+
+        -->it return full matching records from all table. but
+        execution time will be slow compare to direct, left,right joins
+
+      Syntax :
+         select table1.*, table2.*
+		 from table1
+		 inner join table2
+		 on table1.primary key = table2.foreign key;
+		 
+	  Example :
+         select city.cityname, user.fullname,user.mobileno
+		 from city
+		 inner join user
+		 on city.cityid = user.cityid
+-------------------------------------------------------------------------------------------------------------	
+    3.left join :
+        
+        --->it return all record from main table and only matching 
+        records from dependent table.
+      
+       Syntax:
+           select tabel1.*, table2.*
+           from table1
+           left join tabel2
+           on tabel1.primary key = tabel2.foreign key
+ 
+       Example :
+	      select city.cityname, user.fullname, user.mobileno
+		  from city
+		  left join user
+		  on city.cityid = user.cityid;
+		  
+		  
+	   a. left outer join :
+
+	   Example :
+		
+	      select city.cityname, user.fullname, user.mobileno
+		  from city
+		  left outer join user
+		  on city.cityid = user.cityid;	  
+-------------------------------------------------------------------------------------------------------
+     4. right	join:
+          
+		   ---->it will return all data dependent table and only matching data from main table.
+        	 
+	   Syntax:
+           select tabel1.*, table2.*
+           from table1
+           right join tabel2
+           on tabel1.primary key = tabel2.foreign key
+ 
+       Example :
+	      select city.cityname, user.fullname, user.mobileno
+		  from city
+		  right join user
+		  on city.cityid = user.cityid;
+------------------------------------------------------------------------------------------------------
+   How to drop foreign key in mysql table ?
+     
+     Syntax :
+          alter table<tablename>
+          drop foreign key <foreign key name>;
+
+     Example:
+          alter table user
+          drop foreign key cityid;		  
+-----------------------------------------------------------------------------------------------------
+      Types of storage engine:
+          1. MRG_MYISAM
+		  2. MYISAM
+		  3. BLACKHOLE
+		  4. CSV
+		  5. MEMORY
+		  6. ARCHIVE
+		  7. INNODB
+----------------------------------------------------------------------------
+    What is default storage  engine?
+      in mysql 4 = MYISAM
+      in mysql 5 + = innoDB
+----------------------------------------------------------------------
+     What is default port number of mysql ?
+       3306(can be changed)	 
+---------------------------------------------------------------------
+   difference bettween innoDb & myisam
+
+     innoDB:
+         it store bulk data up to memory limit.
+         it support primary key and foreign key
+         it support column level locking
+         it support RDBMS
+
+      myisam:
+
+		it store LIMITED data...
+		it DOES NOT support foreign key
+		it support table/row level locking
+		it support DBMS	  
+		
+-----------------------------------------------------------------------------------------------------------
+     How to add index in mysql table?
+
+      Syntax:
+          alter table<tablename>
+          add index (<indexname>);
+
+      Example:
+         alter table user
+         add index (fullname);		 
+	  
+	      alter table user
+         add index (mobileno);
+		 
+		  alter table user
+         add index (cityid);
+---------------------------------------------------------------------------------------------------
+How to drop index in mysql table:
+   Example:
+       alter table user
+       drop index fullname;
+----------------------------------------------	   

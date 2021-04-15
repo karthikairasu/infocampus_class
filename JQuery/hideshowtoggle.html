@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Jquery</title>
+		<script src="dist/js/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			//==================================
+				$("#btn1").click(function(){
+					$("#div1").hide(2000); //timer is given in 2000 milli seconds
+				})
+				$("#btn2").click(function(){
+					$("#div1").show(4000);
+				})
+				$("#btn3").click(function(){
+					$("#div1").toggle(6000);
+				})
+			//==================================
+			});
+		</script>
+	</head>
+	</body>
+		<div id="div1">
+			I am Working hide Show Toggle Function of Jquery
+		</div>
+		<button id="btn1">Hide</button>
+		<button id="btn2">Show</button>
+		<button id="btn3">Toggle</button>
+	</body>
+</html>

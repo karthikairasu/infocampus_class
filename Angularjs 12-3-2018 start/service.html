@@ -1,0 +1,25 @@
+<html>
+   <head>
+      <title>services in angular</title>
+	  <script src="assets/js/angular.js"></script>
+	  <script>
+	      var app=angular.module("myapp",[]);
+		  app.service("myownservice",function(){
+		     this.getname=function(){
+			   return "hello knight riders";
+			 }
+		  });
+		  
+		  app.controller("myctrl1",function($scope,myownservice){
+		    
+			$scope.msg=myownservice.getname();
+			//-services--->1.name of the service,2.anayoms function// not using object ,is a service method
+		  });
+	  </script>
+   </head>
+   <body ng-app="myapp">
+    <div ng-controller="myctrl1">  
+	  {{msg}}
+	</div>
+   </body>
+</html>

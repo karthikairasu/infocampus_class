@@ -1,0 +1,183 @@
+<html>
+  <head>
+   <script>
+     function pagetest()
+	 {
+	   var a = document.getElementById("fname").value;
+	   if (a=="")
+	   {
+	  document.getElementById("fname").style.borderColor="red";
+	  document.getElementById("nameerror").innerHTML="enter your name";
+	   }
+	   else{
+	  document.getElementById("fname").style.borderColor="";
+	  document.getElementById("nameerror").innerHTML="";
+	   }
+	   // name validation end 
+	   // mobile validation start
+	   var a = document.getElementById("mobile").value;
+	   if( (a=="") || (a.length<10) || (isNaN(a)))
+	   {
+	  document.getElementById("mobile").style.borderColor="red";
+	  document.getElementById("mobileerror").innerHTML="enter your mobile no";
+	   }
+	   else{
+	    document.getElementById("mobile").style.borderColor="";
+	  document.getElementById("mobileerror").innerHTML="";
+	   }
+	   // city validation start
+	   var a = document.getElementById("city").value;
+	   if(a=="") 
+	   {
+	  document.getElementById("city").style.borderColor="red";
+	  document.getElementById("cityerror").innerHTML="enter your city";
+	   }
+	   else{
+	    document.getElementById("city").style.borderColor="";
+	  document.getElementById("cityerror").innerHTML="";
+	   }
+	    // message validation start
+	   var a = document.getElementById("message").value;
+	   if(a=="") 
+	   {
+	  document.getElementById("message").style.borderColor="red";
+	  document.getElementById("messageerror").innerHTML="enter your message";
+	   }
+	   else{
+	    document.getElementById("message").style.borderColor="";
+	  document.getElementById("messageerror").innerHTML="";
+	   }
+	   
+	   //gender validation 
+	   var m =  document.getElementById("male").checked;
+	  var f = document.getElementById("female").checked;
+	  if ( (m==false) && (f==false) )
+	  {
+	  document.getElementById("gendererror").innerHTML="Please select gender";
+	  }
+	  else{
+	  document.getElementById("gendererror").innerHTML="";
+	  }
+	  
+	  //T & C validation 
+	  var tnc = document.getElementById("tnc").checked;
+	  if (tnc==false)
+	  {
+	  document.getElementById("tncerror").innerHTML="Please select T & C";
+	  }
+	   else{
+	  document.getElementById("tncerror").innerHTML="";
+	  }
+	  //File type validation
+       var file = document.getElementById("doc").value;
+	   
+	   var filename = file.split(".")//converting to array
+	   var ext = filename[ filename.length-1 ];
+	   
+	   //alert(ext);
+	   
+       if((file=="") || (ext !="jpg") )
+        {
+		document.getElementById("fileerror").innerHTML="Invalid File";
+	  }
+	   else{
+	  document.getElementById("fileerror").innerHTML="";
+	  }
+		  
+	 }
+	 
+	 
+   </script>
+   <style>
+   i{color:red;}
+   </style>
+  </head>
+  <body>
+    <table align="center" cellpadding="10"> 
+	<caption>page validation</caption>
+	<tr>
+	 <th>Name</th>
+	 <td> 
+	 <input type="text" id="fname">
+	 <i id="nameerror"></i>
+	 </td>
+	 
+	</tr>
+	
+	<tr>
+	 <th>Mobile</th>
+	 <td> 
+	 <input type="text" id="mobile" maxlength="10">
+	 <i id="mobileerror"></i>
+	 </td>
+	 
+	</tr>
+	
+	<tr>
+	 <th>city</th>
+	 <td> 
+	   <select id="city">
+	   <option value="">choose city</option>
+	   <option value="1">Bangalore</option>
+	   <option value="2">chennai</option>
+	   </select>
+	   <i id="cityerror"></i>
+	 </td>
+	 
+	</tr>
+	
+	<tr>
+	 <th>Message</th>
+	 <td> 
+	 <textarea id="message" cols="35"></textarea>
+	 <i id="messageerror"></i>
+	 </td>
+	 
+	</tr>
+	
+	<tr>
+	 <th>Gender</th>
+	 <td> 
+	 <input type="radio" name="gender" id="male">male
+	 <input type="radio" name="gender" id="female">female
+	  <i id="gendererror"></i>
+	 </td>
+	 
+	</tr>
+	
+	<tr>
+	 <th>File</th>
+	 <td> 
+	 <input type="file" name="file" id="doc">
+	 <br>
+	 <label>only.jpg file is allowed</label>
+	 <br>
+	 <i id="fileerror"></i>
+	 </td>
+	 
+	</tr>
+	
+	<tr>
+	 <th>T & C</th>
+	 <td> 
+	 <input type="checkbox" name="tnc" id="tnc">
+	 I am agree
+	 <br>
+	 
+	 <i id="tncerror"></i>
+	 </td>
+	 
+	</tr>
+	
+	<tr>
+	 <th colspan="2">
+	 <button onclick="pagetest()">save</button>
+	 </th>
+	 
+	</tr>
+	
+	</table>
+	
+	
+  </body>
+</html>

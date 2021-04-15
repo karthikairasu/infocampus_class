@@ -1,0 +1,30 @@
+<html>
+  <head>
+   <script>
+     var a = ["apple","mango","orange"];
+	 
+	 function ShowArray()
+{
+	var data = "<ul>";
+	for(var i=0; i<a.length; i++)
+	{
+		data = data + "<li>" +a[i] +"</li>";
+	}	
+	data = data + "</ul>";
+	//alert(data);
+	document.getElementById("msg").innerHTML=data;
+	
+}
+   </script>
+  </head>
+  <body>
+    <fieldset >
+	
+	<button onclick="ShowArray()">Show Item</button>
+	<div id="msg">
+		   
+	</div>
+	</fieldset>
+	
+  </body>
+</html>

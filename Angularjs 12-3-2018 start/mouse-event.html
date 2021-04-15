@@ -1,0 +1,69 @@
+<html>
+  <head>
+     <script src="assets/js/angular.js"></script>
+  </head>
+  <body>
+    
+	 
+	 <div ng-app="mouseEvent">
+	 
+	 <div ng-controller="eventTest">
+	    <h3>{{msg}}</h3>
+		
+	    <button ng-click="test()">1 click</button>
+		<button ng-dblclick="test2()">2 click</button>
+		
+		
+		<button ng-mousemove="test3()">mouse move</button>
+		<button ng-mouseout="test4()">mouse out</button>
+		
+		Choose City:
+		         
+				 <select ng-model="city" ng-change="test5(city)">
+				    <option value="NA">Choose city</option>
+					<option value="Bangalore">Bangalore</option>
+					<option value="Pune">Pune</option>
+					<option value="Kolkata">Kolkata</option>
+					<option value="Hydrabed">Hydrabed</option>
+					<option value="chennai">chennai</option>
+				 
+				 </select>
+		
+	</div>
+	 
+	 </div>
+	 
+	 <script>
+	  var obj= angular.module("mouseEvent",[]);//object creation of module
+	  obj.controller("eventTest",function($scope){
+	      
+		  $scope.test = function()
+		  {
+		    $scope.msg = "Hello From Mouse Click";
+		  }
+		  $scope.test2 = function()
+		  {
+		    $scope.msg = "Hello From Mouse 2 Click";
+		  }
+		  $scope.msg = 0;
+		  
+		  $scope.test3 = function()
+		  {
+		    $scope.msg++;
+		  }
+		  $scope.test4 = function()
+		  {
+		    $scope.msg--;
+		  }
+		  
+		  $scope.test5 = function(cityname)
+		  {
+		    $scope.msg = "You Have Selected City As :"+cityname;
+		  }
+		  
+		  
+	  });
+	 </script>
+	 
+  </body>
+</html>

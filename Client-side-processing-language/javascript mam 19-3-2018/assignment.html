@@ -1,0 +1,278 @@
+<html>
+ <head>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+	
+  <script>
+    function assignment()
+	{
+	  
+	 var name=document.getElementById("name").value;
+	 var email=document.getElementById("email").value;
+	 var mobile=document.getElementById("mobile").value;
+	 var city=document.getElementById("city").value;
+	 var state=document.getElementById("state").value;
+	 var prelocation=document.getElementById("plocation").value;
+	 var clocation=document.getElementById("clocation").value;
+	 var amenties1=document.getElementById("amenties1").checked;
+	 var amenties2=document.getElementById("amenties2").checked;
+	 var amenties3=document.getElementById("amenties3").checked;
+	 var tokenamount1=document.getElementById("tokenamount1").checked;
+	 var tokenamount2=document.getElementById("tokenamount2").checked;
+	 var tokenamount3=document.getElementById("tokenamount3").checked;
+	 var tokenamount4=document.getElementById("tokenamount4").checked;
+	 
+	 status=true;
+	 if(name=="")
+	 {
+	  document.getElementById("name").style.borderColor="red";
+	  document.getElementById("nameerror").innerHTML="Invalid name";
+	  status=false;
+	 }
+	 else{
+	  document.getElementById("name").style.borderColor="green";
+	  document.getElementById("nameerror").innerHTML="";
+	 }
+	 //==========================================================//
+	  if(email=="")
+	 {
+	  document.getElementById("email").style.borderColor="red";
+	  document.getElementById("emailerror").innerHTML="Invalid email id";
+	  status=false;
+	 }
+	 else{
+	  document.getElementById("email").style.borderColor="green";
+	  document.getElementById("emailerror").innerHTML="";
+	 }
+	 //================================================//
+	 	  if(mobile=="" ||mobile.length<10||isNaN(mobile))
+	 {
+	  document.getElementById("mobile").style.borderColor="red";
+	  document.getElementById("mobileerror").innerHTML="Invalid mobile no";
+	  status=false;
+	 }
+	 else{
+	  document.getElementById("mobile").style.borderColor="green";
+	  document.getElementById("mobileerror").innerHTML="";
+	 }
+	 //================================================//
+	 	  if(city=="")
+	 {
+	  document.getElementById("city").style.borderColor="red";
+	  document.getElementById("cityerror").innerHTML="Invalid city name";
+	  status=false;
+	 }
+	 else{
+	  document.getElementById("city").style.borderColor="green";
+	  document.getElementById("cityerror").innerHTML="";
+	 }
+	 //================================================//
+	 	  if(state=="")
+	 {
+	  document.getElementById("state").style.borderColor="red";
+	  document.getElementById("stateerror").innerHTML="Invalid state name";
+	  status=false;
+	 }
+	 else{
+	  document.getElementById("state").style.borderColor="green";
+	  document.getElementById("stateerror").innerHTML="";
+	 }
+	 //================================================//
+	 	  if(prelocation=="")
+	 {
+	  document.getElementById("plocation").style.borderColor="red";
+	  document.getElementById("plocationerror").innerHTML="Invalid preferred location";
+	  status=false;
+	 }
+	 else{
+	  document.getElementById("plocation").style.borderColor="green";
+	  document.getElementById("plocationerror").innerHTML="";
+	 }
+	 //================================================//
+	 	  if(clocation=="")
+	 {
+	  document.getElementById("clocation").style.borderColor="red";
+	  document.getElementById("clocationerror").innerHTML="Invalid current location";
+	  status=false;
+	 }
+	 else{
+	  document.getElementById("clocation").style.borderColor="green";
+	  document.getElementById("clocationerror").innerHTML="";
+	 }
+	 //================================================//
+	 	  if(amenties1==true ||amenties2==true ||amenties3==true)
+	 {
+	  
+	  document.getElementById("amentieserror").innerHTML="";
+	  
+	 }
+	 else{
+	  
+	  document.getElementById("amentieserror").innerHTML="please select amenties ";
+	  status=false;
+	 }
+	 //================================================//
+	 
+	  	  if(tokenamount1==true ||tokenamount2==true ||tokenamount3==true||tokenamount4==true)
+	 {
+	  
+	  document.getElementById("tokenamounterror").innerHTML="";
+	  
+	 }
+	 else{
+	  
+	  document.getElementById("tokenamounterror").innerHTML="please select amenties ";
+	  status=false;
+	 }
+	 //================================================//
+	 
+	 return status;
+	}
+  
+  </script>	
+	
+ </head>
+  <body>
+     <div class="container">
+	  <div class="row">
+	  
+	  <div class="col-sm-12">
+	  <form action="#" method="POST" >
+	  <div class="row">
+	    <div class="col-sm-4">
+		
+		<div class="row form-group">
+		<div class="col-sm-4"><label>Name</label></div>
+		<div class="col-sm-8">
+		  <input type="text" class="form-control" id="name" placeholder="Eneter Name">
+		  <i id="nameerror" style="color:red;"></i>
+		</div>
+		</div>
+		
+		<div class="row form-group">
+		<div class="col-sm-4"><label>City</label></div>
+		<div class="col-sm-8">
+		    <select class="form-control" id="city" name="city">
+			 <option value="">Choose city</option>
+			 <option value="bangalore">bangalore</option>
+			 <option value="chennai">chennai</option>
+			 <option value="mumbai">mumbai</option>
+			</select>
+		  <i id="cityerror" style="color:red;"></i>
+		</div>
+		</div>
+		
+		</div>
+		<div class="col-sm-4">
+		
+		<div class="row form-group">
+		<div class="col-sm-4"><label>Email</label></div>
+		<div class="col-sm-8">
+		  <input type="text" class="form-control" id="email" placeholder="Eneter email">
+		  <i id="emailerror" style="color:red;"></i>
+		</div>
+		</div>
+		
+		<div class="row form-group">
+		<div class="col-sm-4"><label>State</label></div>
+		<div class="col-sm-8">
+		    <select class="form-control" id="state" name="state">
+			 <option value="">Choose state</option>
+			 <option value="karnataka">karnataka</option>
+			 <option value="tamilnadu">tamilnadu</option>
+			 <option value="kerala">kerala</option>
+			</select>
+		  <i id="stateerror" style="color:red;"></i>
+		</div>
+		</div>
+		
+		</div>
+		<div class="col-sm-4">
+		
+		<div class="row form-group">
+		<div class="col-sm-4"><label>Mobile</label></div>
+		<div class="col-sm-8">
+		  <input type="text" class="form-control" id="mobile" placeholder="Eneter mobile">
+		  <i id="mobileerror" style="color:red;"></i>
+		</div>
+		</div>
+		
+		<div class="row form-group">
+		<div class="col-sm-4"><label>preferred location</label></div>
+		<div class="col-sm-8">
+		    <select class="form-control" id="plocation" name="plocation">
+			 <option value="">Choose pre location</option>
+			 <option value="silkboard">silkboard</option>
+			 <option value="madiwala">madiwala</option>
+			 <option value="mgroad">mgroad</option>
+			</select>
+		  <i id="plocationerror" style="color:red;"></i>
+		</div>
+		</div>
+		</div>
+		
+		<div class="row form-group">
+		<div class="col-sm-2"><label>current location</label></div>
+		<div class="col-sm-10">
+		  <textarea class="form-control" id="clocation" placeholder="enter current location"></textarea>
+		  <i id="clocationerror" style="color:red;"></i>
+		</div>
+		</div>
+		
+		<div class="row form-group">
+		<div class="col-sm-2"><label>Amenties</label></div>
+		<div class="col-sm-10">
+		 <div class="row">
+		   <div class="col-sm-4">
+		   <input type="checkbox"  id="amenties1" name="Amenties" value="lift">lift
+		   </div>
+		   <div class="col-sm-4">
+		   <input type="checkbox"  id="amenties2" name="Amenties" value="powerbackup">powerbackup
+		   </div>
+		   <div class="col-sm-4">
+		   <input type="checkbox"  id="amenties3" name="Amenties" value="children play area">children play area
+		   </div>
+		  
+		  
+		  
+		  <i id="amentieserror" style="color:red;"></i>
+		  </div>
+		</div>
+		</div>
+		<hr>
+		<div class="row form-group">
+		<div class="col-sm-2"><label>token amount</label></div>
+		<div class="col-sm-10">
+		 <div class="row">
+		   <div class="col-sm-3">
+		   <input type="radio"  id="tokenamount1" name="tokenamount" >cash
+		   </div>
+		   <div class="col-sm-3">
+		   <input type="radio"  id="tokenamount2" name="tokenamount" >credit
+		   </div>
+		   <div class="col-sm-3">
+		   <input type="radio"  id="tokenamount3" name="tokenamount" >debit
+		   </div>
+		  <div class="col-sm-3">
+		   <input type="radio"  id="tokenamount4" name="tokenamount" >net banking
+		   </div>
+		  
+		  
+		  <i id="tokenamounterror" style="color:red;"></i>
+		  </div>
+		</div>
+		</div>
+		<hr>
+		<div class="row form-group text-center">
+		 <button type="button" class="btn btn-success" onclick="assignment()">Register</button>
+		 <button type="reset" class="btn btn-warning">clear</button>
+		</div>
+		
+		
+		</div>
+		</form>
+	  </div>
+	  	
+	  </div>
+	 </div>
+  </body>
+</html>

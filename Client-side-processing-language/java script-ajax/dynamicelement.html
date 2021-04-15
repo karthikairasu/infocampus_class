@@ -1,0 +1,44 @@
+<html>
+   <head>
+   <link href="assets/css/bootstrap.css" rel="stylesheet">
+     <script>
+	     var i=1;
+	   function New()
+	   {
+	      
+var newdata = '<div class="row form-group" id="'+i+'"><div class="col-sm-10"><input type="text" class="form-control input-sm" ></div><div class="col-sm-2"><button type="button" class="btn btn-primary" onclick="deletes('+i+')">Delete</button> </div></div>';
+		  
+     var olddata = document.getElementById("data").innerHTML;
+		  
+document.getElementById("data").innerHTML=olddata + newdata;
+		  i++;
+	   }
+	   function deletes(rowid)
+	   {
+	     document.getElementById(rowid).style.display="none";
+	   }
+	 </script>
+   </head>
+   <body>
+      <br>
+	  
+	  <div class="container">
+	  <div class="row">
+	   <div class="col-sm-3"></div>
+	   <div class="col-sm-6 well" id="data">
+	       
+		   <div class="row form-group">
+		     <div class="col-sm-10">
+			  <input type="text" class="form-control input-sm" >
+			 </div>
+			 <div class="col-sm-2">
+			 <button type="button" class="btn btn-warning" onclick="New()">New</button>
+			 </div>
+		   </div>
+	   
+	   </div>
+	   <div class="col-sm-3"></div>
+	  </div>
+	  </div>
+   </body>
+</html>

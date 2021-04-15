@@ -1,0 +1,32 @@
+<html>
+  <head>
+     <title>Routing in angular</title>
+	 <link href="assets/css/bootstrap.css" rel="stylesheet">
+	 <script src="assets/js/angular.js"></script>
+	 <script src="assets/js/route.js"></script>
+	 <script src="assets/js/myapp2.js"></script>
+  </head>
+  <body ng-app="myapp">
+     <div class="container">
+	  <div class="row">
+	    <div class="col-sm-3"></div>
+		<div class="col-sm-6">
+		 <ul class="nav nav-pills">
+		   <li><a href="#home">Home</a></li>
+		   <li><a href="#about">About</a></li>
+		   <li><a href="#services">Services</a></li>
+		   <li><a href="#contact">Contact</a></li>
+		 </ul>
+		</div>
+		<div class="col-sm-3"></div>
+		 
+	  </div>
+	  <div class="row">
+	    <div class="col-sm-2"></div>
+		<div class="col-sm-8" ng-view></div>
+		<div class="col-sm-2"></div>
+	  
+	  </div><!-------2nd row close-------->
+	 </div><!--------container close----->
+  </body>
+</html>

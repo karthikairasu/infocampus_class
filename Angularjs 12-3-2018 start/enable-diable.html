@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script src="assets/js/angular.js"></script>
+  </head>
+  <body>
+    <div ng-app="" ng-init=" tnc=false; ">
+	  
+		<p> Name: <input type="text" ng-model="fname"></p>
+		<p> Email: <input type="text" ng-model="Email"></p>
+		<p> Password: <input type="text" ng-model="Password"></p>
+		
+		<p>
+		  <input type="checkbox" ng-model="tnc">terms and conditions
+		</p>
+		
+		<p>
+		 <button ng-disabled="!tnc">Register</button>
+		</p>
+	 
+	</div>
+  </body>
+</html>

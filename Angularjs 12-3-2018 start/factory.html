@@ -1,0 +1,27 @@
+<html>
+   <head>
+      <title>factory in angular</title>
+	  <script src="assets/js/angular.js"></script>
+	  <script>
+	      var app=angular.module("myapp",[]);
+		  app.service("myfactory",function(){
+		     var obj={};
+		     obj.getage=function(){
+			   return "My age is 27 Years";
+			 }
+			 return obj;
+		  });
+		  
+		  app.controller("myctrl1",function($scope,myfactory){
+		    
+			$scope.msg=myfactory.getage();
+			//--factory is one of the service--->same as function and service----is using object method
+		  });
+	  </script>
+   </head>
+   <body ng-app="myapp">
+    <div ng-controller="myctrl1"> 
+	  {{msg}}
+	</div>
+   </body>
+</html>

@@ -1,0 +1,13 @@
+    XML : XML stands for extensible markup language.
+	
+	XML USES : xml use to store small amount of data for sort or long duration .
+	
+	XML --> xml is a markup language like html. but in html all tags are pre-defined and in html
+	          all tags are user-defined.
+	
+	--> xml tags are fully case Sensitive .
+	--> like html have a body tag similar in xml also should have a parent tag as user-defined.
+	--> every xml file should a parent tag. 
+	--> a xml parent tag can have multiple / or multi level child tags.
+------------------------------------------------------------------------------------------------------
+	

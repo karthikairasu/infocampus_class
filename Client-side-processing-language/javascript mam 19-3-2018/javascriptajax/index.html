@@ -1,0 +1,115 @@
+<html>
+  <head>
+     <title>javascript ajax</title>
+	 <link href="assets/css/bootstrap.css" rel="stylesheet">
+	 <script>
+	   function homepage()
+	   {
+	      	  var xhttp;
+				  if (window.XMLHttpRequest) {
+					// code for modern browsers
+					xhttp = new XMLHttpRequest();
+					} else {
+					// code for IE6, IE5
+					xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				  }
+				  xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+					  document.getElementById("result").innerHTML = this.responseText;
+					}
+				  };
+				  xhttp.open("GET", "home.html", true);
+				  xhttp.send();
+	   
+	     //==========================================//
+	   }//homepage close//
+	   function aboutpage(){
+	     
+		   var xhttp;
+				  if (window.XMLHttpRequest) {
+					// code for modern browsers
+					xhttp = new XMLHttpRequest();
+					} else {
+					// code for IE6, IE5
+					xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				  }
+				  xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+					  document.getElementById("result").innerHTML = this.responseText;
+					}
+				  };
+				  xhttp.open("GET", "about.html", true);
+				  xhttp.send();
+	   
+	     //==========================================//
+	    
+	   }
+	   function servicespage()
+	   {
+	     var xhttp;
+				  if (window.XMLHttpRequest) {
+					// code for modern browsers
+					xhttp = new XMLHttpRequest();
+					} else {
+					// code for IE6, IE5
+					xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				  }
+				  xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+					  document.getElementById("result").innerHTML = this.responseText;
+					}
+				  };
+				  xhttp.open("GET", "services.html", true);
+				  xhttp.send();
+	   
+	     //==========================================//
+	   }
+	   function contactpage()
+	   {
+	        var xhttp;
+				  if (window.XMLHttpRequest) {
+					// code for modern browsers
+					xhttp = new XMLHttpRequest();
+					} else {
+					// code for IE6, IE5
+					xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				  }
+				  xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+					  document.getElementById("result").innerHTML = this.responseText;
+					}
+				  };
+				  xhttp.open("GET", "contact.html", true);
+				  xhttp.send();
+	   
+	     //==========================================//
+	   }
+	 </script>
+  </head>
+  <body>
+    <div class="container">
+	  <div class="row">
+	     <div class="col-sm-2"></div>
+		 <div class="col-sm-8">
+		 <ul class="nav nav-pills">
+		 <li><a href="#" onclick="homepage()">Home</a></li>
+		 <li><a href="#" onclick="aboutpage()">About</a></li>
+		 <li><a href="#" onclick="servicespage()">services</a></li>
+		 <li><a href="#" onclick="contactpage()">contact</a></li>
+		 </ul>
+		 
+		 
+		 </div>
+		 <div class="col-sm-2"></div>
+	  </div>
+	  <div class="row">
+	      <div class="col-sm-2">
+		  </div>
+		  <div class="col-sm-8" id="result">
+		  </div>
+		  <div class="col-sm-2">
+		  </div>
+	  </div>
+	</div>
+  </body>
+</html>

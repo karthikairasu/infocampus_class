@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+	<script src="assets/js/angular.js"></script>
+	<script src="assets/js/route.js"></script>
+	<script src="assets/js/app2.js"></script>
+  </head>
+  <body ng-app="Blog">
+    <div class="container">
+	  <div class="row">
+	    <div class="col-sm-4">
+		  <ul class="nav nav-pills">
+		     <li><a href="#home">home</a></li>
+			 <li><a href="#pages">pages</a></li>
+			 <li><a href="#events">events</a></li>
+			 <li><a href="#media">media</a></li>
+		  </ul>
+		</div>
+		<div class="col-sm-8" ng-view></div>
+	  </div>
+	</div>
+  </body>
+</html>

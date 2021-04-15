@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+     <meta charset="UTF-8">
+	 <title>transition2 effect</title>
+	 <style>
+	    #div1{
+		   width:200px;
+		   height:300px;
+		   border:2px solid green;
+		   position:relative;
+		}
+		#div2{
+		  height:0px;
+		  width:200px;
+		  border:1px solid green;
+		  position:absolute;
+		  overflow:hidden;
+		  background-color:blue;
+		  opacity:0.3;
+		  -webkit-transition:height 2s;
+		  transition:height 2s;
+		  text-align:center;
+		  color:white;
+		  font-size:20px;
+		  line-height:200px;
+		}
+		#div1:hover #div2{
+		  height:300px;
+		}
+	 </style>
+  </head>
+  <body>
+     
+     <div id="div1">
+	    <div id="div2">Hello Word</div>
+	 </div>
+	 
+  </body>
+</html>

@@ -1,0 +1,30 @@
+
+AngularJs- is client side processing language. it's library of javascript
+           introduced by Google.com
+		   
+->Angularjs is MVC framework
+    
+	M ->MODULES
+	V ->VIEWS
+	C ->CONTROLLERS
+	
+	->VIEWS : it manage the display part(user interface html,css,bootstrap)
+	->MODULES : it manage the processing part (using js code input will be 
+	     	 processed)
+	
+    ->CONTROLLER : it Control the flow of data from views to modules
+--------------------------------------------------------------------------------------------------------	
+view : 
+       Methods of data printing in ang.
+	      input filed:
+		    a.ng-model
+	       non-input filed:
+            a.ng-bind
+            b.{{}}  ->regular expression
+            c.ng-bind-html
+--------------------------------------------------------------------------------------------------------------------			
+			   ng-init: to creative variable with data or without data in view.
+			           a. simple variable assignment.
+				   b. 1 dimentional array assignment
+				   c. multi dimentional array assignment.
+--------------------------------------------------------------------------------------------------------------				   

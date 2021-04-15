@@ -1,0 +1,150 @@
+<html>
+   <head>
+      <link href="assets/css/bootstrap.css" rel="stylesheet">
+	  <script src="assets/js/validation.js"></script>
+	  <script>
+	   function save()
+	   {
+	   var a = document.getElementById("fname").value;
+	   if (a=="")
+	   {
+	  document.getElementById("fname").style.borderColor="red";
+	  document.getElementById("nameerror").innerHTML="Invaild name";
+	   }
+	   else{
+	  document.getElementById("fname").style.borderColor="";
+	  document.getElementById("nameerror").innerHTML="";
+	   }
+	   // name validation end 
+	   // mobile validation start
+	   var a = document.getElementById("mobile").value;
+	   if( (a=="") || (a.length<10) || (isNaN(a)))
+	   {
+	  document.getElementById("mobile").style.borderColor="red";
+	  document.getElementById("mobileerror").innerHTML="enter your mobile no";
+	   }
+	   else{
+	    document.getElementById("mobile").style.borderColor="";
+	  document.getElementById("mobileerror").innerHTML="";
+	   }
+	   // city validation start
+	   var a = document.getElementById("email").value;
+	   if(a=="") 
+	   {
+	  document.getElementById("email").style.borderColor="red";
+	  document.getElementById("emailerror").innerHTML="enter your email id";
+	   }
+	   else{
+	    document.getElementById("email").style.borderColor="";
+	  document.getElementById("emailerror").innerHTML="";
+	   }
+	    // message validation start
+	   var a = document.getElementById("password").value;
+	   if(a=="") 
+	   {
+	  document.getElementById("password").style.borderColor="red";
+	  document.getElementById("passworderror").innerHTML="enter your password";
+	   }
+	   else{
+	    document.getElementById("password").style.borderColor="green";
+	  document.getElementById("passworderror").innerHTML="";
+	   }
+	   
+	    // message validation start
+	   var a = document.getElementById("gender").value;
+	   if(a=="") 
+	   {
+	  document.getElementById("gender").style.borderColor="red";
+	  document.getElementById("gendererror").innerHTML="Please select gender";
+	   }
+	   else{
+	    document.getElementById("gender").style.borderColor="";
+	  document.getElementById("gendererror").innerHTML="";
+	   }
+	   
+	   var a = document.getElementById("address").value;
+	   if(a=="") 
+	   {
+	  document.getElementById("address").style.borderColor="red";
+	  document.getElementById("addresserror").innerHTML="enter your password";
+	   }
+	   else{
+	    document.getElementById("address").style.borderColor="";
+	  document.getElementById("addresserror").innerHTML="";
+	   }
+	  
+	 }
+	  </script>
+	     <style>
+   i{color:red;}
+   </style>
+   </head>
+   <body>
+       <div class="container">
+	      <div class="row" >
+		   <div class="col-sm-3"></div>
+		   <div class="col-sm-6 text-center ">
+		     <h4 class="text-center">Signup</h4>
+			    <div class="row">
+				  <div class="form-group row">
+				   <div class="col-sm-3"><label>Name</label></div>
+				    <div class="col-sm-9">
+					<input type="text" class="form-control" id="fname" placeholder="Enter name">
+					<i id="nameerror"></i>
+					</div>
+				  </div>
+				
+				  <div class="form-group row">
+				   <div class="col-sm-3"><label>Mobile</label></div>
+				    <div class="col-sm-9">
+					<input type="text" class="form-control" id="mobile" placeholder="Enter mobile" maxlength="10">
+					<i id="mobileerror"></i>
+					</div>
+				  </div>
+				  
+				  <div class="form-group row">
+				   <div class="col-sm-3"><label>Email</label></div>
+				    <div class="col-sm-9">
+					<input type="text" class="form-control" id="email" placeholder="Enter Email">
+					<i id="emailerror"></i>
+					</div>
+				  </div>
+				  
+				  <div class="form-group row">
+				   <div class="col-sm-3"><label>password</label></div>
+				    <div class="col-sm-9">
+					<input type="text" class="form-control" id="password" placeholder="Enter password">
+					<i id="passworderror"></i>
+					</div>
+				  </div>
+				  
+				  <div class=" form-group row">
+				  <div class="col-sm-3"><label>Gender</label></div>
+				   <div class="col-sm-9">
+				    <select id="gender" class="form-control">
+					  <option value="">gender</option>
+					  <option value="male">male</option>
+					  <option value="female">female</option>
+					</select>
+					<i id="gendererror"></i>
+				   </div>
+				  </div>
+				  <div class="form-group row">
+				  <div class="col-sm-3"><label>address</label></div>
+				  <div class="col-sm-9">
+				  <textarea id="address" class="form-control" placeholder="enter address"></textarea>
+				  <i id="addresserror"></i>
+				  </div>
+				  
+				   </div>
+				  
+
+				  <button type="text" onclick="save()"class="btn btn-primary">Save</button>
+				  
+				</div>
+				</div>
+		  </div>
+		  <div class="col-sm-3"></div>
+	   </div>
+   </body>
+</html>

@@ -1,0 +1,13 @@
+
+	create database organization;
+	
+	create table emp
+	(
+		empid      		int(10)primary key auto_increment,
+		empname			varchar(100),
+		empemail		varchar(100),
+		empmobile 		bigint(10),
+		emppage			varchar(20),
+		empcity  	 	varchar(100),
+		empsalary		int(10)
+	)

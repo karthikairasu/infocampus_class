@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <script>
+	   function one()
+	   {
+	    var a = prompt("enter something");
+		if( isNaN (a) )
+		{
+		  alert( a + "is string data type");
+		}else
+		{
+		  alert( a + "is numeric data type");
+		}
+	   }
+	   function two()
+	   {
+	    var a = prompt ("Enter An Interger Number");
+		a = parseInt(a);
+		if( (a > 20) && (a < 30) )
+		{
+		alert("The Square of :"+a+" is ->"+ a*a );
+		}
+		else if( (a > 30) && (a <40 ) )
+		{
+		alert("The Sum is :"+a+" is ->"+ (a+a) );
+		}
+		else{
+		 alert("This is eight less than 20 or greater than 40");
+		 two();
+		}
+	   }
+	   function three()
+	   {
+	    var a = prompt ("Enter 1st Number");//10
+		var b = prompt ("Enter 2nd Number");//11
+		a = parseInt(a);
+		b = parseInt(b);
+		if(a>b)
+		{
+		  if(a%2==0)
+		  {
+		   alert(a +" is higher and even number");
+		  }else
+		  {
+		  alert(a +" is higher a number but odd");
+		  }
+		}else
+		{
+		  alert(b +" is higher  number but no idea of odd even");
+		}
+	   }
+	   function four()
+	   {
+	    var a = prompt("Enter number between 1 and 4");
+		switch(a)
+		{
+		case "1":
+		alert("you have enter :"+a);
+		break;
+		
+		case "1":
+		alert("you have enter :"+a);
+		break;
+		
+		case "2":
+		alert("you have enter :"+a);
+		break;
+		
+		case "3":
+		alert("you have enter :"+a);
+		break;
+		
+		case "4":
+		alert("you have enter :"+a);
+		break;
+		
+		default:
+		alert("Out of range :"+a+ "Try again");
+		four()
+		}
+	   }
+	</script>
+  </head>
+  <body>
+     <center>
+	    <h1>JavaScript Control Structure (Condition) Example</h1>
+		
+		<button onclick="one()">if else</button>
+		<button onclick="two()">if else if</button>
+		<button onclick="three()">nested if</button>
+		<button onclick="four()">switch case</button>
+	 </center>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+   <head>
+      <title>my blogs</title>
+	  <link href="assets/css/bootstrap.css" rel="stylesheet">
+	  <script src="assets/js/angular.js"></script>
+	  <script>
+	     var app=angular.module("blogsApp",[]);
+		 app.controller("myctrl",function($scope){
+		    
+			var blogs=[{'title':'Greenland','image':'assets/images/1.jpe','description':'This image is green in land','likes':0,'dislikes':0,'share':0},
+			{'title':'Sunrise','image':'assets/images/2.jpe','description':'This image is sunrise in the morning','likes':0,'dislikes':0,'share':0},
+			{'title':'NatureWay','image':'assets/images/3.jpe','description':'This image is nature in the waysides','likes':0,'dislikes':0,'share':0},
+			{'title':'Bridflower','image':'assets/images/4.jpg','description':'This image is brid sitting in the flower','likes':0,'dislikes':0,'share':0}
+			
+			];
+			$scope.blogsimag=blogs;
+			$scope.incrementlikes=function(blog)
+			{
+			blog.likes++;
+			}
+			
+			$scope.incrementdislikes=function(blog)
+			{
+			blog.dislikes++;
+			}
+			$scope.incrementshare=function(blog)
+			{
+			blog.share++;
+			}
+		 });
+	  
+	  </script>
+   </head>
+   <body ng-app="blogsApp">
+       <div class="container" ng-controller="myctrl">
+	     <div class="row">
+		 <div class="col-sm-3"></div>
+		 <div class="col-sm-6">
+		   <div class="panel panel-success" ng-repeat="blog in blogsimag">
+		      <div class="panel-heading">
+			    <div class="panel-title text-center">
+				{{blog.title}}
+				</div>
+				</div>
+				<div class="panel-body text-center">
+				<img ng-src="{{blog.image}}" height="300px" width="300px" class="img-thumbnail">
+				<p class="text-left">{{blog.description}}
+				<button type="button" class="btn btn-success">View more</button>
+				</p>
+				</div>
+				<div class="panel-footer">
+				likes:{{blog.likes}}<button ng-click="incrementlikes(blog)"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+				dislikes:{{blog.dislikes}}<button ng-click="incrementdislikes(blog)"><span class="glyphicon glyphicon-thumbs-down"></span></button>
+				share:{{blog.share}}<button ng-click="incrementshare(blog)"><span class="glyphicon glyphicon-share-alt"></span></button>
+				</div>
+			  
+		   </div>
+		 </div>
+		 <div class="col-sm-3"></div>
+		 </div>
+	   
+	   </div>
+   </body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Featching 2</title>
+		<script src="dist/js/jquery.min.js"></script>
+		<script>
+			$(function(){
+					$("#btn").click(function(){
+					
+					var item=$("#itemname").val();
+					var price=$("#price").val();
+					var qty=$("#qty").val();
+					var total=parseInt(price)*parseInt(qty);
+					$("#btn").text("featching....");
+					alert(total);
+				})
+		});
+		</script>
+	</head>
+	<body>
+		<table bgcolor="skyblue" align="center" border="1">
+			<tr>
+				<th>Name</th>
+				<td><input type="text" placeholder="Enter Name of item" id="itemname"/></td>
+			</tr>
+			<tr>
+				<th>Price</th>
+				<td><input type="text" placeholder="Enter Price of item" id="price"/></td>
+			</tr>
+			<tr>
+				<th>Quantity</th>
+				<td>
+					<select id="qty">
+						<option value="0">Choose Quantity</option>
+						<option value="10">10</option>
+						<option value="15">15</option>
+						<option value="20">20</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>Result</th>
+				<td><input type="text" id="result" readonly/></td>
+			
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<button type="button" id="btn">Total bill</button>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

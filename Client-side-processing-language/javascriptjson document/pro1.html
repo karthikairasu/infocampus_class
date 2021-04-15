@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title> fetching the json data</title>
+		<script>
+		function fetchdata()
+		{
+			var myjson='[{"name":"asha","age":"30","city":"bangalore"},{"name":"nisha","age":"30","city":"mumbai"},{"name":"disha","age":"20","city":"Chennai"},{"name":"sita","age":"27","city":"Pune"}]';
+			var mydata=JSON.parse(myjson); //convert in json object
+			var length1=mydata.length;
+			//alert(length);
+			var data="<table align='center' bgcolor='skyblue'>";
+			data=data+"<tr><th>Name</th><th>Age</th><th>city</th></tr>";
+			for(var i=0;i<length1;i++)
+			{
+				var name=mydata[i].name;
+				var age=mydata[i].age;
+				var city=mydata[i].city;
+				data=data+"<tr>";
+					data=data+"<td>"+ name+"</td>";
+					data=data+"<td>"+ age+"</td>";
+					data=data+"<td>"+ city+"</td>";
+				data=data+"</tr>";
+			}
+			
+			data+"</table>";
+			document.getElementById("result").innerHTML=data;
+			
+		}
+		</script>
+	</head>
+	<body>
+		<div id="result">
+		</div>
+		<button type="button" onclick="fetchdata()">
+		Fetch Json data</button>
+	</body>
+</html>

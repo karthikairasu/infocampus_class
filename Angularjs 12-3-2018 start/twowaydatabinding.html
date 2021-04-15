@@ -1,0 +1,28 @@
+<html>
+   <head>
+      <title>Two Way Data binding</title>
+	  <link href="assets/css/bootstrap.css" rel="stylesheet">
+	  <script src="assets/js/angular.js"></script>
+	  <script>
+	    var app = angular.module("myApp",[]);
+		app.controller("myctrl",function($scope){
+		 $scope.fname = "Hello angular";
+		});
+	  </script>
+   </head>
+   <body ng-app="myApp">
+		<div class="container" ng-controller="myctrl">
+			<div class="row form-group">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<input type="text" ng-model="fname" class="form-control">
+					You are chainging the original  value :{{fname}}
+				
+				</div>
+				<div class="col-sm-3"></div>
+			</div>
+		</div>
+	
+   </body>
+   
+</html>

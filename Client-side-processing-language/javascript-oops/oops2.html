@@ -1,0 +1,89 @@
+<html>
+   <head>
+     <link href="assets/css/bootstrap.css" rel="stylesheet">
+	 <script src="assets/js/jquery.min.js"></script>
+	 <script src="assets/js/bootstrap.js"></script>
+     <script src="oops.js"></script>
+	 <script src="oopsfun.js"></script>
+   </head>
+   <body>
+      
+	  <div class="container">
+	  <div class="row">
+	  <div class="col-sm-3"></div>
+	  <div class="col-sm-6 text-center">
+	 
+	  <h1 align="center">Java Script Object Oriented Example</h1>
+	  <div class="row form-group">
+	  <div class="col-sm-3"><label>Name:</label></div>
+	  <div class="col-sm-9">
+	  <input type="text" class="form-control" id="uname">
+	  <i id="unameerror"></i>
+	  </div>
+	  </div>
+	  <div class="row form-group">
+	  <div class="col-sm-3"><label>Mobile:</label></div>
+	  <div class="col-sm-9">
+	  <input type="text" class="form-control" id="mobile">
+	  </div>
+	  </div>
+	  <div class="row form-group">
+	  <div class="col-sm-3"><label>Age:</label></div>
+	  <div class="col-sm-9">
+	  <input type="text" class="form-control" id="age">
+	  </div>
+	  </div>
+	  <div class="row form-group">
+	  <div class="col-sm-3"><label>Gender:</label></div>
+	  <div class="col-sm-9">
+	  <input type="text" class="form-control" id="gender">
+	  </div>
+	  </div>
+	    <div class="row form-group">
+	  <div class="col-sm-3"><label>ProductName :</label></div>
+	  <div class="col-sm-9">
+	  <input type="text" class="form-control" id="pname">
+	  </div>
+	  </div>
+	    <div class="row form-group">
+	  <div class="col-sm-3"><label>Price :</label></div>
+	  <div class="col-sm-9">
+	  <input type="text" class="form-control" id="price">
+	  </div>
+	  </div>
+	    <div class="row form-group">
+	  <div class="col-sm-3"><label>pdate:</label></div>
+	  <div class="col-sm-9 ">
+	  <input type="text" class="form-control" id="pdate">
+	  </div>
+	  </div>
+	  
+	  <button type="button" class="btn btn-success" onclick="obj.setdetails()">Save</button>
+	  <button type="button" class="btn btn-success" onclick="obj.viewdata()" data-toggle="modal" data-target="#mymodal">View</button>
+	 
+	  </div> 
+	  <div class="col-sm-3"></div>
+	  </div>
+	  </div>
+      
+	  <div class="modal fade" id="mymodal" role="dialog">
+	  <div class="modal-dialog">
+	  <div class="modal-content">
+	  <div class="modal-header">
+	  <div class="modal-title">
+	    <a href="#" class="close" data-dismiss="modal">&times;</a>
+		</div>
+	  </div>
+	  <div class="modal-body " id="msg" ></div>
+	  
+	  
+	  <div class="modal-footer">
+	   <button type="button" class="btn btn-danger" data-dismiss="modal">close</button>
+	  </div>
+	  
+	  </div>
+	  </div>
+	  </div>
+	 
+   </body>
+</html>

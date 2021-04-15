@@ -1,0 +1,40 @@
+<html>
+   <head>
+     <script>
+	   function test()
+	   {
+	      var sts = document.getElementById("chk1").checked;
+		  if(sts==true)
+		  {
+		  var a = document.getElementById("data1").value;
+		  document.getElementById("data2").value = a;
+		  
+		  }else
+		  {
+		   document.getElementById("data2").value="";
+		  }
+	   }
+	   function test2()
+	   {
+	var a = document.getElementById("data3").value;
+	document.getElementById("p1").innerHTML = "Total char is :"+a.length;
+	   }
+	   
+	 </script>
+   </head>
+    <body>
+	  <textarea id="data1"></textarea>
+	   
+	   <input type="checkbox" id="chk1" onclick="test()">
+	   same as above
+	   
+	   <textarea id="data2"></textarea>
+	   <hr color="red">
+	   
+	   <textarea id="data3"></textarea>
+	   <button onclick="test2()">Find length</button>
+	   
+	   <p id="p1"></p>
+	</body>
+   
+</html>

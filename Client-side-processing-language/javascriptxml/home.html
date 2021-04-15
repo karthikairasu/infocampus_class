@@ -1,0 +1,72 @@
+<html>
+   <head>
+     <link href="assets/css/bootstrap.css" rel="stylesheet">
+	 <script src="assets/js/jquery.min.js"></script>
+	 	 <script src="assets/js/bootstrap.js"></script>
+
+     <script src="assets/js/ajax.js"></script>
+	 <style>
+	   i{
+	    color:red;
+	   }
+	
+	 </style>
+   
+   </head>
+	  
+	  <body>
+	    <div class="container">
+		 
+		 <div class="row">
+		   <div class="col-sm-12 bg-warning" >
+		   <ul class="nav nav-pills">
+		   <li> <a href="home.html" >Home</a></li>
+		   <li> <a href="#"onclick="about()">About Us</a></li>
+		   <li> <a href="#"onclick="contact()">Contact Us</a></li>
+		   <li> <a href="#"onclick="signup()">Sign up</a></li>
+		   <li> <a href="#"onclick="userlist()">User list</a></li>
+		   <li> <a href="#"onclick="contactlist()">contact list</a></li>
+		   <li> <a href="#"onclick="gallary()">Gallary</a></li>
+		   <li> 
+		   <a href="#" onclick="modalview()" data-toggle="modal" data-target="#mymodal">Modal</a>
+		   </li>
+		   </ul>
+		   
+		   </div><!-----col-sm-12 close--->
+		   
+		 </div><!----row close---->
+		 <div class="row">
+		 <div class="col-sm-12 " id="pagedata">
+		  No data
+		  </div>
+		 </div>
+		</div> <!-----container---->
+	  </body>
+	  </html>
+	  
+	  
+	  <div class="modal fade" id="mymodal" role="dialog">
+				    <div class="modal-dialog">
+					   <div class="modal-content">
+					      <div class="modal-header">
+						     <div class="modal-title">
+							     <a href="#" class="close" data-dismiss="modal">&times;</a>
+								 </div>
+							 </div><!----header closes--->
+							    <div class="modal-body" id="msg2">
+							     <center ><i class="glyphicon glyphicon-refresh" style="font-size:60;"></i>
+								 <br>
+								 Please Wait Loading.....
+								 </center>	      
+							     
+								</div><!----body closes--->
+							 <div class="modal-footer">
+							 <button class="btn btn-danger" data-dismiss="modal">close</button>	
+								
+								</div><!----footer closes--->
+							   
+                                     							   
+						   
+					   </div><!----content closes--->
+					</div><!----dialog closes--->
+				</div><!----fade closes--->

@@ -1,0 +1,68 @@
+<html>
+   <head>
+      <script>
+	    function test()
+		{
+		 alert("ok");
+		 
+		}
+		function getprice()
+		{
+		 var qty = document.getElementById("qty").value;
+		 var item = document.getElementById("item").value;
+		 var total = qty * item ;
+		 alert(total);
+		}
+		function test2(a)
+		{
+		 alert(a);
+		}
+	  </script>
+   </head>
+     <body onload="test()"> 
+	 <center>
+	   <h1>event examples</h1>
+	   <button onclick="test()">one click</button>
+	   <button ondblclick="test()">2 click</button>
+	   <button onmousemove="test()">mouse move</button>
+	   <button onmouseout="test()">mouse out</button>
+	   <select onchange="test()">
+	      <option>Choose item</option>
+		    <option>Apple</option>
+		    <option>Orange</option>
+			<option>Banana</option>
+			<option>Mango</option>
+	   </select>
+	   <hr>
+	   <p>
+	   <select id="qty">
+		    <option value="0">Choose Quantity</option>
+		    <option value="1">1kg</option>
+		    <option value="2">2kg</option>
+			<option value="3">3kg</option>
+			<option value="4">4kg</option>
+			<option value="5">5kg</option>
+			<option value="6">6kg</option>
+		</select>
+		
+		<select onchange="getprice()" id="item">
+		    <option value="0">Choose item</option>
+		    <option value="200">Apple</option>
+		    <option value="25">Orange</option>
+			<option value="20">Banana</option>
+			<option value="50">Mango</option>
+		</select>
+	   
+	   </p>
+	   
+	   <h2>Keyboard Event</h2>
+	   
+	   <p> On Key Press<input type="text" onkeypress="test2(this.value)"></p>
+	   <p> On Key up<input type="text" onkeyup="test2(this.value)"></p>
+	   <p> On Key down<input type="text" onkeydown="test2(this.value)"></p>
+	   <p> On focus<input type="text" onfocus="test2(this.value)"></p>
+	   <p> On blur<input type="text" onblur="test2(this.value)"></p>
+	  </center> 
+	 </body>
+   
+</html>

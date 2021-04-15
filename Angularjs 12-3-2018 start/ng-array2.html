@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script src="assets/js/angular.js"></script>
+  </head>
+  <body>
+    <div ng-app="" ng-init=" 
+	                      item=[
+						  {'name':'mango', 'price':'200'},
+						  {'name':'apple', 'price':'205'},
+						  {'name':'orange', 'price':'40'},
+						  {'name':'grapes', 'price':'60'},
+						  {'name':'banana', 'price':'30'}
+						  ]; ">
+	  
+		
+		
+		<table>
+		
+		   <caption>Item List</caption>
+		   <tr>
+		      <th>Item Name</th>
+			  <th>Item Price</th>
+		   </tr>
+		   
+		   <tr ng-repeat="row in item">
+		       <td>{{row.name}}</td>
+			   <td>{{row.price}}</td>
+		     
+		   </tr>
+		</table>
+	</div>
+  </body>
+</html>

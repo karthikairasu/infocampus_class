@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+     <meta charset="UTF-8">
+	 <title>transition effect</title>
+	 <style>
+	    #div1{
+		   width:100px;
+		   height:200px;
+		   background-color:orange;
+		   border:2px solid black;
+		   border-radius:10px;
+		   margin:25px;
+		   -webkit-transition:width 2s,height 2s;
+		   transition:width 2s,height 2s;
+		   transition-timing-function:linear;
+		}
+		#div1:hover{
+		    height:300px;
+			width:300px;
+		}
+		 #div2{
+		   width:100px;
+		   height:200px;
+		   background-color:magenta;
+		   border:2px solid black;
+		   border-radius:10px;
+		   margin:25px;
+		   -webkit-transition:width 2s,height 2s;
+		   transition:width 2s,height 2s;
+		   transition-timing-function:ease;
+		}
+		#div2:hover{
+		    height:300px;
+			width:300px;
+		}
+		 #div3{
+		   width:100px;
+		   height:200px;
+		   background-color:pink;
+		   border:2px solid black;
+		   border-radius:10px;
+		   margin:25px;
+		   -webkit-transition:width 2s,height 2s;
+		   transition:width 2s,height 2s;
+		   transition-timing-function:ease-in;
+		}
+		#div3:hover{
+		    height:300px;
+			width:300px;
+		}
+		
+		 #div4{
+		   width:100px;
+		   height:200px;
+		   background-color:yellow;
+		   border:2px solid black;
+		   border-radius:10px;
+		   margin:25px;
+		   -webkit-transition:width 2s,height 2s;
+		   transition:width 2s,height 2s;
+		   transition-timing-function:ease-out;
+		}
+		#div4:hover{
+		    height:300px;
+			width:300px;
+		}
+		
+		 #div5{
+		   width:100px;
+		   height:200px;
+		   background-color:yellow;
+		   border:2px solid black;
+		   border-radius:10px;
+		   margin:25px;
+		   -webkit-transition:width 2s,height 2s;
+		   transition:width 2s,height 2s;
+		   transition-timing-function:ease-in-out;
+		}
+		#div5:hover{
+		    height:300px;
+			width:300px;
+		}
+	 </style>
+  </head>
+  <body>
+     
+     <div id="div1">
+	 </div>
+	 <div id="div2">
+	 </div>
+	 <div id="div3">
+	 </div>
+	 <div id="div4">
+	 </div>
+	 <div id="div5">
+	 </div>
+  </body>
+</html>

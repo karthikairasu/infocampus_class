@@ -1,0 +1,41 @@
+<html>
+   <head>
+       <script>
+	    function getimage(a)
+		{
+		 document.getElementById("myphoto").src=a;
+		}
+	    function small()
+		{
+		 document.getElementById("myphoto").height=50;
+		 document.getElementById("myphoto").width=50;
+		}
+		function medium()
+		{
+		 document.getElementById("myphoto").height=100;
+		 document.getElementById("myphoto").width=400;
+		}
+		function large()
+		{
+		 document.getElementById("myphoto").height=400;
+		 document.getElementById("myphoto").width=700;
+		}
+	   </script>
+   </head>
+     <body>
+	    <h1>image manipulation Java script</h1>
+		<select onchange="getimage(this.value)">
+		  <option value="4.jpg">user1</option>
+		  <option value="5.jpg">user2</option>
+		  <option value="6.jpg">user3</option>
+		  <option value="4.jpg">user4</option>
+		</select>
+		<button onclick="small()">small</button>
+		<button onclick="medium()">medium</button>
+		<button onclick="large()">large</button>
+		<p>
+		  <img src="6.jpg" height="300px" width="600px" id="myphoto">
+		</p>
+		</select>
+	 </body>
+</html>

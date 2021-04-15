@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>Fetching</title>
+	<script src="assets/js/jquery.min.js"></script>
+	<style>
+	  a{
+	    text-decoration:none;
+		margin:25px;
+		font-size:20px;
+		font-weight:bold;
+	  }
+	  .active
+	  {
+	  background-color:orange;
+	  color:blue;
+	   
+	  }
+	</style>
+	<script>
+	   $(function(){
+	   
+	   $("#link1").click(function(){
+	     $("#link1").addClass('active');
+		 $("#link2").removeClass('active');
+		 $("#link3").removeClass('active');
+		 $("#link4").removeClass('active');
+		 
+	   })
+	   
+	   $("#link2").click(function(){
+	     $("#link2").addClass('active');
+		 $("#link1").removeClass('active');
+		 $("#link3").removeClass('active');
+		 $("#link4").removeClass('active');
+		 
+	   })
+	   
+	   $("#link3").click(function(){
+	     $("#link3").addClass('active');
+		 $("#link1").removeClass('active');
+		 $("#link2").removeClass('active');
+		 $("#link4").removeClass('active');
+		 
+	   })
+	   
+	   $("#link4").click(function(){
+	     $("#link4").addClass('active');
+		 $("#link1").removeClass('active');
+		 $("#link2").removeClass('active');
+		 $("#link3").removeClass('active');
+		 
+	   })
+	   
+	   });
+	</script>
+	
+  </head>
+  
+  <body>
+     <center>
+	  <a href="#" id="link1">home</a>
+	  <a href="#" id="link2">About</a>
+	  <a href="#" id="link3">Service</a>
+	  <a href="#" id="link4">Contact</a>
+	  
+	 </center>
+  </body>
+</html>

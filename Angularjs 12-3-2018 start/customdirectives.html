@@ -1,0 +1,31 @@
+<html>
+   <head>
+       <title>custom directives</title>
+	   <script src="assets/js/angular.js"></script>
+	   <script >
+	    var app=angular.module("myApp",[]);
+		app.controller("myctrl",function($scope)
+		{
+		
+		});
+		app.controller("myctrl",function($scope)
+		{
+		
+		});
+		app.directive("myTestDirective",function(){
+		   return{
+		     template: "<h4> This is my own directive </h4>"
+		   }
+		});
+	   </script>
+   </head>
+   
+   <body ng-app="myApp">
+     <div ng-controller="myctrl">
+	  <my-test-directive></my-test-directive>
+	 </div>
+	 <div ng-controller="myctrl">
+	  <my-test-directive></my-test-directive>
+	 </div>
+   </body>
+</html>

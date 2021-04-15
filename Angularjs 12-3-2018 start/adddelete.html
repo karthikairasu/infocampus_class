@@ -1,0 +1,97 @@
+<html>
+   <head>
+    <title>Add Delete</title>
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	<script src="assets/js/angular.js"></script>
+	<script>
+	  var app = angular.module("Mymodule",[]);
+	  app.controller("myctrl",function($scope){
+	    var product = [{'pname':'ponds','pprice':'100Rs','pdescription':'face powder'},
+		{'pname':'surfexcel','pprice':'50Rs','pdescription':'washing powder'},
+		{'pname':'colcate','pprice':'30Rs','pdescription':'tooth paste'},
+		{'pname':'lifeboy','pprice':'50Rs','pdescription':'body soap'},
+		{'pname':'rin','pprice':'20Rs','pdescription':'washing powder'},
+		{'pname':'deltol','pprice':'60Rs','pdescription':'hand wash'},
+		{'pname':'ponds','pprice':'50Rs','pdescription':'face powder'}
+		];
+		$scope.products = product;
+		
+		$scope.saveproduct = function()
+		{
+		   var newproduct=[];
+		   newproduct.pname = $scope.proname;
+		   newproduct.pprice = $scope.price;
+		   newproduct.pdescription = $scope.desc;
+		   $scope.products.push(newproduct);
+		}
+		$scope.deleteproduct = function(index){
+		    $scope.products.splice(index,1);
+		}
+	  });
+	</script>
+	
+   </head>
+     <body ng-app="Mymodule">
+	    <div class="container" ng-controller="myctrl">
+		   <div class="row form-group">
+		     <div class="col-sm-4"><label>Product Name</label></div>
+			 <div class="col-sm-8">
+			   <input type="text" class="form-control" ng-model="proname">
+			 </div>
+		   </div>
+		   
+		   <div class="row form-group">
+		     <div class="col-sm-4"><label>Product Price</label></div>
+			 <div class="col-sm-8">
+			   <input type="text" class="form-control" ng-model="price">
+			 </div>
+		   </div>
+		   
+		   <div class="row form-group">
+		     <div class="col-sm-4"><label>Product Description</label></div>
+			 <div class="col-sm-8">
+			   <textarea class="form-control" ng-model="desc"></textarea>
+			 </div>
+		   </div>
+		   
+		   <div class="row form-group">
+		    
+			 <div class="col-sm-12 text-center">
+			   <button type="button" class="btn btn-primary" ng-click="saveproduct()">Save</button>
+			 </div>
+		   </div>
+		   
+		   <div class="row" >
+		   <div class="col-sm-2"></div>
+		   <div class="col-sm-8">
+		   <table class="table table-striped">
+		     <thead>
+			   <tr class="bg-success">
+			     <th>Name</th>
+				 <th>Price</th>
+				 <th>Description</th>
+				 <th >Action</th>
+			   </tr>
+			 
+			 </thead>
+			 
+			 <tbody>
+			   <tr ng-repeat="p in products">
+			     <td>{{p.pname}}</td>
+			      <td>{{p.pprice}}</td>
+			      <td>{{p.pdescription}}</td>
+				  <td><span class="glyphicon glyphicon-trash" ng-click="deleteproduct($index)"></span></td>
+				  
+			   </tr>
+			 </tbody>
+		   
+		   </table>
+		   </div>
+		   <div class="col-sm-2"></div>
+		   </div>
+		   
+		   
+		   
+		</div><!-------container close------>
+	 </body>
+</html>   
