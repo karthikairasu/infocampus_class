@@ -1,0 +1,157 @@
+a{
+  text-decoration:none;
+  color:black;
+}
+a:hover{
+  text-decoration: none;
+  color:black;
+}
+body{
+  font-family: 'Ubuntu', sans-serif;
+}
+.f-ub{
+    font-family: 'Ubuntu', sans-serif;
+}
+.f-ply{
+  font-family: 'Play', sans-serif;
+}
+.f-rt{
+  font-family: 'Righteous', cursive;
+}
+.f-ac{
+ font-family: 'Acme', sans-serif;
+}
+.f-so{
+font-family: 'Squada One', cursive;
+}
+.f-ma{
+font-family: 'Merienda', cursive;
+}
+.f-tt{
+font-family: 'Trochut', cursive;
+}
+.f-cga{
+  font-family: 'Changa', sans-serif;
+}
+.f-tw{
+  font-family: 'Titillium+Web', sans-serif;
+}
+.f-lt{
+  font-family: 'Lobster', cursive;
+}
+.bg-burgundy{
+  background-color:#7BABED;
+}
+.bg-darkblue{
+  background-color: #022952;
+}
+.bg-translit{
+  background-color: #f8f9fac4!important;
+}
+.text-burgundy{
+  color: #75022D;
+}
+.text-grey{
+  color: #c1c1c1!important;
+}
+/*-------side nav--------*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9999 !important;
+  top: 0;
+  left: 0;
+  background-color: #7BABED;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav .side-mu .nav-item a:hover {
+  color: #e93a3a;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: -10px;
+  right: 5px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.side-mu .nav-item .nav-link{
+    color: black;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+.side-ft{
+    bottom: 0px;
+    position: absolute;
+    width:100%;
+    text-align: center;
+}
+/*.sd:hover {
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 10px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow 0.3s ease-in-out;
+    transform: scale(0.95, 0.95);
+}*/
+.sd {
+    box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 6px 0 rgba(0, 0, 0, 0.19);
+    border: 0px;
+}
+.sd2{
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*---------------login page------------*/
+#particles-js{
+  	width: 100%;
+  	height: 100%;
+  	background-size: cover;
+  	background-position: 50% 50%;
+  	position: fixed;
+  	top: 0px;
+  	z-index:1;
+}
+/* width */
+.msg_list::-webkit-scrollbar {
+  width: 3px;
+}
+/* Track */
+.msg_list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.msg_list::-webkit-scrollbar-thumb {
+  background: grey; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.msg_list::-webkit-scrollbar-thumb:hover {
+  background: lightgrey; 
+}
+/*----------------personal msg---------------*/
+.msg_ent{
+  height:40px;
+  border-radius: 20px;
+  background-color: #007bff;
+  color:white;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px 4px;
+  border: 2px solid white;
+  padding: 4px 5px 4px 7px;;
+}
